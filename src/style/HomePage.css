@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+.maing-home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../assets/navbar/loging_bg.png");
+    background-size: cover;
+    background-position: center;
+  }
+  .maing-home::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-out;
+  }
+  .maing-home.show::before {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+section{
+    padding: 5% 5%;
+}
+
+   
+
+.home-text h5{
+    color: black;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.home-text h1{
+    color: black;
+    font-size: 65px;
+    text-transform: capitalize;
+    line-height: 1.1;
+    font-weight: 600;
+    margin: 6px 0 10px;
+}
+
+.home-text p{
+    color: black;
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.btn-shop{
+    display: inline-block;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 2px solid #111;
+    padding: 12px 25px;
+    transition: all .42s ease;
+}
+.btn-shop:hover{
+    background-color: black;
+    color: white;
+    transition: all .42s ease;
+}
+
+
+.container-welcome{
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 580px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    background-color: white;
+}
+
+.container-row-welcome{
+    width: 100%;
+}
+.container-izquierdo-welcome{
+    max-width: 66.6666666667%;
+}
+
+.big-title{
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.big-top{
+    font-size: 3.3rem;
+    line-height: 15px;
+    font-weight: 900;
+    font-family: "Poppins";
+}
+.big-middle{
+    font-size: 3.3rem;  
+    font-weight: 300;
+    font-family: "Poppins";
+}
+.big-subtitle{
+    font-size: 1rem;
+    font-weight: 400;
+    
+}
+
+.text{
+    margin-top: 50px;
+    line-height: 2.5rem;
+    text-align: left;
+    color: black;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.text-style{
+    line-height: 2.5rem;
+    margin-bottom: 1.7rem;
+    width: 100%;
+}
+
+.container-derecho-welcome{
+    font-size: 4.2rem;
+    position: absolute;
+    right: 0%;
+    transform: rotate(-90deg);
+    bottom: 100px;
+}
+.vertical{
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    font-family: "Poppins";
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: .9em;
+}
+.vertical2{
+    margin: 0;
+    padding: 0%;
+    text-align: right;
+    font-family: "Poppins";
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: .9em;
+    
+}
