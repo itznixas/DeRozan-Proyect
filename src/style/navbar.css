@@ -8,11 +8,14 @@
   font-family: "Poppins", sans-serif;
 }
 
+<<<<<<< HEAD
 html, body {
   overflow-x: hidden; /* Prevenir scroll horizontal globalmente */
   width: 100%;
 }
 
+=======
+>>>>>>> 94dbba24a7009637f13e9ad1f4a4ca2b754695d8
 a {
   text-decoration: none;
 }
@@ -29,16 +32,39 @@ a {
   max-width: 1100px;
   width: 100%;
   margin: 0 auto;
+<<<<<<< HEAD
+=======
+}
+
+.nav,
+.nav_item {
+>>>>>>> 94dbba24a7009637f13e9ad1f4a4ca2b754695d8
   display: flex;
   height: 100%;
   align-items: center;
 }
+<<<<<<< HEAD
 
+=======
+
+.nav_logo,
+.nav_link,
+
+.button {
+  color: #000000;
+}
+
+.button-login {
+  color: #ce6060;
+}
+
+>>>>>>> 94dbba24a7009637f13e9ad1f4a4ca2b754695d8
 .nav_logo {
   font-size: 25px;
   color: #000000;
 }
 
+<<<<<<< HEAD
 .nav_items {
   display: flex;
   flex-grow: 1; /* Ocupar todo el espacio disponible */
@@ -46,24 +72,32 @@ a {
   justify-content: center; /* Centramos los items */
 }
 
+=======
+>>>>>>> 94dbba24a7009637f13e9ad1f4a4ca2b754695d8
 .nav_item {
   display: flex;
   column-gap: 25px;
 }
 
+<<<<<<< HEAD
 .nav_link {
   color: #000000;
 }
 
+=======
+>>>>>>> 94dbba24a7009637f13e9ad1f4a4ca2b754695d8
 .nav_link:hover {
   color: #dbacac;
 }
 
+<<<<<<< HEAD
 .login {
   display: flex;
   margin-left: auto; /* Empuja el div.login al final del contenedor */
 }
 
+=======
+>>>>>>> 94dbba24a7009637f13e9ad1f4a4ca2b754695d8
 .button-login {
   color: #ce6060;
   padding: 6px 4px;
@@ -74,7 +108,11 @@ a {
   margin: 0 2px; /* Espaciado entre botones */
 }
 
+<<<<<<< HEAD
 .button-login:active {
+=======
+.button:active {
+>>>>>>> 94dbba24a7009637f13e9ad1f4a4ca2b754695d8
   transform: scale(0.98);
 }
 
@@ -149,7 +187,7 @@ a {
 }
 
 .input_box input:focus {
-  border-color: #2415d2;
+  border-color: #ce6060;
 }
 
 .input_box i {
@@ -167,7 +205,7 @@ a {
 
 .input_box input:focus ~ i.email,
 .input_box input:focus ~ i.password {
-  color: #1b1bc9;
+  color: #ce6060;
 }
 
 .input_box i.pw_hide {
@@ -184,7 +222,7 @@ a {
 }
 
 .form_container a {
-  color: #7d2ae8;
+  color: #ce6060;
   font-size: 12px;
 }
 
@@ -199,7 +237,7 @@ a {
 }
 
 .checkbox input {
-  accent-color: #7d2ae8;
+  accent-color: #ce6060;
 }
 
 .checkbox label {
@@ -223,3 +261,62 @@ a {
   text-align: center;
   margin-top: 15px;
 }
+<<<<<<< HEAD
+=======
+
+.social_login {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1px;
+}
+
+.social_login .button {
+  width: 46%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+}
+
+.social_login .button.google {
+  background-color: #ed7e7e;
+  color: white;
+}
+
+.social_login .button.facebook {
+  background-color: #5d84d6;
+  color: white;
+}
+
+.social_login .button i {
+  margin-right: 2px;
+}
+
+.social_signup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1px;
+}
+
+.social_signup .button {
+  width: 46%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+}
+
+.social_signup .button.google {
+  background-color: #ed7e7e; /* Color de Google */
+  color: white;
+}
+
+.social_signup .button.facebook {
+  background-color:#5d84d6; /* Color de Facebook */
+  color: white;
+}
+
+.social_signup .button i {
+  margin-right: 2px;
+}
+>>>>>>> 94dbba24a7009637f13e9ad1f4a4ca2b754695d8
