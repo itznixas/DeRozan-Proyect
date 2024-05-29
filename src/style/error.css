@@ -31,3 +31,11 @@
     width: auto;
     height: 600px;
 }
+.nav_logo {
+    font-size: 25px;
+    color: #000000;
+  }
+  
+  .nav_link {
+    color: #000000;
+  }

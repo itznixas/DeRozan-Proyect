@@ -7,6 +7,8 @@ export default function HomePage(){
     return(
     <>
     <Header/>
+    <div className="main">
+
     <section className="maing-home">
         <div className="home-text">
             <h5>Derozan Collections</h5>
@@ -45,6 +47,7 @@ export default function HomePage(){
     </section>
   
     <Footer/>
+    </div>
     </>
     )
 }
