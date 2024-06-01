@@ -29,7 +29,6 @@ com\ConexionS\Controller\BrandController.class
 com\ConexionS\Repository\InventoryMovementDetailRepository.class
 com\ConexionS\Controller\WishlistController.class
 com\ConexionS\Controller\RatingController.class
-com\ConexionS\Entities\LoginRequest.class
 com\ConexionS\Service\WishlistService.class
 com\ConexionS\Controller\InventoryMovementController.class
 com\ConexionS\Service\RefundService.class

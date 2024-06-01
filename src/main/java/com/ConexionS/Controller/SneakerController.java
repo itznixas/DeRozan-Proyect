@@ -84,7 +84,7 @@ public class SneakerController {
         }
     }
 
-    @DeleteMapping("/image/{id}")
+    @DeleteMapping("/delete-image/{id}")
     public ResponseEntity<Void> deleteImage(@PathVariable Integer id) {
         try {
             sneakerService.deleteImage(id);

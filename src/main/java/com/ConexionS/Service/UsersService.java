@@ -3,22 +3,18 @@ package com.ConexionS.Service;
 import com.ConexionS.Entities.Users;
 import com.ConexionS.Repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UsersService {
+public class UsersService{
 
     @Autowired
     private UsersRepository usersRepository;
 
-    //private BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-
     public Users createUser(Users user){
-        //user.setPassword(passwordEncoder.encode(user.getPassword()));
         return  usersRepository.save(user);
     }
 
@@ -56,19 +52,16 @@ public class UsersService {
         usersRepository.deleteById(id);
    }
 
-    /*public boolean validateUser(String identifier, String password) {
-        Optional<Users> userOptional = usersRepository.findByEmail(identifier);
-
-        if (!userOptional.isPresent()) {
-            userOptional = usersRepository.findByUsername(identifier);
-        }
+    public boolean validateUser(String email, String password) {
+        Optional<Users> userOptional = usersRepository.findByEmail(email);
 
         if (userOptional.isPresent()) {
-            Users user = userOptional.get();
-            return passwordEncoder.matches(password, user.getPassword());
+            Users users = userOptional.get();
+            return password.equals(users.getPassword());
         }
 
         return false;
-    }*/
+    }
+
 
 }

@@ -40,6 +40,7 @@ public class UserController {
         return new ResponseEntity<>(newUser, HttpStatus.CREATED);
     }
 
+
     @PostMapping("/register-user-google")
     public ResponseEntity<String> registerUserGoogle(@RequestBody GoogleUser userGoogleRequest) {
 
