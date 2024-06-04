@@ -31,7 +31,7 @@ public class UserController {
         users.setStatus("activo");
 
         Role defaultRole = new Role();
-        defaultRole.setId_role(1);
+        defaultRole.setId(1);
         users.setRole(defaultRole);
 
         // Save the user
