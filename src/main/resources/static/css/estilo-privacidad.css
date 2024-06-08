@@ -6,8 +6,66 @@ body{
 }
 
 
+header.stickys{
+    padding: 5px 10%;
+    background-color: #000000;
+}
 
+.navs {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
 
+.navs,
+.nav_items {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_logos,
+.nav_links,
+.button {
+    color: #000000;
+}
+
+.nav_logos {
+    font-size: 2em;
+}
+
+.nav_items {
+    column-gap: 25px;
+}
+
+.nav_links:hover {
+    color: #585252;
+}
+
+.buttons {
+    padding: 6px 24px;
+    border: 2px solid #000000;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.buttons:active {
+    transform: scale(0.98);
+}
+
+header.stickys .nav_items li a {
+    color: #ffffff;
+}
+
+header.stickys .nav_logos{
+    color: #ffffff;
+}
+header.stickys .button{
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
 
 .container-politica-y-condiciones{
     width: 100%;

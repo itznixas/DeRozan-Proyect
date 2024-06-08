@@ -6,6 +6,7 @@
     <title>Aviso De Privacidad</title>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/estilo-privacidad.css" />
+    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -16,22 +17,27 @@
   <body>
     
     
-    <header class="header">
-        <nav class="nav">
-          <a href="#" class="nav_logo">DeRozan</a>
-    
+    <header>
+      <nav class="navs">
+          <a href="#" class="nav_logos">DEROZAN</a>
           <ul class="nav_items">
-            <li class="nav_item">
-              <a href="#" class="nav_link">Home</a>
-              <a href="#" class="nav_link">Sneakers</a>
-              <a href="#" class="nav_link">Services</a>
-              <a href="#" class="nav_link">Contact</a>
-            </li>
+              <li class="nav_items">
+                  <a href="../index.html" class="nav_links">HOME</a>
+                  <a href="#" class="nav_links">SNEAKERS</a>
+                  <a href="#" class="nav_links">SERVICES</a>
+                  <a href="./contacto.html" class="nav_links">CONTACT</a>
+              </li>
           </ul>
-    
-          <button class="button" id="form-open">Login</button>
-        </nav>
-      </header>
+          <button class="button" id="form-open">LOGIN</button>
+      </nav>
+  </header>
+
+  <script type="text/javascript">
+      window.addEventListener("scroll", function () {
+          var header = document.querySelector("header");
+          header.classList.toggle("stickys", window.scrollY > 0);
+      });
+  </script>
     
       <!-- Home -->
       <section class="home">
