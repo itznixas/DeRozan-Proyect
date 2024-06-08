@@ -5,6 +5,7 @@
     scroll-behavior: smooth;
     list-style: none;
     text-decoration: none;
+    font-family: 'Jost',sans-serif;
     
 }
 
@@ -12,14 +13,17 @@ a {
     text-decoration: none;
 }
 
-.header {
+header {
     position: fixed;
-    height: 80px;
+    top: 0;
+    left: 0;
     width: 100%;
-    z-index: 100;
-    padding: 0 20px;
-    background: black;
-    top: 0%;
+    display: flex;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
 }
 
 .nav {
@@ -43,7 +47,7 @@ a {
 }
 
 .nav_logo {
-    font-size: 25px;
+    font-size: 2em;
 }
 
 .nav_item {
@@ -65,6 +69,31 @@ a {
 .button:active {
     transform: scale(0.98);
 }
+
+header.sticky{
+    padding: 5px 10%;
+    background-color: #fff;
+}
+
+header.sticky .nav_items li a {
+    color: #000;
+}
+
+header.sticky .nav_logo{
+    color: #000;
+}
+header.sticky .button{
+    color: #000;
+    border: 2px solid #000;
+}
+
+
+
+
+
+
+
+
 
 /* Home */
 .home {
@@ -612,26 +641,123 @@ section{
 
 /*ACA VA LA SECTIONS DEROZAN_COLLECTIONS*/
 .container-collections-derozan{
-    width: 100%;
     height: 100vh;
+    width: 100%;
     
 }
 .content-collections-derozan{
-    height: 100vh;
+    width: 100%;
 }
 .content-collections-derozan h1{
+    text-align: center ;
     margin-bottom: 20px;
     font-size: 40px;
 }
 .row-collections-derozan{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
     gap: 30px;
     display: flex;
 }
 .image-collections-derozan img{
-    width: 594px;
+    width: 500px;
     object-fit: cover;
     height: 743px;
 }
+
+
+
+
+
+
+.container-best-products{
+    height: 100vh;
+    width: 100%;
+    background-color: gainsboro;
+}
+.container-best-products h1{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 40px;
+}
+.container-best-products p{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.content-best-products{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    gap: 70px;
+}
+
+.card-best-products{
+    text-align: center;
+    width: 345px;
+    height: 550px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.img-top-product{
+    width: 100%;
+    background-color: #25589B;
+    border-radius: 30px;
+}
+.img-top-product img{
+    width: 300px;
+    height: 230px;
+    background-size: cover;
+}
+
+.text-contet-product{
+    padding: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.text-contet-product p{
+    margin-top: 15px;
+    color: gray;
+    font-size: 20px;
+}
+.text-contet-product h1{
+    margin-top: 15px;
+    font-size: 25px;
+    color: black;
+    font-weight: 600;
+}
+.text-contet-product h5{
+    margin-top: 25px;
+    font-size: 18px;
+    color: gray;
+
+}
+.text-contet-product button{
+    margin-top: 20px;
+    border-radius: 20px;
+    color: white;
+    background-color: #25589B;
+    font-size: 15px;
+    border: none;
+    height: 50px;
+    width: 250px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
