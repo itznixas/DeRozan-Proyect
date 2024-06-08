@@ -1,0 +1,66 @@
+body{
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    background-color: white;
+}
+
+
+
+
+
+.container-politica-y-condiciones{
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+    position: relative;
+    margin-bottom: 100px;
+}
+.container-row{
+    padding-top:  10px;
+    margin-left: 8.3333333333%;
+    width: 83.3333333333%;
+}
+
+.container-padding{
+    width: 100%;
+    justify-content: center;
+    padding-left: 140px;
+    padding-right: 140px;
+    box-sizing: border-box;
+}
+.container-text{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+.title-aviso{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.texto-normal{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.title-general{
+    font-size: 30px;
+    font-weight: 800;
+}
+.title-subtitulo{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+
+@font-face {
+    font-family: AdihausDIN;
+    src: url(fonts/729-font.ttf);
+}
+
+
+

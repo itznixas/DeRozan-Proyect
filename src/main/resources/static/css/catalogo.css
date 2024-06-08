@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Jost',sans-serif;
+}
+
+header{
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 30px 10%;
+}
+
+.logo{
+    margin-right: auto;
+    cursor: pointer;
+    color: black;
+    font-size: 30px;
+    transition: 0.5s;
+}
+.logo:hover{
+    transform: translateY(-5px);
+    
+}
+
+.nav-menu{
+    list-style: none;
+}
+.nav-menu li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav-menu li a{
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all 0.3s ease 0s;
+}
+
+.nav-menu li a:hover{
+    color: #0088a9;
+    
+}
+
+.nav-icons-menu {
+    margin-left: auto;
+    padding: 9px 25px;
+    color: white;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.container{
+    padding: 20px;
+    box-sizing: border-box;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.content{
+    display: grid;
+    gap: 40px;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    
+
+}
+.title-and-search{
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.title-and-search input{
+    margin-top: 20px;
+    height: 40px;
+    width: 650px;
+    padding-left: 25px;
+}
+.title-and-search i{
+    border: 1px solid gray;
+    height: 40px;
+    width: 50px;
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 10px;
+
+}
+.search{
+    display: flex;
+}
+.card{
+    width: 300px;
+    height: 420px;
+    position: relative;
+    background-color: whitesmoke;
+
+}
+
+.product-img{
+
+
+    width: 300px;
+    height: 230px;
+    background-image: url(img/nike-sb-dunk-low-pro-black-gum-cd2563-006-54-400x400.png);
+    background-repeat: no-repeat;
+    background-position: 0 -75px;
+    background-size:  cover;
+}
+.product-detail{
+
+    position: absolute;
+    bottom: 0;
+    transform: translateY(0%);
+    border-radius: 20px 50% 0 0; 
+    padding: 1rem;
+
+    width: 300px;
+    height: 190px;
+    background-color: #21222d;
+    border-radius: 0 40% 0 0;
+    padding: 0.8rem;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+.rating{
+    font-size: 0.7rem;
+    color: #fdcc0d;
+    user-select: none;
+
+}
+
+.product-detail p{
+    font-size: 0.8rem;
+    color: #5f5f6b;
+    margin-top: 15px;
+
+}
+.buttons{
+
+    height: 65px;
+    margin-top: 15px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+
+}
+.price{
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 20px;
+
+}
+
+.btn{
+    position: relative;
+    border: none;
+    outline: none;
+    background-color: #35353f;
+    color: #fff;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+
+}
+.cart{
+    width: 160px;
+
+}
+
+.favourite{
+    border: 1px solid #35353f;
+    color: white;
+    background-color: #35353f;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #35353f;
+    height: 45px;
+    transition: 0.3s;
+}
+.cart::before{
+    width: 165px;
+    border-radius: 50px;
+
+}
+.favourite::before{
+    width: 45px;
+    border-radius: 50%;
+}
+.btn:hover::before{
+    border-color: #fff;
+}
+
+
+
+footer{
+
+    padding: 20px 50px;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    margin-top: 200px;
+    height: 300px;
+
+    background-color: #3586FF; 
+    color: white;
+    text-align: center;
+    
+}
+footer .social-media, .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+
+}
+footer .social-media li{
+    list-style: none;
+}
+footer .social-media li a{
+    font-size: 4em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+footer .social-media li a:hover{
+    transform: translateY(-10px);
+}
+
+footer .menu li a{
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    opacity: 1;
+}
+
+footer .menu li a:hover{
+
+    transform: translateY(-10px);
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+footer .wave{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background:  url(../Imagines/wave.png);
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_02 4s linear infinite;
+}
+
+footer .wave#wave3{
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4{
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_02 3s linear infinite;
+}
+
+@keyframes animateWave {
+    0%{
+        background-position: 1000px;
+    }
+
+    100%{
+        background-position: 0;
+    }
+}
+
+@keyframes animateWave_02 {
+    0%{
+        background-position: 0;
+    }
+
+    100%{
+        background-position: 1000px;
+    }
+}

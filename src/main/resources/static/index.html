@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derozan Official</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/interaciones.js"></script>
+    <link rel="icon" href="../Imagines/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav">
+      <a href="#" class="nav_logo">DeRozan</a>
+
+      <ul class="nav_items">
+        <li class="nav_item">
+          <a href="#" class="nav_link">Home</a>
+          <a href="#" class="nav_link">Sneakers</a>
+          <a href="#" class="nav_link">Services</a>
+          <a href="#" class="nav_link">Contact</a>
+        </li>
+      </ul>
+
+      <button class="button" id="form-open">Login</button>
+    </nav>
+  </header>
+
+  <!-- Home -->
+  <section class="home">
+    <div class="form_container">
+      <i class="uil uil-times form_close"></i>
+      <!-- Formulario de Login -->
+      <div class="form login_form">
+        <form action="#">
+          <h2>Login</h2>
+
+          <div class="input_box">
+            <input type="email" placeholder="Introduce tu correo" required />
+            <i class="uil uil-envelope-alt email"></i>
+          </div>
+          <div class="input_box">
+            <input type="password" placeholder="Introduce tu contraseña" required />
+            <i class="uil uil-lock password"></i>
+            <i class="uil uil-eye-slash pw_hide"></i>
+          </div>
+
+          <div class="option_field">
+            <span class="checkbox">
+              <input type="checkbox" id="check" />
+              <label for="check">Recordarme</label>
+            </span>
+            <a href="#" class="forgot_pw">¿Olvidaste tu contraseña?</a>
+          </div>
+
+          <button class="button">Iniciar Sesión</button>
+
+            <div class="login_signup">O</div>
+
+          <button class="google">Continuar con Google</button>
+          <button class="facebook">Continuar con Facebook</button>
+            
+          <div class="login_signup">¿No tienes una cuenta? <a href="#" id="signup">Regístrate</a></div>
+          
+
+        </form>
+      </div>
+
+      <!-- Formulario de Registro -->
+      <div class="form signup_form">
+        <form action="#">
+          <h2>Registro</h2>
+
+          <div class="input_box">
+            <input type="email" placeholder="Introduce tu correo" required />
+            <i class="uil uil-envelope-alt email"></i>
+          </div>
+          <div class="input_box">
+            <input type="password" placeholder="Crea una contraseña" required />
+            <i class="uil uil-lock password"></i>
+            <i class="uil uil-eye-slash pw_hide"></i>
+          </div>
+          <div class="input_box">
+            <input type="password" placeholder="Confirma tu contraseña" required />
+            <i class="uil uil-lock password"></i>
+            <i class="uil uil-eye-slash pw_hide"></i>
+          </div>
+          <br>
+          <div>
+            <span class="checkbox">
+              <input type="checkbox" id="check" />
+              <label for="check">Acepto las <a href="./html/avisos-de-privacidad.html">Política de Privacidad</a></label>
+            </span>
+            <span class="checkbox">
+              <input type="checkbox" id="check" />
+              <label for="check">He leido y Acepto las <a href="./html/termino-condiciones.html">Terminos y condiciones</a></label>
+            </span>
+          </div>
+          <button class="button">Regístrate Ahora</button>
+          <div class="login_signup">O</div>
+            
+          <button class="google">Continuar con Google</button>
+          <button class="facebook">Continuar con Facebook</button>
+            
+
+          <div class="login_signup">¿Ya tienes una cuenta? <a href="#" id="login">Iniciar Sesión</a></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 3;
+
+    function showNextSlide() {
+        currentSlide = (currentSlide % totalSlides) + 1;
+        document.getElementById('slideOne').checked = currentSlide === 1;
+        document.getElementById('slideTwo').checked = currentSlide === 2;
+        document.getElementById('slideThree').checked = currentSlide === 3;
+    }
+
+    setInterval(showNextSlide, 3000); // 1000 = 1s
+</script>
+
+    <div class="maing-home">
+        <div class="slider-1">
+            <input type="radio" name="slider" id="slideOne" checked>
+        <input type="radio" name="slider" id="slideTwo">
+        <input type="radio" name="slider" id="slideThree">
+
+        <div class="buttons-pp">
+            <label for="slideOne"></label>
+            <label for="slideTwo"></label>
+            <label for="slideThree"></label>
+        </div>
+
+        <div class="content-imgs">
+            <div class="firstslide"></div>
+            <div class="secondslide"></div>
+            <div class="thirdslide"></div>
+        </div>
+        </div>
+        
+
+
+        <div class="home-text">
+            <h5>Derozan Collections</h5>
+            <h1>New Year <br> Collections 2024</h1>
+            <p>Choose your new style</p>
+
+            <a href="#" class="btn-shop">Shop Now</a>
+            </div>
+        </div>     
+
+    </div>
+
+
+
+    <section class="best-collections-container">
+        <div class="content-collections">
+            <p>BEST COLLECTIONS</p>
+            <div>
+            <div class="container-slider">
+                <div class="slider-wrapper">
+                    <button id="prev-slide" class="slide-button material-symbols-rounded">
+                    chevron_left
+                    </button>
+                    <ul class="image-list">
+                    <img class="image-item" src="./img/img-1.jfif" alt="img-1" />
+                    <img class="image-item" src="./img/img-1.jfif" alt="img-2" />
+                    <img class="image-item" src="./img/img-1.jfif" alt="img-3" />
+                    <img class="image-item" src="./img/img-1.jfif" alt="img-5" />
+                    <img class="image-item" src="./img/img-1.jfif" alt="img-6" />
+                    <img class="image-item" src="./img/img-1.jfif" alt="img-7" />
+                    <img class="image-item" src="./img/img-1.jfif" alt="img-8" />
+                    
+                    </ul>
+                    
+                    <button id="next-slide" class="slide-button material-symbols-rounded">
+                    chevron_right
+                    </button>
+                </div>
+                <div class="slider-scrollbar">
+                    <div class="scrollbar-track">
+                    <div class="scrollbar-thumb"></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class=container-collections-derozan">
+        <div class="content-collections-derozan">
+            <h1>DEROZAN COLLECTIONS</h1>
+            <div class="row-collections-derozan">
+                <div class="image-collections-derozan">
+                    <a href="https://www.nike.com/es/"><img src="./img/marca1.jfif" alt="nike"></a>
+                </div>
+                <div class="image-collections-derozan">
+                    <a href="https://www.adidas.co/"><img src="./img/marca2.jfif" alt="adidas"></a>
+                </div>
+                <div class="image-collections-derozan">
+                    <a href="https://us.puma.com/us/es"><img src="./img/marca3.jfif" alt="pumas"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+
+
+        <ul class="social-media">
+            <li><a href="#"><i  class='bx bxl-twitter' ></i></a></li>
+            <li><a href="#"><i  class='bx bxl-facebook'></i></a></li>
+            <li><a href="#"><i  class='bx bxl-instagram-alt' ></i></a></li>
+        </ul>
+        
+        <ul class="menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="./html/avisos-de-privacidad.html">Privacy Policy</a></li>
+            <li><a href="./html/termino-condiciones.html">Terms of Services</a></li>
+        </ul>
+
+        <p >@2024 Derozan Official | All Rights Reserved.</p>
+
+    </footer>
+    
+    <script src="./js/interaciones.js"></script>
+    <script src="./js/./script.js"></script>
+
+
+</body>
+</html>
