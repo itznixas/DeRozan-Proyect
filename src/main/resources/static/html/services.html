@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Responsive Services Section</title>
+        <!-- Font Awesome CDN-->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+        <!-- Google Font -->
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+          rel="stylesheet"
+        />
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="../css/services.css" />
+
+        <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+      </head>
+
+  <body>
+
+    <header>
+        <nav class="nav">
+          <a href="../index.html" class="nav_logo">DEROZAN</a>
+          <ul class="nav_items">
+            <li class="nav_item">
+              <a href="../index.html" class="nav_link">HOME</a>
+              <a href="catalogo.html" class="nav_link">SNEAKERS</a>
+              <a href="services.html" class="nav_link">SERVICES</a>
+              <a href="contacto.html" class="nav_link">CONTACT</a>
+            </li>
+          </ul>
+          <div>
+            <button class="nav_login" ><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="nav_login"> <i class="fa-regular fa-heart"></i></button>
+            <button class="nav_login"> <i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
+            <button class="nav_login" id="form-open"> <i class="fa-regular fa-user"></i></button>
+          </div>
+        </nav>
+      </header>
+    
+      <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+          var header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY > 0)
+        })
+      </script>
+
+
+
+
+    <section>
+      <div class="row">
+        <h2 class="section-heading">Derozan Services</h2>
+      </div>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+                <i class="fa-solid fa-truck"></i>
+            </div>
+            <h3>Fast and Free Delivery</h3>
+            <p>
+                Offer fast and free delivery to attract customers, ensuring they receive their sneakers as quickly as possible.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+            <h3>Real-Time Tracking</h3>
+            <p>
+                Provide a real-time tracking system so customers can see the status and location of their order at all times.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+                <i class="fa-solid fa-rotate-left"></i>
+            </div>
+            <h3>Free Returns and Exchanges</h3>
+            <p>
+                Implement a free returns and exchanges policy so customers can shop with confidence and return or exchange products at no additional cost.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+                <i class="fa-solid fa-handshake-angle"></i>
+            </div>
+            <h3>Personalized Online Assistance</h3>
+            <p>
+                Offer personalized assistance through live chat, video calls, or social media to help customers choose the right model and size.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+                <i class="fa-solid fa-signal"></i>
+            </div>
+            <h3>Virtual Sneaker Try-On</h3>
+            <p>
+                Implement a virtual try-on tool that allows customers to see how the sneakers would look on their feet before buying.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+                <i class="fa-solid fa-boxes-stacked"></i>
+            </div>
+            <h3>Sneaker Subscription Boxes</h3>
+            <p>
+                Offer a monthly subscription service where customers receive a selection of surprise sneakers or ones based on their preferences.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+  <footer>
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+
+
+    <ul class="social-media">
+      <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+      <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
+      <li><a href="#"><i class='bx bxl-instagram-alt'></i></a></li>
+    </ul>
+
+    <ul class="menu">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./html/contacto.html">Contact</a></li>
+      <li><a href="./html/avisos-de-privacidad.html">Privacy Policy</a></li>
+      <li><a href="./html/termino-condiciones.html">Terms of Services</a></li>
+    </ul>
+
+    <p>@2024 Derozan Official | All Rights Reserved.</p>
+
+  </footer>
+
+  </body>
+</html>

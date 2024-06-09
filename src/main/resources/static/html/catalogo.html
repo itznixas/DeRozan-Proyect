@@ -10,22 +10,32 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <header class="header">
+    <header>
         <nav class="nav">
-          <a href="#" class="nav_logo">DeRozan</a>
-    
+          <a href="../index.html" class="nav_logo">DEROZAN</a>
           <ul class="nav_items">
             <li class="nav_item">
-              <a href="#" class="nav_link">Home</a>
-              <a href="#" class="nav_link">Sneakers</a>
-              <a href="#" class="nav_link">Services</a>
-              <a href="#" class="nav_link">Contact</a>
+              <a href="../index.html" class="nav_link">HOME</a>
+              <a href="catalogo.html" class="nav_link">SNEAKERS</a>
+              <a href="#" class="nav_link">SERVICES</a>
+              <a href="contacto.html" class="nav_link">CONTACT</a>
             </li>
           </ul>
-    
-          <button class="button" id="form-open">Login</button>
+          <div>
+            <button class="nav_login" ><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="nav_login"> <i class="fa-regular fa-heart"></i></button>
+            <button class="nav_login"> <i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
+            <button class="nav_login" id="form-open"> <i class="fa-regular fa-user"></i></button>
+          </div>
         </nav>
       </header>
+    
+      <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+          var header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY > 0)
+        })
+      </script>
     
       <!-- Home -->
       <section class="home">
@@ -389,10 +399,10 @@
         </ul>
         
         <ul class="menu">
-            <li><a href="../Estructura/home.html">Home</a></li>
-            <li><a href="../Estructura/contact.html">Contact</a></li>
-            <li><a href="../Estructura/aviso-de-privacidad.html">Privacy Policy</a></li>
-            <li><a href="../Estructura/politica-y-condiciones.html">Terms of Services</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="contacto.html">Contact</a></li>
+            <li><a href="avisos-de-privacidad.html">Privacy Policy</a></li>
+            <li><a href="termino-condiciones.html">Terms of Services</a></li>
         </ul>
 
         <p >@2024 Derozan Official | All Rights Reserved.</p>
