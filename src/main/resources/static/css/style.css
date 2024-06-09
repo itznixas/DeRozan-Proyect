@@ -42,7 +42,7 @@ header {
 
 .nav_logo,
 .nav_link,
-.button {
+.nav_login {
     color: #fff;
 }
 
@@ -55,17 +55,22 @@ header {
 }
 
 .nav_link:hover {
-    color: #d9d9d9;
+    color: #383636;
 }
 
-.button {
-    padding: 6px 24px;
-    border: 2px solid #fff;
+.nav_login {
+    padding: 4px 12px;
     background: transparent;
-    border-radius: 6px;
     cursor: pointer;
+    font-size: 18px;
+    right: 30px;
+    border: none; 
+    box-shadow: none;
 }
 
+.nav_login:hover {
+    color: #383636;
+}
 .button:active {
     transform: scale(0.98);
 }
@@ -82,9 +87,8 @@ header.sticky .nav_items li a {
 header.sticky .nav_logo{
     color: #000;
 }
-header.sticky .button{
+header.sticky .nav_login{
     color: #000;
-    border: 2px solid #000;
 }
 
 

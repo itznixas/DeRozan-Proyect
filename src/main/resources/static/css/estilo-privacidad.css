@@ -43,12 +43,14 @@ header.stickys{
     color: #585252;
 }
 
-.buttons {
-    padding: 6px 24px;
-    border: 2px solid #000000;
+.nav_logins {
+    padding: 4px 12px;
     background: transparent;
-    border-radius: 6px;
     cursor: pointer;
+    font-size: 18px;
+    right: 30px;
+    border: none; 
+    box-shadow: none;
 }
 
 .buttons:active {
@@ -62,9 +64,9 @@ header.stickys .nav_items li a {
 header.stickys .nav_logos{
     color: #ffffff;
 }
-header.stickys .button{
+header.stickys .nav_logins{
     color: #ffffff;
-    border: 2px solid #ffffff;
+        
 }
 
 .container-politica-y-condiciones{
