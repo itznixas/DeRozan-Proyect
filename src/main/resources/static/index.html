@@ -8,7 +8,7 @@
   <title>Derozan Official</title>
 
   <link rel="stylesheet" href="./css/style.css">
-  <script src="./js/interaciones.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
   <link rel="icon" href="../Imagines/logo.png" type="image/x-icon">
 
@@ -20,8 +20,6 @@
 </head>
 
 <body>
-
-
 
   <header>
     <nav class="nav">
@@ -56,15 +54,14 @@
       <i class="uil uil-times form_close"></i>
       <!-- Formulario de Login -->
       <div class="form login_form">
-        <form action="#">
+        <form id="login-form">
           <h2>Login</h2>
-
           <div class="input_box">
-            <input type="email" placeholder="Introduce tu correo" required />
+            <input type="email" id="email" placeholder="Introduce tu correo" required />
             <i class="uil uil-envelope-alt email"></i>
           </div>
           <div class="input_box">
-            <input type="password" placeholder="Introduce tu contraseña" required />
+            <input type="password" id="password" placeholder="Introduce tu contraseña" required />
             <i class="uil uil-lock password"></i>
             <i class="uil uil-eye-slash pw_hide"></i>
           </div>
@@ -77,19 +74,44 @@
             <a href="#" class="forgot_pw">¿Olvidaste tu contraseña?</a>
           </div>
 
-          <button class="button">Iniciar Sesión</button>
+            <button class="button" type="submit">Iniciar Sesión</button>
 
           <div class="login_signup">O</div>
 
-          <button class="google">Continuar con Google</button>
-          <button class="facebook">Continuar con Facebook</button>
+          <button class="google" type="button">Continuar con Google</button>
+          <button class="facebook" type="button">Continuar con Facebook</button>
 
           <div class="login_signup">¿No tienes una cuenta? <a href="#" id="signup">Regístrate</a></div>
-
-
         </form>
       </div>
+    </div>
+  </section>
 
+  <script>
+    document.getElementById('login-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      try {
+        const response = await axios.post('/api/auth/login', {
+          email: email,
+          password: password
+        });
+
+        if (response.status === 200) {
+          console.log('Login successful');
+          // Aquí puedes redirigir al usuario o mostrar un mensaje de éxito
+        }
+
+      } catch (err) {
+        console.error('Error during login', err);
+        // Aquí puedes mostrar un mensaje de error al usuario
+      }
+    });
+    
+  </script>
       <!-- Formulario de Registro -->
       <div class="form signup_form">
         <form action="#">

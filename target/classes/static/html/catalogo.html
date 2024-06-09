@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo Derozan</title>
+    <link rel="stylesheet" href="../css/catalogo.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+          <a href="#" class="nav_logo">DeRozan</a>
+    
+          <ul class="nav_items">
+            <li class="nav_item">
+              <a href="#" class="nav_link">Home</a>
+              <a href="#" class="nav_link">Sneakers</a>
+              <a href="#" class="nav_link">Services</a>
+              <a href="#" class="nav_link">Contact</a>
+            </li>
+          </ul>
+    
+          <button class="button" id="form-open">Login</button>
+        </nav>
+      </header>
+    
+      <!-- Home -->
+      <section class="home">
+        <div class="form_container">
+          <i class="uil uil-times form_close"></i>
+          <!-- Formulario de Login -->
+          <div class="form login_form">
+            <form action="#">
+              <h2>Login</h2>
+    
+              <div class="input_box">
+                <input type="email" placeholder="Introduce tu correo" required />
+                <i class="uil uil-envelope-alt email"></i>
+              </div>
+              <div class="input_box">
+                <input type="password" placeholder="Introduce tu contraseña" required />
+                <i class="uil uil-lock password"></i>
+                <i class="uil uil-eye-slash pw_hide"></i>
+              </div>
+    
+              <div class="option_field">
+                <span class="checkbox">
+                  <input type="checkbox" id="check" />
+                  <label for="check">Recordarme</label>
+                </span>
+                <a href="#" class="forgot_pw">¿Olvidaste tu contraseña?</a>
+              </div>
+    
+              <button class="button">Iniciar Sesión</button>
+    
+                <div class="login_signup">O</div>
+    
+              <button class="google">Continuar con Google</button>
+              <button class="facebook">Continuar con Facebook</button>
+                
+              <div class="login_signup">¿No tienes una cuenta? <a href="#" id="signup">Regístrate</a></div>
+              
+    
+            </form>
+          </div>
+    
+          <!-- Formulario de Registro -->
+          <div class="form signup_form">
+            <form action="#">
+              <h2>Registro</h2>
+    
+              <div class="input_box">
+                <input type="email" placeholder="Introduce tu correo" required />
+                <i class="uil uil-envelope-alt email"></i>
+              </div>
+              <div class="input_box">
+                <input type="password" placeholder="Crea una contraseña" required />
+                <i class="uil uil-lock password"></i>
+                <i class="uil uil-eye-slash pw_hide"></i>
+              </div>
+              <div class="input_box">
+                <input type="password" placeholder="Confirma tu contraseña" required />
+                <i class="uil uil-lock password"></i>
+                <i class="uil uil-eye-slash pw_hide"></i>
+              </div>
+              <button class="button">Regístrate Ahora</button>
+              <div class="login_signup">O</div>
+                
+              <button class="google">Continuar con Google</button>
+              <button class="facebook">Continuar con Facebook</button>
+                
+    
+              <div class="login_signup">¿Ya tienes una cuenta? <a href="#" id="login">Iniciar Sesión</a></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    
+    
+
+      <div class="container">
+        <div class="title-and-search">
+            <h1>SNEAKERS CATALOGO</h1>
+            <div class="search">
+                <i class='bx bx-search'></i>
+                <input type="search" placeholder="Search among 100+ products">
+            </div>
+            
+        </div>
+        <div class="content">
+            <div class="card">
+                <div class="product-img">
+                    <div class="product-detail">
+                        <span>Nike Dunk</span>
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="buttons">
+                            <div class="price">$30.99</div>
+                            <button class="cart btn">Add to cart</button>
+                            <button class="favourite"><i class='bx bx-heart' ></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="product-img">
+                    <div class="product-detail">
+                        <span>Nike Dunk</span>
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="buttons">
+                            <div class="price">$30.99</div>
+                            <button class="cart btn">Add to cart</button>
+                            <button class="favourite"><i class='bx bx-heart' ></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="product-img">
+                    <div class="product-detail">
+                        <span>Nike Dunk</span>
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="buttons">
+                            <div class="price">$30.99</div>
+                            <button class="cart btn">Add to cart</button>
+                            <button class="favourite"><i class='bx bx-heart' ></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="product-img">
+                    <div class="product-detail">
+                        <span>Nike Dunk</span>
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="buttons">
+                            <div class="price">$30.99</div>
+                            <button class="cart btn">Add to cart</button>
+                            <button class="favourite"><i class='bx bx-heart' ></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="product-img">
+                    <div class="product-detail">
+                        <span>Nike Dunk</span>
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="buttons">
+                            <div class="price">$30.99</div>
+                            <button class="cart btn">Add to cart</button>
+                            <button class="favourite"><i class='bx bx-heart' ></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="product-img">
+                    <div class="product-detail">
+                        <span>Nike Dunk</span>
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="buttons">
+                            <div class="price">$30.99</div>
+                            <button class="cart btn">Add to cart</button>
+                            <button class="favourite"><i class='bx bx-heart' ></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="product-img">
+                    <div class="product-detail">
+                        <span>Nike Dunk</span>
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="buttons">
+                            <div class="price">$30.99</div>
+                            <button class="cart btn">Add to cart</button>
+                            <button class="favourite"><i class='bx bx-heart' ></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="product-img">
+                    <div class="product-detail">
+                        <span>Nike Dunk</span>
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="buttons">
+                            <div class="price">$30.99</div>
+                            <button class="cart btn">Add to cart</button>
+                            <button class="favourite"><i class='bx bx-heart' ></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="product-img">
+                    <div class="product-detail">
+                        <span>Nike Dunk</span>
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="buttons">
+                            <div class="price">$30.99</div>
+                            <button class="cart btn">Add to cart</button>
+                            <button class="favourite"><i class='bx bx-heart' ></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="product-img">
+                    <div class="product-detail">
+                        <span>Nike Dunk</span>
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="buttons">
+                            <div class="price">$30.99</div>
+                            <button class="cart btn">Add to cart</button>
+                            <button class="favourite"><i class='bx bx-heart' ></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="product-img">
+                    <div class="product-detail">
+                        <span>Nike Dunk</span>
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="buttons">
+                            <div class="price">$30.99</div>
+                            <button class="cart btn">Add to cart</button>
+                            <button class="favourite"><i class='bx bx-heart' ></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="product-img">
+                    <div class="product-detail">
+                        <span>Nike Dunk</span>
+                        <div class="rating">
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star' ></i>
+                            <i class='bx bxs-star-half' ></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="buttons">
+                            <div class="price">$30.99</div>
+                            <button class="cart btn">Add to cart</button>
+                            <button class="favourite"><i class='bx bx-heart' ></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+
+
+
+
+
+    <footer>
+
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+
+
+        <ul class="social-media">
+            <li><a href="#"><i  class='bx bxl-twitter' ></i></a></li>
+            <li><a href="#"><i  class='bx bxl-facebook'></i></a></li>
+            <li><a href="#"><i  class='bx bxl-instagram-alt' ></i></a></li>
+        </ul>
+        
+        <ul class="menu">
+            <li><a href="../Estructura/home.html">Home</a></li>
+            <li><a href="../Estructura/contact.html">Contact</a></li>
+            <li><a href="../Estructura/aviso-de-privacidad.html">Privacy Policy</a></li>
+            <li><a href="../Estructura/politica-y-condiciones.html">Terms of Services</a></li>
+        </ul>
+
+        <p >@2024 Derozan Official | All Rights Reserved.</p>
+
+    </footer>
+    
+    <script src="./js/interaciones.js"></script>
+    <script src="./js/./script.js"></script>
+    
+
+
+</body>
+</html>
