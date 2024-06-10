@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aviso De Privacidad</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derozan Official</title>
+  
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/estilo-privacidad.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/themes/mint.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <link rel="icon" href="../Imagines/logo.png" type="image/x-icon">
+  
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-    <link rel="shortcut icon" href="imgs/D.png" />
-</head>
-
+  </head>
+  
 <body>
     <header>
         <nav class="navs">
@@ -49,15 +59,15 @@
             <i class="uil uil-times form_close"></i>
             <!-- Formulario de Login -->
             <div class="form login_form">
-                <form action="#">
+                <form action="#" id="login-form">
                     <h2>Login</h2>
 
                     <div class="input_box">
-                        <input type="email" placeholder="Introduce tu correo" required />
+                        <input type="email" id="email" placeholder="Introduce tu correo" required />
                         <i class="uil uil-envelope-alt email"></i>
                     </div>
                     <div class="input_box">
-                        <input type="password" placeholder="Introduce tu contraseña" required />
+                        <input type="password" id="password" placeholder="Introduce tu contraseña" required />
                         <i class="uil uil-lock password"></i>
                         <i class="uil uil-eye-slash pw_hide"></i>
                     </div>
@@ -70,7 +80,7 @@
                         <a href="#" class="forgot_pw">¿Olvidaste tu contraseña?</a>
                     </div>
 
-                    <button class="button">Iniciar Sesión</button>
+                    <button class="button" type="submit">Iniciar Sesión</button>
 
                     <div class="login_signup">O</div>
 
@@ -82,12 +92,46 @@
                     </div>
                 </form>
             </div>
+           
+           <script>
+                document.getElementById('login-form').addEventListener('submit', async function (e) {
+                  e.preventDefault();
+            
+                  const email = document.getElementById('email').value;
+                  const password = document.getElementById('password').value;
+            
+                  try {
+                    const response = await axios.post('/api/auth/login', {
+                      email: email,
+                      password: password
+                    });
+            
+                    if (response.status === 200) {
+                      new Noty({
+                      type: 'success',
+                      layout: 'topRight',
+                      text: 'You have been logged in successfully.',
+                      timeout: 3000
+                    }).show();
+                      // Aquí puedes redirigir al usuario o mostrar un mensaje de éxito
+                    }
+                  } catch (err) {
+                    new Noty({
+                    type: 'error',
+                    layout: 'topRight',
+                    text: 'Please check your credentials and try again.',
+                    timeout: 3000
+                  }).show();
+                    // Aquí puedes mostrar un mensaje de error al usuario
+                  }
+                });
+                
+              </script>
 
             <!-- Formulario de Registro -->
             <div class="form signup_form">
                 <form action="#">
                     <h2>Registro</h2>
-
                     <div class="input_box">
                         <input type="email" placeholder="Introduce tu correo" required />
                         <i class="uil uil-envelope-alt email"></i>

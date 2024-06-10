@@ -9,7 +9,9 @@
 
   <link rel="stylesheet" href="./css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/themes/mint.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
   <link rel="icon" href="../Imagines/logo.png" type="image/x-icon">
 
   <link rel="stylesheet"
@@ -18,6 +20,7 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 </head>
+<body>
 
 <body>
 
@@ -51,111 +54,161 @@
   <!-- Home -->
   <section class="home">
     <div class="form_container">
-      <i class="uil uil-times form_close"></i>
-      <!-- Formulario de Login -->
-      <div class="form login_form">
-        <form id="login-form">
-          <h2>Login</h2>
-          <div class="input_box">
-            <input type="email" id="email" placeholder="Introduce tu correo" required />
-            <i class="uil uil-envelope-alt email"></i>
-          </div>
-          <div class="input_box">
-            <input type="password" id="password" placeholder="Introduce tu contraseña" required />
-            <i class="uil uil-lock password"></i>
-            <i class="uil uil-eye-slash pw_hide"></i>
-          </div>
+        <i class="uil uil-times form_close"></i>
+        <!-- Formulario de Login -->
+        <div class="form login_form">
+            <form action="#" id="login-form">
+                <h2>Login</h2>
 
-          <div class="option_field">
-            <span class="checkbox">
-              <input type="checkbox" id="check" />
-              <label for="check">Recordarme</label>
-            </span>
-            <a href="#" class="forgot_pw">¿Olvidaste tu contraseña?</a>
-          </div>
+                <div class="input_box">
+                    <input type="email" id="email" placeholder="Introduce tu correo" required />
+                    <i class="uil uil-envelope-alt email"></i>
+                </div>
+                <div class="input_box">
+                    <input type="password" id="password" placeholder="Introduce tu contraseña" required />
+                    <i class="uil uil-lock password"></i>
+                    <i class="uil uil-eye-slash pw_hide"></i>
+                </div>
 
-            <button class="button" type="submit">Iniciar Sesión</button>
+                <div class="option_field">
+                    <span class="checkbox">
+                        <input type="checkbox" id="check" />
+                        <label for="check">Recordarme</label>
+                    </span>
+                    <a href="#" class="forgot_pw">¿Olvidaste tu contraseña?</a>
+                </div>
 
-          <div class="login_signup">O</div>
+                <button class="button" type="submit">Iniciar Sesión</button>
 
-          <button class="google" type="button">Continuar con Google</button>
-          <button class="facebook" type="button">Continuar con Facebook</button>
+                <div class="login_signup">O</div>
 
-          <div class="login_signup">¿No tienes una cuenta? <a href="#" id="signup">Regístrate</a></div>
-        </form>
-      </div>
-    </div>
-  </section>
+                <button class="google">Continuar con Google</button>
+                <button class="facebook">Continuar con Facebook</button>
 
-  <script>
-    document.getElementById('login-form').addEventListener('submit', async function (e) {
-      e.preventDefault();
+                <div class="login_signup">
+                    ¿No tienes una cuenta? <a href="#" id="signup">Regístrate</a>
+                </div>
+            </form>
+        </div>
+       
+       <script>
+            document.getElementById('login-form').addEventListener('submit', async function (e) {
+              e.preventDefault();
+        
+              const email = document.getElementById('email').value;
+              const password = document.getElementById('password').value;
+        
+              try {
+                const response = await axios.post('/api/auth/login', {
+                  email: email,
+                  password: password
+                });
+        
+                if (response.status === 200) {
+                  new Noty({
+                  type: 'success',
+                  layout: 'topRight',
+                  text: 'You have been logged in successfully.',
+                  timeout: 3000
+                }).show();
+                  // Aquí puedes redirigir al usuario o mostrar un mensaje de éxito
+                }
+              } catch (err) {
+                new Noty({
+                type: 'error',
+                layout: 'topRight',
+                text: 'Please check your credentials and try again.',
+                timeout: 3000
+              }).show();
+                // Aquí puedes mostrar un mensaje de error al usuario
+              }
+            });
+            
+          </script>
 
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
+        <!-- Formulario de Registro -->
+        <div class="form signup_form">
+          <form action="#" id="signup_form">
+            <h2>Registro</h2>
+            <div class="input_box">
+              <i class="uil uil-chat-bubble-user username"></i>
+              <input type="text" id="username" placeholder="Introduce tu nombre" required />
+            </div>
+            <div class="input_box">
+              <input type="email" id="email" placeholder="Introduce tu correo" required />
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" id="password" placeholder="Crea una contraseña" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+        
+            <br />
+            <div>
+              <span class="checkbox">
+                <input type="checkbox" id="privacy_policy" required />
+                <label for="privacy_policy">Acepto las
+                  <a href="./html/avisos-de-privacidad.html">Política de Privacidad</a></label>
+              </span>
+              <span class="checkbox">
+                <input type="checkbox" id="terms_conditions" required />
+                <label for="terms_conditions">He leído y acepto las
+                  <a href="./html/termino-condiciones.html">Términos y Condiciones</a></label>
+              </span>
+            </div>
+            <button class="button" type="submit">Regístrate Ahora</button>
+            <div class="login_signup">O</div>
+        
+            <button class="google" type="button">Continuar con Google</button>
+            <button class="facebook" type="button">Continuar con Facebook</button>
+            <div class="login_signup">
+              ¿Ya tienes una cuenta? <a href="#" id="login">Iniciar Sesión</a>
+            </div>
+          </form>
+        </div>
+</section>
 
-      try {
-        const response = await axios.post('/api/auth/login', {
-          email: email,
-          password: password
-        });
+<script>
+  document.getElementById('signup_form').addEventListener('submit', async function (e) {
+    e.preventDefault();
 
-        if (response.status === 200) {
-          console.log('Login successful');
-          // Aquí puedes redirigir al usuario o mostrar un mensaje de éxito
-        }
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
 
-      } catch (err) {
-        console.error('Error during login', err);
-        // Aquí puedes mostrar un mensaje de error al usuario
-      }
-    });
-    
-  </script>
-      <!-- Formulario de Registro -->
-      <div class="form signup_form">
-        <form action="#">
-          <h2>Registro</h2>
+    try {
+      const response = await axios.post('/api/users/register-user', {
+        username: username,
+        email: email,
+        password: password
+      });
 
-          <div class="input_box">
-            <input type="email" placeholder="Introduce tu correo" required />
-            <i class="uil uil-envelope-alt email"></i>
-          </div>
-          <div class="input_box">
-            <input type="password" placeholder="Crea una contraseña" required />
-            <i class="uil uil-lock password"></i>
-            <i class="uil uil-eye-slash pw_hide"></i>
-          </div>
-          <div class="input_box">
-            <input type="password" placeholder="Confirma tu contraseña" required />
-            <i class="uil uil-lock password"></i>
-            <i class="uil uil-eye-slash pw_hide"></i>
-          </div>
-          <br>
-          <div>
-            <span class="checkbox">
-              <input type="checkbox" id="check" />
-              <label for="check">Acepto las <a href="./html/avisos-de-privacidad.html">Política de
-                  Privacidad</a></label>
-            </span>
-            <span class="checkbox">
-              <input type="checkbox" id="check" />
-              <label for="check">He leido y Acepto las <a href="./html/termino-condiciones.html">Terminos y
-                  condiciones</a></label>
-            </span>
-          </div>
-          <button class="button">Regístrate Ahora</button>
-          <div class="login_signup">O</div>
-
-          <button class="google">Continuar con Google</button>
-          <button class="facebook">Continuar con Facebook</button>
-          <div class="login_signup">¿Ya tienes una cuenta? <a href="#" id="login">Iniciar Sesión</a></div>
-        </form>
-      </div>
-    </div>
-  </section>
+      new Noty({
+        type: 'success',
+        layout: 'topRight',
+        text: 'You have been signed up successfully.',
+        timeout: 3000,
+        theme: 'mint'
+      }).show();
+      // Aquí puedes redirigir al usuario o mostrar un mensaje de éxito
+    } catch (err) {
+      console.error('Error during sign up', err);
+      new Noty({
+        type: 'error',
+        layout: 'topRight',
+        text: 'Please check your credentials and try again.',
+        timeout: 3000,
+        theme: 'mint'
+      }).show();
+    }
+  });
+</script>
 
 
+<script src="./js/script.js"></script>
+
+  <!-- Recibir los datos para el login y bd -->
   <script>
     let currentSlide = 1;
     const totalSlides = 3;
@@ -190,11 +243,6 @@
 
     </div>
   </div>
-
-
-
-
-
   <section class=container-collections-derozan">
     <div class="content-collections-derozan">
       <h1>DEROZAN COLLECTIONS</h1>
