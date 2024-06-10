@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Derozan Official</title>
 
+
   <link rel="stylesheet" href="./css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.css">
@@ -19,6 +20,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -223,26 +227,27 @@
     setInterval(showNextSlide, 3000); // 1000 = 1s
   </script>
 
-  <div class="maing-home">
-    <div class="slider-1">
+<div class="maing-home">
+  <div class="slider-1">
       <input type="radio" name="slider" id="slideOne" checked>
       <input type="radio" name="slider" id="slideTwo">
       <input type="radio" name="slider" id="slideThree">
 
       <div class="buttons-pp">
-        <label for="slideOne"></label>
-        <label for="slideTwo"></label>
-        <label for="slideThree"></label>
+          <label for="slideOne"></label>
+          <label for="slideTwo"></label>
+          <label for="slideThree"></label>
       </div>
 
       <div class="content-imgs">
-        <div class="firstslide"></div>
-        <div class="secondslide"></div>
-        <div class="thirdslide"></div>
+          <div class="firstslide"></div>
+          <div class="secondslide"></div>
+          <div class="thirdslide"></div>
       </div>
-
-    </div>
   </div>
+</div>
+
+
   <section class=container-collections-derozan">
     <div class="content-collections-derozan">
       <h1>DEROZAN COLLECTIONS</h1>
@@ -303,6 +308,70 @@
 
     </div>
   </section>
+
+
+  <section class="container-discount">
+
+    <div class="banner-discount">
+      <img src="../static/img/banner2.jpg" alt="">
+        <div class="content-discount">
+            <span>limited offer</span>
+            <h3>upto 40% off</h3>
+            <button class="btn-discount">
+                <span>shop now</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="banner-discount">
+        <img src="../static/img/banner1.jpg" alt="">
+        <div class="content-discount">
+            <span>limited offer</span>
+            <h3>upto 40% off</h3>
+            <button class="btn-discount">
+                <span>shop now</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+</section>
+
+
+
+<section class="splide" aria-label="Basic Structure Example">
+  <div class="splide__track">
+    <ul class="splide__list">
+      <li class="splide__slide"><img src="../static/img/img-1.jfif" alt=""></li>
+      <li class="splide__slide"><img src="../static/img/img-2.jfif" alt=""></li>
+      <li class="splide__slide"><img src="../static/img/img-3.jfif" alt=""></li>
+      <li class="splide__slide"><img src="../static/img/img-4.jfif" alt=""></li>
+      <li class="splide__slide"><img src="../static/img/img-5.jfif" alt=""></li>
+      <li class="splide__slide"><img src="../static/img/img-6.jfif" alt=""></li>
+      <li class="splide__slide"><img src="../static/img/img-7.jfif" alt=""></li>
+      <li class="splide__slide"><img src="../static/img/img-8.jfif" alt=""></li>
+      <li class="splide__slide"><img src="../static/img/img-9.jfif" alt=""></li>
+    </ul>
+  </div>
+</section>
+  <script>
+    var splide = new Splide( '.splide', {
+    perPage: 3,
+    rewind : true,
+    type: 'loop',
+    snap: true,
+    arrows: true,
+    pagination: true,
+    autoplay: true,
+    padding: '3rem',
+    gap: '1.5rem',
+    drag: 'free',
+
+  } );
+
+  splide.mount();
+  </script>
 
 
   <footer>

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +6,31 @@
     scroll-behavior: smooth;
     list-style: none;
     text-decoration: none;
-    font-family: 'Jost', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    
+    
 }
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: #fff;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #000;
+    border-radius: .5rem;
+}
+
 
 a {
     text-decoration: none;
@@ -23,6 +47,7 @@ header {
     align-items: center;
     transition: 0.6s;
     padding: 40px 100px;
+
 }
 
 .nav {
@@ -101,7 +126,9 @@ header.sticky .nav_login {
 
 
 
-
+section{
+    padding: 0 9%;
+}
 
 
 
@@ -294,215 +321,105 @@ header.sticky .nav_login {
 
 
 
-section{
-    padding-left: 2%;
-}
 
 
-.maing-home{
+.maing-home {
     overflow: hidden;
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: gray;
     display: grid;
-    
 }
 
-.slider-1 input{
+.slider-1 input {
     visibility: hidden;
     display: none;
 }
 
-.buttons-pp{
+.buttons-pp {
     position: absolute;
     width: 100%;
     display: flex;
     justify-content: center;
     bottom: 50px;
     gap: 10px;
+    z-index: 10; /* Asegúrate de que los botones estén encima de las imágenes */
 }
 
-.buttons-pp label{
+.buttons-pp label {
     width: 20px;
     height: 20px;
     background-color: white;
     opacity: 0.5;
     cursor: pointer;
     z-index: 1;
-    transition:  300ms ease-in-out;
+    transition: 300ms ease-in-out;
 }
 
-.buttons-pp label:hover{
-    scale: 1.2;
+.buttons-pp label:hover {
+    transform: scale(1.2);
     opacity: 1;
 }
 
-.home-text input:nth-child(1):checked ~ .buttons-pp label:nth-child(1),
-.home-text input:nth-child(2):checked ~ .buttons-pp label:nth-child(2),
-.home-text input:nth-child(3):checked ~ .buttons-pp label:nth-child(3)
-{
+.maing-home input:nth-of-type(1):checked ~ .buttons-pp label:nth-of-type(1),
+.maing-home input:nth-of-type(2):checked ~ .buttons-pp label:nth-of-type(2),
+.maing-home input:nth-of-type(3):checked ~ .buttons-pp label:nth-of-type(3) {
     opacity: 1;
-    scroll-margin: 1.2;
+    transform: scale(1.2);
     width: 40px;
 }
 
-.content-imgs{
+.content-imgs {
     overflow: hidden;
-    position: relative;
+    position: absolute; /* Cambiado de relative a absolute */
+    top: 0;
+    left: 0;
     width: 300vw;
+    height: 100%; /* Asegura que las imágenes ocupen toda la altura */
     display: flex;
     transition: 400ms ease-in-out;
+    
 }
 
-.firstslide,.secondslide,.thirdslide{
+.firstslide, .secondslide, .thirdslide {
     position: relative;
     width: 100vw;
+    height: 100vh; /* Asegura que las imágenes ocupen toda la altura */
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.firstslide{
-    background-image: url(../img/slide-principal-1.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.secondslide{
+.firstslide {
     background-image: url(../img/slide-principal-1.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.thirdslide{
-    background-image: url(../img/slide-principal-1.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.secondslide {
+    background-image: url(../img/slider\ principal\ 2.jpg);
 }
 
-.slider-1 input:nth-child(1):checked ~ .content-imgs{
+.thirdslide {
+    background-image: url(../img/slider\ principal\ 3.jpg);
+}
+
+.slider-1 input:nth-of-type(1):checked ~ .content-imgs {
     left: 0;
+    background-size: cover;
 }
 
-.slider-1 input:nth-child(2):checked ~ .content-imgs{
+.slider-1 input:nth-of-type(2):checked ~ .content-imgs {
     left: -100vw;
+    background-size: cover;
 }
 
-.slider-1 input:nth-child(3):checked ~ .content-imgs{
+.slider-1 input:nth-of-type(3):checked ~ .content-imgs {
     left: -200vw;
+    background-size: cover;
 }
 
-
-
-
-.home-text h5{
-    color: black;
-    font-size: 16px;
-    text-transform: capitalize;
-    font-weight: 500;
-}
-.home-text h1{
-    color: black;
-    font-size: 65px;
-    text-transform: capitalize;
-    line-height: 1.1;
-    font-weight: 600;
-    margin: 6px 0 10px;
-
-}
-.home-text p{
-    color: black;
-    font-size: 20px;
-    font-style: italic;
-    margin-bottom: 20px;
-}
-.btn-shop{
-    display: inline-block;
-    color: black;
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: capitalize;
-    border: 2px solid #111;
-    padding: 12px 25px;
-    transition: all .42s ease;
-}
-.btn-shop:hover{
-    background-color: black;
-    color: white;
-    transition: all .42s ease;
-}
-
-.slider-imgs-main input{
-    visibility: hidden;
-    display: none;
-}
-
-.buttons{
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    bottom: 50px;
-    gap: 10px;
-}
-
-.buttons label{
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    opacity: 0.5;
-    cursor: pointer;
-    z-index: 1;
-    transition:  300ms ease-in-out;
-}
-
-.buttons label:hover{
-    scale: 1.2;
-    opacity: 1;
-}
-
-.slider-imgs-main input:nth-child(1):checked ~ .buttons label:nth-child(1),
-.slider-imgs-main input:nth-child(2):checked ~ .buttons label:nth-child(2),
-.slider-imgs-main input:nth-child(3):checked ~ .buttons label:nth-child(3)
-{
-    opacity: 1;
-    scroll-margin: 1.2;
-    width: 40px;
-}
-
-.content{
-    overflow: hidden;
-    position: relative;
-    width: 300vw;
-    display: flex;
-    transition: 400ms ease-in-out;
-}
-
-.firstslide,.secondslide,.thirdslide{
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    
-    display: flex;
-    
-}
-
-
-.slider input:nth-child(1):checked ~ .content{
-    left: 0;
-}
-
-.slider input:nth-child(2):checked ~ .content{
-    left: -100vw;
-}
-
-.slider input:nth-child(3):checked ~ .content{
-    left: -200vw;
-}
 
 
 .best-collections-container{
@@ -766,9 +683,86 @@ section{
 
 
 
+.container-discount{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.container-discount .banner-discount{
+    flex: 1 1 42rem;
+    overflow: hidden;
+    height: 20rem;
+    position: relative;
+}
+
+.container-discount .banner-discount img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container-discount .banner-discount:hover img{
+    transform: scale(1.1);
+}
+
+.container-discount .banner-discount .content-discount{
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    transform: translateY(-50%);
+}
+
+.container-discount .banner-discount .content-discount span{
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.container-discount .banner-discount .content-discount h3{
+    font-size: 2.2rem;
+    color: #45c287;
+    padding-top: .5rem;
+}
+
+.container-discount .banner-discount .content-discount .btn-discount span{
+    color: #fff;
+}
+.btn-discount{
+    height: 50px;
+    width: 200px;
+    display: flex;
+    gap: .7rem;
+    align-items: center;
+    margin-top: 1rem;
+    padding: .9rem 1rem;
+    border-radius: .5rem;
+    background: #10221b;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-discount:hover{
+    background: #219150;
+}
 
 
 
+
+
+
+
+
+
+
+
+
+
+.splide__slide img{
+    width: 425px;
+    height: 500px;
+}
 
 
 
