@@ -1,0 +1,36 @@
+.container-nose-que-vaina{
+	padding: 40px 0;
+}
+
+.container-nose-que-vaina figure{
+    display: flex;
+    justify-content: center;
+	border:2px solid #fff;
+}
+.container-nose-que-vaina figure img{
+	height: 200px;
+    width: 1500px;
+    object-fit: cover;
+	display: block;
+}
+.container-nose-que-vaina ul{
+    display: flex;
+    gap: 200px;
+    justify-content: center;
+	list-style: none;
+	margin: 0;
+	text-align: center;
+}
+.container-nose-que-vaina ul li{
+	margin: 0 5px;
+	display: inline-block;
+	width: 100px;
+	border:1px solid #fff;
+	cursor: pointer;
+}
+.container-nose-que-vaina ul li img{
+	display: block;
+    height: 200px;
+    object-fit: cover;
+}
+
