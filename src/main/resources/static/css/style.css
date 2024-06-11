@@ -791,15 +791,15 @@ section{
 	  transform: translateX(-100%);
 	}
   }
-.patrocinadores{
+.patners{
 	overflow: hidden;
 	padding: 60px 0;
 	background: var(--background-color);
 	white-space: nowrap;
 	position: relative;
   }
-  .patrocinadores::before,
-  .patrocinadores::after{
+  .patners::before,
+  .patners::after{
 	position: absolute;
 	top: 0;
 	width: 250px;
@@ -808,22 +808,22 @@ section{
 	z-index: 2;
   }
   
-  .patrocinadores::before{
+  .patners::before{
 	left: 0;
 	background: linear-gradient(to left, rgba(255, 255, 255,0), var(--background-color));
   }
-  .patrocinadores::after{
+  .patners::after{
 	right: 0;
 	background: linear-gradient(to right, rgba(255, 255, 255,0), var(--background-color));
   }
-  .patrocinadores:hover .marcas{
+  .patners:hover .brands{
 	animation-play-state: paused;
   }
-  .patrocinadores .marcas{
+  .patners .brands{
 	display: inline-block;
 	animation: 30s slide infinite linear;
   }
-  .patrocinadores .marcas img{
+  .patners .brands img{
     height: 100px;
 	margin: 0 40px;
   }
