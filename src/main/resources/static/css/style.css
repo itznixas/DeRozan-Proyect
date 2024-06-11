@@ -7,7 +7,7 @@
     list-style: none;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
-    border: none;
+
     
     
 }
@@ -295,6 +295,7 @@ section{
     width: 100%;
     padding: 11px 0;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .form_container .google {
@@ -303,6 +304,7 @@ section{
     width: 100%;
     padding: 10px 0;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .form_container .facebook {
@@ -311,12 +313,14 @@ section{
     width: 100%;
     padding: 10px 0;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .login_signup {
     font-size: 12px;
     text-align: center;
     margin-top: 15px;
+    
 }
 
 
