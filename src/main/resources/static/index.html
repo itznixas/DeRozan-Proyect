@@ -339,22 +339,25 @@
 </section>
 
 
-
-<section class="splide" aria-label="Basic Structure Example">
-  <div class="splide__track">
-    <ul class="splide__list">
-      <li class="splide__slide"><img src="../static/img/img-1.jfif" alt=""></li>
-      <li class="splide__slide"><img src="../static/img/img-2.jfif" alt=""></li>
-      <li class="splide__slide"><img src="../static/img/img-3.jfif" alt=""></li>
-      <li class="splide__slide"><img src="../static/img/img-4.jfif" alt=""></li>
-      <li class="splide__slide"><img src="../static/img/img-5.jfif" alt=""></li>
-      <li class="splide__slide"><img src="../static/img/img-6.jfif" alt=""></li>
-      <li class="splide__slide"><img src="../static/img/img-7.jfif" alt=""></li>
-      <li class="splide__slide"><img src="../static/img/img-8.jfif" alt=""></li>
-      <li class="splide__slide"><img src="../static/img/img-9.jfif" alt=""></li>
-    </ul>
+<section class="gallery-container">
+  <h1>GALLERY DEROZAN</h1>
+  <div class="splide" aria-label="Basic Structure Example">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide"><img src="../static/img/img-1.jfif" alt=""></li>
+        <li class="splide__slide"><img src="../static/img/img-2.jfif" alt=""></li>
+        <li class="splide__slide"><img src="../static/img/img-3.jfif" alt=""></li>
+        <li class="splide__slide"><img src="../static/img/img-4.jfif" alt=""></li>
+        <li class="splide__slide"><img src="../static/img/img-5.jfif" alt=""></li>
+        <li class="splide__slide"><img src="../static/img/img-6.jfif" alt=""></li>
+        <li class="splide__slide"><img src="../static/img/img-7.jfif" alt=""></li>
+        <li class="splide__slide"><img src="../static/img/img-8.jfif" alt=""></li>
+        <li class="splide__slide"><img src="../static/img/img-9.jfif" alt=""></li>
+      </ul>
+    </div>
   </div>
 </section>
+
   <script>
     var splide = new Splide( '.splide', {
     perPage: 3,
@@ -367,11 +370,42 @@
     padding: '3rem',
     gap: '1.5rem',
     drag: 'free',
+    breakpoints:{
+      640:{
+        perPage:2,
+        gap: '.7rem'
+      },
+      480:{
+        perPage:1,
+        gap: '.7rem'
+      }
+    }
 
   } );
 
   splide.mount();
   </script>
+
+
+<div class="container-nose-que-vaina">
+  <h1>not idea</h1>
+	<figure>
+		<img id="mainImg" src="../static/img/img-1.jfif">
+	</figure>
+
+	<ul>
+		<li><img id="thumb1" src="../static/img/img-1.jfif"></li>
+		<li><img id="thumb2" src="../static/img/img-4.jfif"></li>
+		<li><img id="thumb3" src="../static/img/img-2.jfif"></li>
+		<li><img id="thumb4" src="../static/img/img-3.jfif"></li>
+	</ul>
+
+</div>
+<script src="js/thumb.js">
+
+</script>
+
+
 
 
   <footer>
