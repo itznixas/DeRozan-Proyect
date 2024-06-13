@@ -56,19 +56,20 @@
   </script>
 
   <!-- Home -->
-  <div class="home">
+  <section class="home">
     <div class="form_container">
         <i class="uil uil-times form_close"></i>
         <!-- Formulario de Login -->
+        <div class="form login_form">
             <form action="#" id="login-form">
                 <h2>Login</h2>
 
                 <div class="input_box">
-                    <input type="email" id="login_email" placeholder="Introduce tu correo" required />
+                    <input type="email" id="email" placeholder="Introduce tu correo" required />
                     <i class="uil uil-envelope-alt email"></i>
                 </div>
                 <div class="input_box">
-                    <input type="password" id="login_password" placeholder="Introduce tu contraseña" required />
+                    <input type="password" id="password" placeholder="Introduce tu contraseña" required />
                     <i class="uil uil-lock password"></i>
                     <i class="uil uil-eye-slash pw_hide"></i>
                 </div>
@@ -92,56 +93,52 @@
                     ¿No tienes una cuenta? <a href="#" id="signup">Regístrate</a>
                 </div>
             </form>
-          </div>
-
-       <script src="./js/loginAut.js"></script>
-
+        </div>
         <!-- Formulario de Registro -->
         <div class="form signup_form">
-          <form action="#" id="signup_form">
-            <h2>Registro</h2>
-            <div class="input_box">
-              <i class="uil uil-chat-bubble-user username"></i>
-              <input type="text" id="signup_username" placeholder="Introduce tu nombre" required />
-            </div>
-            <div class="input_box">
-              <input type="email" id="signup_email" placeholder="Introduce tu correo" required />
-              <i class="uil uil-envelope-alt email"></i>
-            </div>
-            <div class="input_box">
-              <input type="password" id="signup_password" placeholder="Crea una contraseña" required />
-              <i class="uil uil-lock password"></i>
-              <i class="uil uil-eye-slash pw_hide"></i>
-            </div>
+            <form action="#" id="signup_form">
+              <h2>Registro</h2>
+              <div class="input_box">
+                <i class="uil uil-chat-bubble-user username"></i>
+                <input type="text" id="signup_username" placeholder="Introduce tu nombre" required />
+              </div>
+              <div class="input_box">
+                <input type="email" id="signup_email" placeholder="Introduce tu correo" required />
+                <i class="uil uil-envelope-alt email"></i>
+              </div>
+              <div class="input_box">
+                <input type="password" id="signup_password" placeholder="Crea una contraseña" required />
+                <i class="uil uil-lock password"></i>
+                <i class="uil uil-eye-slash pw_hide"></i>
+              </div>
+  
+              <br />
+              <div>
+                <span class="checkbox">
+                  <input type="checkbox" id="privacy_policy" required />
+                  <label for="privacy_policy">Acepto las
+                    <a href="./html/avisos-de-privacidad.html">Política de Privacidad</a></label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="terms_conditions" required />
+                  <label for="terms_conditions">He leído y acepto las
+                    <a href="./html/termino-condiciones.html">Términos y Condiciones</a></label>
+                </span>
+              </div>
+              <button class="button" type="submit">Regístrate Ahora</button>
+              <div class="login_signup">O</div>
+  
+              <button class="google" type="button">Continuar con Google</button>
+              <button class="facebook" type="button">Continuar con Facebook</button>
+              <div class="login_signup">
+                ¿Ya tienes una cuenta? <a href="#" id="login">Iniciar Sesión</a>
+              </div>
+            </form>
+          </div>
+</section>
 
-            <br />
-            <div>
-              <span class="checkbox">
-                <input type="checkbox" id="privacy_policy" required />
-                <label for="privacy_policy">Acepto las
-                  <a href="./html/avisos-de-privacidad.html">Política de Privacidad</a></label>
-              </span>
-              <span class="checkbox">
-                <input type="checkbox" id="terms_conditions" required />
-                <label for="terms_conditions">He leído y acepto las
-                  <a href="./html/termino-condiciones.html">Términos y Condiciones</a></label>
-              </span>
-            </div>
-            <button class="button" type="submit">Regístrate Ahora</button>
-            <div class="login_signup">O</div>
-
-            <button class="google" type="button">Continuar con Google</button>
-            <button class="facebook" type="button">Continuar con Facebook</button>
-            <div class="login_signup">
-              ¿Ya tienes una cuenta? <a href="#" id="login">Iniciar Sesión</a>
-            </div>
-          </form>
-        </div>
-  </section>
-
-  <script src="./js/signupAut.js"></script>
-
-
+<script src="./js/signupAut.js"></script>
+<script src="./js/loginAut.js"></script>
 <script src="./js/script.js"></script>
 
   <!-- Recibir los datos para el login y bd -->
