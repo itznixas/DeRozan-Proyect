@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Derozan Official</title>
 
+
   <link rel="stylesheet" href="./css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.css">
@@ -19,6 +20,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -61,11 +65,11 @@
                 <h2>Login</h2>
 
                 <div class="input_box">
-                    <input type="email" id="login_email" placeholder="Introduce tu correo" required />
+                    <input type="email" id="email" placeholder="Introduce tu correo" required />
                     <i class="uil uil-envelope-alt email"></i>
                 </div>
                 <div class="input_box">
-                    <input type="password" id="login_password" placeholder="Introduce tu contraseña" required />
+                    <input type="password" id="password" placeholder="Introduce tu contraseña" required />
                     <i class="uil uil-lock password"></i>
                     <i class="uil uil-eye-slash pw_hide"></i>
                 </div>
@@ -90,122 +94,51 @@
                 </div>
             </form>
         </div>
-
-       <script>
-            document.getElementById('login-form').addEventListener('submit', async function (e) {
-              e.preventDefault();
-
-              const email = document.getElementById('login_email').value;
-              const password = document.getElementById('login_password').value;
-
-              try {
-                const response = await axios.post('/api/auth/login', {
-                  email: email,
-                  password: password
-                });
-
-                if (response.status === 200) {
-                  new Noty({
-                  type: 'success',
-                  layout: 'topRight',
-                  text: 'You have been logged in successfully.',
-                  timeout: 3000
-                }).show();
-                  // Aquí puedes redirigir al usuario o mostrar un mensaje de éxito
-                }
-              } catch (err) {
-                new Noty({
-                type: 'error',
-                layout: 'topRight',
-                text: 'Please check your credentials and try again.',
-                timeout: 3000
-              }).show();
-                // Aquí puedes mostrar un mensaje de error al usuario
-              }
-            });
-
-          </script>
-
         <!-- Formulario de Registro -->
         <div class="form signup_form">
-          <form action="#" id="signup_form">
-            <h2>Registro</h2>
-            <div class="input_box">
-              <i class="uil uil-chat-bubble-user username"></i>
-              <input type="text" id="signup_username" placeholder="Introduce tu nombre" required />
-            </div>
-            <div class="input_box">
-              <input type="email" id="signup_email" placeholder="Introduce tu correo" required />
-              <i class="uil uil-envelope-alt email"></i>
-            </div>
-            <div class="input_box">
-              <input type="password" id="signup_password" placeholder="Crea una contraseña" required />
-              <i class="uil uil-lock password"></i>
-              <i class="uil uil-eye-slash pw_hide"></i>
-            </div>
+            <form action="#" id="signup_form">
+              <h2>Registro</h2>
+              <div class="input_box">
+                <i class="uil uil-chat-bubble-user username"></i>
+                <input type="text" id="signup_username" placeholder="Introduce tu nombre" required />
+              </div>
+              <div class="input_box">
+                <input type="email" id="signup_email" placeholder="Introduce tu correo" required />
+                <i class="uil uil-envelope-alt email"></i>
+              </div>
+              <div class="input_box">
+                <input type="password" id="signup_password" placeholder="Crea una contraseña" required />
+                <i class="uil uil-lock password"></i>
+                <i class="uil uil-eye-slash pw_hide"></i>
+              </div>
+  
+              <br />
+              <div>
+                <span class="checkbox">
+                  <input type="checkbox" id="privacy_policy" required />
+                  <label for="privacy_policy">Acepto las
+                    <a href="./html/avisos-de-privacidad.html">Política de Privacidad</a></label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" id="terms_conditions" required />
+                  <label for="terms_conditions">He leído y acepto las
+                    <a href="./html/termino-condiciones.html">Términos y Condiciones</a></label>
+                </span>
+              </div>
+              <button class="button" type="submit">Regístrate Ahora</button>
+              <div class="login_signup">O</div>
+  
+              <button class="google" type="button">Continuar con Google</button>
+              <button class="facebook" type="button">Continuar con Facebook</button>
+              <div class="login_signup">
+                ¿Ya tienes una cuenta? <a href="#" id="login">Iniciar Sesión</a>
+              </div>
+            </form>
+          </div>
+</section>
 
-            <br />
-            <div>
-              <span class="checkbox">
-                <input type="checkbox" id="privacy_policy" required />
-                <label for="privacy_policy">Acepto las
-                  <a href="./html/avisos-de-privacidad.html">Política de Privacidad</a></label>
-              </span>
-              <span class="checkbox">
-                <input type="checkbox" id="terms_conditions" required />
-                <label for="terms_conditions">He leído y acepto las
-                  <a href="./html/termino-condiciones.html">Términos y Condiciones</a></label>
-              </span>
-            </div>
-            <button class="button" type="submit">Regístrate Ahora</button>
-            <div class="login_signup">O</div>
-
-            <button class="google" type="button">Continuar con Google</button>
-            <button class="facebook" type="button">Continuar con Facebook</button>
-            <div class="login_signup">
-              ¿Ya tienes una cuenta? <a href="#" id="login">Iniciar Sesión</a>
-            </div>
-          </form>
-        </div>
-  </section>
-
-  <script>
-  document.getElementById('signup_form').addEventListener('submit', async function (e) {
-    e.preventDefault();
-
-    const username = document.getElementById('signup_username').value;
-    const email = document.getElementById('signup_email').value;
-    const password = document.getElementById('signup_password').value;
-
-    try {
-      const response = await axios.post('/api/users/register-user', {
-        name: username,
-        email: email,
-        password: password
-      });
-
-      new Noty({
-        type: 'success',
-        layout: 'topRight',
-        text: 'You have been signed up successfully.',
-        timeout: 3000,
-        theme: 'mint'
-      }).show();
-      // Aquí puedes redirigir al usuario o mostrar un mensaje de éxito
-    } catch (err) {
-      console.error('Error during sign up', err);
-      new Noty({
-        type: 'error',
-        layout: 'topRight',
-        text: 'Please check your credentials and try again.',
-        timeout: 3000,
-        theme: 'mint'
-      }).show();
-    }
-  });
-</script>
-
-
+<script src="./js/signupAut.js"></script>
+<script src="./js/loginAut.js"></script>
 <script src="./js/script.js"></script>
 
   <!-- Recibir los datos para el login y bd -->
@@ -223,86 +156,214 @@
     setInterval(showNextSlide, 3000); // 1000 = 1s
   </script>
 
-  <div class="maing-home">
-    <div class="slider-1">
+<div class="maing-home">
+  <div class="slider-1">
       <input type="radio" name="slider" id="slideOne" checked>
       <input type="radio" name="slider" id="slideTwo">
       <input type="radio" name="slider" id="slideThree">
 
       <div class="buttons-pp">
-        <label for="slideOne"></label>
-        <label for="slideTwo"></label>
-        <label for="slideThree"></label>
+          <label for="slideOne"></label>
+          <label for="slideTwo"></label>
+          <label for="slideThree"></label>
       </div>
 
       <div class="content-imgs">
-        <div class="firstslide"></div>
-        <div class="secondslide"></div>
-        <div class="thirdslide"></div>
+          <div class="firstslide"></div>
+          <div class="secondslide"></div>
+          <div class="thirdslide"></div>
       </div>
-
-    </div>
   </div>
+</div>
+
+
   <section class=container-collections-derozan">
     <div class="content-collections-derozan">
       <h1>DEROZAN COLLECTIONS</h1>
       <div class="row-collections-derozan">
         <div class="image-collections-derozan">
-          <a href="https://www.nike.com/es/"><img src="./img/marca1.jfif" alt="nike"></a>
+          <a href="https://www.nike.com/es/"><img src="./img/Cristiano Ronaldo.jpg" alt="nike"></a>
         </div>
         <div class="image-collections-derozan">
-          <a href="https://www.adidas.co/"><img src="./img/marca2.jfif" alt="adidas"></a>
+          <a href="https://www.adidas.co/"><img src="./img/adidas+messi.jpg" alt="adidas"></a>
         </div>
         <div class="image-collections-derozan">
-          <a href="https://us.puma.com/us/es"><img src="./img/marca3.jfif" alt="pumas"></a>
+          <a href="https://us.puma.com/us/es"><img src="./img/PUMA - This is my flow.jpg" alt="pumas"></a>
         </div>
       </div>
     </div>
   </section>
 
+
+
+
   <section class="container-best-products">
-    <h1>New Collection</h1>
-    <p>I invite you to enjoy the DEROZAN collection now</p>
+    <h1>TRENDS IN DEROZAN</h1>
+
     <div class="content-best-products">
 
-      <div class="card-best-products">
-        <div class="img-top-product">
-          <img src="../static/img/sakura.png" alt="">
-        </div>
-        <div class="text-contet-product">
-          <p>NIKE</p>
-          <h1>R698 MID - SAKURA</h1>
-          <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
-          <button>$220 - ADD TO CART</button>
-        </div>
-      </div>
+      
 
       <div class="card-best-products">
         <div class="img-top-product">
-          <img src="../Imagines/image-removebg-preview (1).png" alt="">
-        </div>
-        <div class="text-contet-product">
-          <p>NIKE</p>
-          <h1>AIR MAX 90 INFRARED</h1>
-          <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
-          <button>$129 - ADD TO CART</button>
-        </div>
-      </div>
-
-      <div class="card-best-products">
-        <div class="img-top-product">
-          <img src="../Imagines/image-removebg-preview (1).png" alt="">
+          <img src="../static/img/Adidas-Forum-Low-CL-Shoes-Core-White-IH7830-400x400.png" alt="">
         </div>
         <div class="text-contet-product">
           <p>NIKE</p>
           <h1>YEEZY BOOTS 350</h1>
-          <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
           <button>$110 - ADD TO CART</button>
         </div>
       </div>
 
+      <div class="card-best-products">
+        <div class="img-top-product">
+          <img src="../static/img/Adidas-Forum-Low-CL-Shoes-Core-White-IH7830-400x400.png" alt="">
+        </div>
+        <div class="text-contet-product">
+          <p>NIKE</p>
+          <h1>YEEZY BOOTS 350</h1>
+          <button>$110 - ADD TO CART</button>
+        </div>
+      </div>
+
+      <div class="card-best-products">
+        <div class="img-top-product">
+          <img src="../static/img/Adidas-Forum-Low-CL-Shoes-Core-White-IH7830-400x400.png" alt="">
+        </div>
+        <div class="text-contet-product">
+          <p>NIKE</p>
+          <h1>YEEZY BOOTS 350</h1>
+          <button>$110 - ADD TO CART</button>
+        </div>
+      </div>
+
+      <div class="card-best-products">
+        <div class="img-top-product">
+          <img src="../static/img/Adidas-Forum-Low-CL-Shoes-Core-White-IH7830-400x400.png" alt="">
+        </div>
+        <div class="text-contet-product">
+          <p>NIKE</p>
+          <h1>YEEZY BOOTS 350</h1>
+          <button>$110 - ADD TO CART</button>
+        </div>
+      </div>
+
+      
+
     </div>
   </section>
+
+
+  <section class="container-discount">
+
+    <div class="banner-discount">
+      <img src="../static/img/banner-discount1.png" alt="">
+        <div class="content-discount">
+            <span>Limited offer</span>
+            <h3>40% Disccount</h3>
+            <button class="btn-discount">
+                <span>View Now</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="banner-discount">
+        <img src="../static/img/banner-discount2.png" alt="">
+        <div class="content-discount">
+            <span>limited offer</span>
+            <h3>40% Discount</h3>
+            <button class="btn-discount">
+                <span>View Now</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="gallery-container">
+  <h1>GALLERY DEROZAN</h1>
+  <div class="splide" aria-label="Basic Structure Example">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide"><img src="../static/img/img-1.jfif" alt=""></li>
+        <li class="splide__slide"><img src="../static/img/img-2.jfif" alt=""></li>
+        <li class="splide__slide"><img src="../static/img/img-3.jfif" alt=""></li>
+        <li class="splide__slide"><img src="../static/img/img-4.jfif" alt=""></li>
+        <li class="splide__slide"><img src="../static/img/img-5.jfif" alt=""></li>
+        <li class="splide__slide"><img src="../static/img/img-6.jfif" alt=""></li>
+        <li class="splide__slide"><img src="../static/img/img-7.jfif" alt=""></li>
+        <li class="splide__slide"><img src="../static/img/img-8.jfif" alt=""></li>
+        <li class="splide__slide"><img src="../static/img/img-9.jfif" alt=""></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  <script>
+    var splide = new Splide( '.splide', {
+    perPage: 3,
+    rewind : true,
+    type: 'loop',
+    snap: true,
+    arrows: true,
+    pagination: true,
+    autoplay: true,
+    padding: '3rem',
+    gap: '1.5rem',
+    drag: 'free',
+    breakpoints:{
+      640:{
+        perPage:2,
+        gap: '.7rem'
+      },
+      480:{
+        perPage:1,
+        gap: '.7rem'
+      }
+    }
+
+  } );
+
+  splide.mount();
+  </script>
+
+
+
+
+
+
+<section class="patners">
+	<div class="brands">
+	  <img src="../static/img/brand-adidas.svg">
+	  <img src="../static/img/brand-nike.svg">
+	  <img src="../static/img/brand-puma.svg">
+	  <img src="../static/img/brand-reebok.svg">
+    <img src="../static/img/brand-adidas.svg">
+	  <img src="../static/img/brand-nike.svg">
+	  <img src="../static/img/brand-puma.svg">
+	  <img src="../static/img/brand-reebok.svg">
+	</div>
+	<div class="brands">
+	  <img src="../static/img/brand-adidas.svg">
+	  <img src="../static/img/brand-nike.svg">
+	  <img src="../static/img/brand-puma.svg">
+	  <img src="../static/img/brand-reebok.svg">
+    <img src="../static/img/brand-adidas.svg">
+	  <img src="../static/img/brand-nike.svg">
+	  <img src="../static/img/brand-puma.svg">
+	  <img src="../static/img/brand-reebok.svg">
+	</div>
+  </section>
+
+
+
+
+
+
+
 
 
   <footer>
