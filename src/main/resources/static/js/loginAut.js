@@ -12,7 +12,7 @@ document.getElementById('login-form').addEventListener('submit', async function 
 
     if (response.status === 200) {
       const roleId = response.data.roleId; // Obtener el ID del rol desde la respuesta
-
+     
       // Verificar el ID del rol y mostrar la interfaz correspondiente
 
       updateNavbar(roleId);
