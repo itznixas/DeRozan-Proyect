@@ -11,7 +11,6 @@ document.getElementById('signup_form').addEventListener('submit', async function
         email: email,
         password: password
       });
-
       new Noty({
         type: 'success',
         layout: 'topRight',

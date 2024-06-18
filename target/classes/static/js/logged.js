@@ -27,5 +27,6 @@ window.addEventListener('load', function() {
       document.getElementById('user-nav').style.display = 'none';
       document.getElementById('super-nav').style.display = 'none';
       document.getElementById('admin-nav').style.display = 'none';
+      document.getElementById('homeLogin').style.display = 'block';
   }
 });

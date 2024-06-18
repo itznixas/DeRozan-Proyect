@@ -15,13 +15,14 @@ document.getElementById('login-form').addEventListener('submit', async function 
      
       // Verificar el ID del rol y mostrar la interfaz correspondiente
 
-      updateNavbar(roleId);
-
+      updateNavbar(roleId, email);
+      
       new Noty({
         type: 'success',
         layout: 'topRight',
         text: 'You have been logged in successfully.',
         timeout: 300
+        
       }).show();
 
     } else {
@@ -42,7 +43,7 @@ document.getElementById('login-form').addEventListener('submit', async function 
   }
 });
 
-function updateNavbar(roleId) {
+function updateNavbar(roleId, email) {
 
   document.getElementById('guest-nav').style.display = 'none';
   document.getElementById('user-nav').style.display = 'none';
@@ -52,16 +53,19 @@ function updateNavbar(roleId) {
 
   if (roleId === 1) { 
     document.getElementById('user-nav').style.display = 'block';
+    document.getElementById('homeLogin').style.display = 'none';
     localStorage.setItem('isLoggedIn', 'true');
     console.log('Mostrar interfaz para clientes (ID 1)');
     return;
   } if (roleId === 2) {
     localStorage.setItem('isLoggedInAD', 'true')
     document.getElementById('admin-nav').style.display = 'block';
+    document.getElementById('homeLogin').style.display = 'none';
     console.log('Mostrar interfaz para administradores (ID 2)');
     return;
   } if (roleId === 3) { 
     document.getElementById('super-nav').style.display = 'block';
+    document.getElementById('homeLogin').style.display = 'none';
     localStorage.setItem('isLoggedInSA', 'true');
     console.log('Mostrar interfaz para super-administradores (ID 3)');
     return;
