@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Jost',sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+}
+
+.nav {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav,
+.nav_item {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_logo,
+.nav_link,
+.nav_login {
+    color: #fff;
+}
+
+.nav_logo {
+    font-size: 2em;
+}
+
+.nav_item {
+    column-gap: 25px;
+}
+
+.nav_link:hover {
+    color: #383636;
+}
+
+.nav_login_container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav_login {
+    padding: 4px 12px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+    box-shadow: none;
+}
+
+.nav_login:hover {
+    color: #383636;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+
+header.sticky {
+    padding: 5px 10%;
+    background-color: #fff;
+}
+
+header.sticky .nav_items li a {
+    color: #000;
+}
+
+header.sticky .nav_logo {
+    color: #000;
+}
+
+header.sticky .nav_login {
+    color: #000;
+}
+
+
+
+
+.title-and-search{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.title-and-search input{
+    background-image: url(../img/search.png);
+    background-position:  10px;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+    height: 40px;
+    width: 650px;
+    padding-left: 50px;
+}
+
+
+.filters{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+
+.buttons-filter{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.buttons-filter button{
+    padding: 10px 20px;
+    cursor: pointer;
+    color: black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+}
+.buttons-filter button:active{
+    color: white;
+    background-color: black;
+
+}
+
+
+
+
+
+
+
+
+
+
+.products-content{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; 
+    max-width: 1340px;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display:flex;
+}
+
+
+.card{
+    width: 300px;
+    height: 420px;
+    position: relative;
+    background-color: whitesmoke;
+}
+.hide {
+    display: none;
+}
+
+
+
+.product-img{
+    width: 300px;
+    height: 230px;
+    background-image: url(../img/air-jordan-1-low-se-zapatillas-vXjrg8.png);
+    background-repeat: no-repeat;
+    background-position: 0 -75px;
+    background-size:  cover;
+}
+.product-img:hover{
+    filter: brightness(0.9);
+}
+.product-detail{
+
+    position: absolute;
+    bottom: 0;
+    transform: translateY(0%);
+    border-radius: 20px 50% 0 0; 
+    padding: 1rem;
+
+    width: 300px;
+    height: 190px;
+    background-color: #21222d;
+    border-radius: 0 40% 0 0;
+    padding: 0.8rem;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+.rating{
+    font-size: 0.7rem;
+    color: #fdcc0d;
+    user-select: none;
+
+}
+
+.product-detail p{
+    font-size: 0.8rem;
+    color: #5f5f6b;
+    margin-top: 15px;
+
+}
+.buttons{
+
+    height: 65px;
+    margin-top: 15px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+
+}
+.price{
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 20px;
+
+}
+
+.btn{
+    position: relative;
+    border: none;
+    outline: none;
+    background-color: #35353f;
+    color: #fff;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+
+}
+.cart{
+    width: 160px;
+
+}
+
+.favourite{
+    border: 1px solid #35353f;
+    color: white;
+    background-color: #35353f;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #35353f;
+    height: 45px;
+    transition: 0.3s;
+}
+.cart::before{
+    width: 165px;
+    border-radius: 50px;
+
+}
+.favourite::before{
+    width: 45px;
+    border-radius: 50%;
+}
+.btn:hover::before{
+    border-color: #fff;
+}
+
+
+
+footer{
+
+    padding: 20px 50px;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    margin-top: 200px;
+    height: 300px;
+
+    background-color: #3586FF; 
+    color: white;
+    text-align: center;
+    
+}
+footer .social-media, .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+
+}
+footer .social-media li{
+    list-style: none;
+}
+footer .social-media li a{
+    font-size: 4em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+footer .social-media li a:hover{
+    transform: translateY(-10px);
+}
+
+footer .menu li a{
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    opacity: 1;
+}
+
+footer .menu li a:hover{
+
+    transform: translateY(-10px);
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+footer .wave{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background:  url(../Imagines/wave.png);
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_02 4s linear infinite;
+}
+
+footer .wave#wave3{
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4{
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_02 3s linear infinite;
+}
+
+@keyframes animateWave {
+    0%{
+        background-position: 1000px;
+    }
+
+    100%{
+        background-position: 0;
+    }
+}
+
+@keyframes animateWave_02 {
+    0%{
+        background-position: 0;
+    }
+
+    100%{
+        background-position: 1000px;
+    }
+}
