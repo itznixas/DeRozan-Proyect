@@ -97,23 +97,16 @@
 
   <script src="./js/logout.js"></script>
   <script src="./js/logged.js"></script>
- 
-
-  <script type="text/javascript">
-    window.addEventListener("scroll", function () {
-      var header = document.querySelector("header");
-      header.classList.toggle("sticky", window.scrollY > 0)
-    })
-  </script>
+ <script src="./js/scroll.js"></script>
 
   <!-- Home -->
-<div class="home">
+<div class="home" id="homeLogin">
     <div class="form_container">
         <div class="button_box">
             <div class="slider_button"></div>
             <button type="button" class="signup_button">LOGIN</button>
             <button type="button" class="login_button">REGISTER</button>
-            <i class="uil uil-times form_close"></i>
+            <i class="uil uil-times form_close" style="color: rgb(111, 111, 133);"></i>
         </div>
         
         <div class="form_box">
@@ -183,28 +176,8 @@
 </div>
 
   <script src="js/script.js"></script>
-  <script>
-    let slider_button = document.querySelector(".slider_button");
-    let signup_button = document.querySelector(".signup_button");
-    let login_button = document.querySelector(".login_button");
-    let form_slider = document.querySelector(".form_slider");
-
-    signup_button.style.color = "#fff";
-
-    login_button.onclick = function () {
-        slider_button.style.left = "50%";
-        login_button.style.color = "#fff";
-        signup_button.style.color = "#000";
-        form_slider.style.left = "-100%";
-    }
-    signup_button.onclick = function () {
-        slider_button.style.left = "0%";
-        signup_button.style.color = "#fff";
-        login_button.style.color = "#000";
-        form_slider.style.left = "0%";
-    }
-</script>
-
+  
+  <script src="./js/buttom-login.js"></script>
 </script>
 
 <script src="./js/signupAut.js"></script>

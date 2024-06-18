@@ -274,7 +274,7 @@ section{
     position: absolute;
     width: 50%;
     height: 100%;
-    background: linear-gradient(to bottom right, blue, pink); /* Ajusta esto al color de fondo que prefieras */
+    background: linear-gradient(to bottom right, rgb(97, 97, 97), rgb(50, 38, 40)); /* Ajusta esto al color de fondo que prefieras */
     z-index: -1;
     border-radius: 5px;
     left: 0px;
@@ -342,7 +342,7 @@ section{
 }
 
 #loginBtn{
-    background: linear-gradient(to right, blue, pink);
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(40, 38, 39));
     color: white;
     height: 40px;
     width: 100%;
@@ -373,7 +373,7 @@ section{
 }
 
 #signup_form .button{
-    background: linear-gradient(to right, blue, pink);
+    background: linear-gradient(to right, rgb(49, 49, 49), rgb(59, 58, 58));
     color: white;
     height: 40px;
     width: 100%;
