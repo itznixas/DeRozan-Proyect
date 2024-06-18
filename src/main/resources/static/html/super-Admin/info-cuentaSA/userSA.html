@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prueba</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../css/super-adminCSS/info-cuentaSA/cuentaSA.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+
+
+<body>
+    <div class="menu-container">
+        <div class="menu">
+            <!-- Opciones del menú -->
+            <label id="logo">DEROZAN</label>
+            <div class="options-menu">
+                <button onclick="mostrarContenido('opcion1')">Profile</button>
+                <button onclick="mostrarContenido('opcion2')">Security</button>
+                <button onclick="mostrarContenido('opcion3')">Password</button>
+                <button onclick="mostrarContenido('opcion4')">Log Out</button>
+            </div>
+        </div>
+        <div class="contenido">
+            <div id="opcion1" style="display: block;">
+                <label for="dsasdasda">PROFILE SETTINGS</label>
+                <div class="form-inputs">
+                    <div class="row-1-column">
+                        <div class="column-all">
+                            <label for="">First Name</label>
+                            <input type="text">
+                        </div>
+                        <div class="column-all">
+                            <label for="">Last Name</label>
+                            <input type="text">
+                        </div>
+                        
+                    </div>
+                    <div class="row-2-column">
+                        <div class="column-all">
+                            <label for="">Email</label>
+                            <input type="text">
+                        </div>
+                        <div class="column-all">
+                            <label for="">Phone Number</label>
+                            <input type="text">
+                        </div>
+
+                    </div>
+                    
+                    <div class="row-3-column">
+                        <div class="column-all">
+                            <label for="">Date or Birth</label>
+                            <input type="text">
+                        </div>
+                        <div class="column-all">
+                            <label for="">Dni</label>
+                        <input type="text">
+                        </div>
+                    </div>
+                    <div class="row-4-column">
+                        <div class="column-all">
+                            <label for="">Bio</label>
+                            <input id="bio"   type="text">
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            <div id="opcion2" style="display: none;">Contenido de la Opción 2</div>
+            <div id="opcion3" style="display: none;"></div>
+            <div id="opcion4" style="display: none;">Contenido de la Opción 4</div>
+        </div>
+    </div>
+
+    <script>
+        function mostrarContenido(opcion) {
+        // Oculta todos los contenidos
+        const contenidos = document.querySelectorAll('.contenido > div');
+        contenidos.forEach(c => c.style.display = 'none');
+
+        // Muestra el contenido de la opción seleccionada
+        document.getElementById(opcion).style.display = 'block';
+    } 
+    </script>
+</body>
+</html>

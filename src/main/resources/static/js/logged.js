@@ -9,18 +9,18 @@ window.addEventListener('load', function() {
       document.getElementById('user-nav').style.display = 'none';
       document.getElementById('admin-nav').style.display = 'none';
       document.getElementById('super-nav').style.display = 'block';
-      
-  } if (isLoggedIn === 'true') {
+          
+  } else if (isLoggedIn === 'true') {
       document.getElementById('guest-nav').style.display = 'none';
       document.getElementById('user-nav').style.display = 'block';
       document.getElementById('super-nav').style.display = 'none';
-      
-  }if (isLoggedInAD === 'true') {
+       
+  } else if (isLoggedInAD === 'true') {
     document.getElementById('guest-nav').style.display = 'none';
       document.getElementById('user-nav').style.display = 'none';
       document.getElementById('admin-nav').style.display = 'block';
       document.getElementById('super-nav').style.display = 'none';
-      
+     
   } 
   else {
       document.getElementById('guest-nav').style.display = 'block';
