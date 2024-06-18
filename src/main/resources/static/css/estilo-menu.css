@@ -1,0 +1,94 @@
+body {
+    font-family: 'Poppins';font-size: 22px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.menu {
+    display: block;
+}
+
+#logo{
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+}
+.menu{
+    width: 290px;
+    background-color: rgba(245,245,245);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.menu .options-menu{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+}
+.options-menu button{
+    font-size: 20px;
+    border: none;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: 0.4s;
+}
+.options-menu button{
+    background-color: rgba(245,245,245);;
+    text-align: start;
+}
+.options-menu button:active{
+    background-color: rgba(56, 136, 255);
+    color: white;
+}
+button:focus{
+    background-color: rgba(56, 136, 255);
+    color: white;
+}
+.contenido{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form-inputs{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-direction: column;
+    height: 100%;
+    background-color:white;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    
+}
+.form-inputs input{
+    height: 40px;
+    width: 500px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.row-1-column, .row-2-column, .row-3-column{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+.column-all{
+    display: flex;
+    flex-direction: column;
+}
+
+
