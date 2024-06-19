@@ -3,71 +3,407 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>prueba</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings User</title>
     <link rel="stylesheet" href="../css/estilo-menu.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
 
 <body>
+    <header>
+        <nav class="nav" id="navbar">
+            <a href="index.html" class="nav_logo">DEROZAN</a>
+            <ul class="nav_items">
+                <li class="nav_item">
+                    <a href="index.html" class="nav_link">HOME</a>
+                    <a href="./html/catalogo.html" class="nav_link">SNEAKERS</a>
+                    <a href="a.html" class="nav_link">SERVICES</a>
+                    <a href="./html/contacto.html" class="nav_link">CONTACT</a>
+                </li>
+            </ul>
+    
+            <div id="guest-nav" style="display: block;" >
+                <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
+                <button class="nav_login"><i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
+                <button class="nav_login" id="form-open"><i class="fa-regular fa-user"></i></button>
+            </div>
+        
+            <div id="user-nav" style="display: none;">
+                <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
+                <button class="nav_login"><i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
+                <div class="nav_login user-menu">
+                    <button id="user-btn"><i class="fa-solid fa-user"></i></button>
+                    <div class="dropdown-content">
+                    <a href="#">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="#" id="logout-btn">Logout</a>
+                    </div>
+                </div>
+            </div>
+        
+            <div id="admin-nav" style="display: none;">
+                <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
+                <button class="nav_login"><i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
+                <div class="nav_login user-menu">
+                    <button id="user-btn"><i class="fa-solid fa-user"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#">Profile</a>
+                        <a href="#">Settings</a>
+                        <a href="#">Admin</a>
+                        <a href="#" id="logout-btnAD">Logout</a>
+                    </div>
+                </div>
+            </div>
+        
+            <div id="super-nav" style="display: none;">
+                <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
+                <button class="nav_login"><i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
+                <div class="nav_login user-menu">
+                    <button id="user-btn"><i class="fa-solid fa-user"></i></button>
+                    <div class="dropdown-content">
+                    <a href="#">Profile</a>           
+                    <a href="./html/super-Admin/principalSA.html">admin</a>
+                    <a href="html/super-Admin/info-cuentaSA/userSA.html">Setting</a>
+                    <a href="#" id="logout-btnSA">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- CONTENEDOR PRINCIPAL-->
     <div class="menu-container">
         <div class="menu">
             <!-- Opciones del menú -->
-            <label id="logo">DEROZAN</label>
+            <label id="logo">MENU ACTUAL</label>
             <div class="options-menu">
-                <button onclick="mostrarContenido('opcion1')"><i class='bx bx-user'></i>User Info</button>
+                <button onclick="mostrarContenido('opcion1')"><i class='bx bx-user'></i>Profile</button>
                 <button onclick="mostrarContenido('opcion2')"><i class='bx bx-shield-quarter'></i>Security</button>
-                <button onclick="mostrarContenido('opcion3')">Password</button>
-                <button onclick="mostrarContenido('opcion4')">Log Out</button>
+                <button onclick="mostrarContenido('opcion3')"><i class='bx bx-cog' ></i>Settings</button>
+                <button onclick="mostrarContenido('opcion4')"><i class='bx bx-package'></i>Add Product</button>
+                <button onclick="mostrarContenido('opcion5')"><i class='bx bx-package'></i>Set Product</button>
+                <button onclick="mostrarContenido('opcion6')"><i class='bx bx-package'></i>Delete Product</button>
+                <button id="log-out-btn"><i class='bx bx-log-out'></i>Log out</button>
             </div>
         </div>
         <div class="contenido">
+            <!-- CONTENIDO DEL MENU ACA -->
             <div id="opcion1" style="display: block;">
-                <label for="dsasdasda">PROFILE SETTINGS</label>
-                <div class="form-inputs">
+                <div class="container-user-info">
+                    <h1 for="dsasdasda">User Info</h1>
+                    <div class="form-inputs">
+                        <div class="row-1-column">
+                            <div class="column-all">
+                                <label for="">Name</label>
+                            </div>
+                            <div class="column-all">
+                                <label for="">Full Name</label>
+                                
+                            </div>
+                            
+                        </div>
+                        <div class="row-2-column">
+                            <div class="column-all">
+                                <label for="">Email Address</label>
+                                
+                            </div>
+                            <div class="column-all">
+                                <label for="">Phone Number</label>
+                                
+                            </div>
+                        </div>
+                        <div class="row-3-column">
+                            <div class="column-all">
+                                <label for="">Date or Birth</label>
+                                
+                            </div>
+                            <div class="column-all">
+                                <label for="">Country</label>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+                
+
+            <div id="opcion2" style="display: none;">
+                <div class="container-user-info">
+                    <h1 for="">Password</h1>
+                    <label for="">Please enter your password to change your password.</label>
+                    <div class="form-inputs">
+
                     <div class="row-1-column">
                         <div class="column-all">
-                            <label for="">Name</label>
-                            <input type="text">
-                        </div>
-                        <div class="column-all">
-                            <label for="">Full Name</label>
-                            <input type="text">
+                            <label for="">Current password</label>
+                            <input type="password">
+                        </div>                     
+                    </div>
+
+                        <div class="row-2-column">
+                            <div class="column-all">
+                                <label for="">New password</label>
+                                <input type="password">
+                            </div>
                         </div>
                         
-                    </div>
-                    <div class="row-2-column">
-                        <div class="column-all">
-                            <label for="">Email Address</label>
-                            <input type="text">
-                        </div>
-                        <div class="column-all">
-                            <label for="">Phone Number</label>
-                            <input type="text">
-                        </div>
-
-                    </div>
-                    
-                    <div class="row-3-column">
-                        <div class="column-all">
-                            <label for="">Date or Birth</label>
-                            <input type="text">
-                        </div>
-                        <div class="column-all">
-                            <label for="">Country</label>
-                        <input type="text">
-                        </div>
-                    </div>  
+                        <div class="row-3-column">
+                            <div class="column-all">
+                                <label for="">Confirm new password Address</label>
+                                <input type="password">
+                            </div>
+                        </div>  
+                        <button id="update-password">Update password</button>
+                    </div> 
                 </div>
-                
             </div>
 
-            <div id="opcion2" style="display: none;">Contenido de la Opción 2</div>
-            <div id="opcion3" style="display: none;"></div>
-            <div id="opcion4" style="display: none;">Contenido de la Opción 4</div>
+
+            <div id="opcion3" style="display: none;">
+                <div class="container-user-info">
+                    <h1 for="dsasdasda">Profile settings</h1>
+                    <div class="form-inputs">
+                        <div class="row-1-column">
+                            <div class="column-all">
+                                <label for="">Name</label>
+                                <input type="text">
+                            </div>
+                            <div class="column-all">
+                                <label for="">Full Name</label>
+                                <input type="text">
+                            </div>
+                            
+                        </div>
+                        <div class="row-2-column">
+                            <div class="column-all">
+                                <label for="">Email Address</label>
+                                <input type="text">
+                            </div>
+                            <div class="column-all">
+                                <label for="">Phone Number</label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="row-3-column">
+                            <div class="column-all">
+                                <label for="">Date or Birth</label>
+                                <input type="text">
+                            </div>
+                            <div class="column-all">
+                                <label for="">Country</label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <button id="update-password">Update password</button>  
+                    </div> 
+                </div>
+            </div>
+
+
+            <div id="opcion4" style="display: none;">
+                <div class="container-column-add">
+                    <div class="column1">
+                        <h1>ADD PRODUCT</h1>
+                        
+                        <div class="name">
+                            <p>Product Title</p>
+                            <input  id="name"  type="text" class="box-input">
+                        </div>
+            
+                        <div class="description">
+                            <p>Product Description</p>
+                            <input id="description" type="text" >
+                        </div>
+            
+                        <div class="mark">
+                            <p>Brand</p>
+                            <input id="mark" type="text" class="box-input">
+                        </div>
+                        
+                        <div class="amount">
+                            <p>Amount</p>
+                            <input id="amount" type="text" class="box-input">
+                        </div>
+            
+                        <div class="price">
+                            <p>Price</p>
+                            <input id="price" type="text" class="box-input">
+                        </div>
+            
+                        <div class="size">
+                            <p>Size</p>
+                            <input id="size" type="text" class="box-input">
+                        </div>
+            
+                        <div class="categories">
+                            <p>Categories</p>
+                            <input id="categories" type="text" class="box-input">
+                        </div>
+            
+                        <div class="color">
+                            <p>Color</p>
+                            <input id="color" type="text" class="box-input">
+                        </div>  
+                        <div class="id-producto">
+                            <p>Id product</p>
+                            <input id="id-producto" type="text" class="box-input">
+                        </div>  
+                        
+                        <div class="id-linea">
+                            <p>Id Line</p>
+                            <input id="id-linea" type="text" class="box-input">
+                        </div>
+                    </div>
+            
+            
+                    <div class="column2">
+                        <div class="drag-imagen1">
+                            <div class="icon-drag"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                
+                            <div class="title-drag">
+                                <p>Drag & Drop to Upload File</p>
+                            </div>
+                            <button id="browser-file">Browse File</button>
+                            <input type="file" hidden id="file">
+                        </div>
+                
+                        <div class="drag-imagen2">
+                            <div class="icon-drag"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                            <div class="title-drag">
+                                <p>Drag & Drop to Upload File</p> 
+                            </div>
+                            <button id="browser-file">Browse File</button>            
+                            <input type="file" hidden id="file">
+                        </div>
+                
+                        <div class="drag-imagen3">                        
+                            <div class="icon-drag"><i class="fa-solid fa-cloud-arrow-up"></i></div>              
+                            <div class="title-drag">
+                                <p> Drag & Drop to Upload File</p>
+                            </div>
+                            <button id="browser-file">Browse File</button>
+                            <input type="file" hidden id="file">
+                        </div>
+                        <button id="save-product"><i class="fa-regular fa-floppy-disk"></i>  Save All Product Info</i></button>
+                    </div>
+                    
+                </div>
+                    <script src="../js/super-admin/productos/upload-image.js"></script>
+            </div>
+
+            <div id="opcion5" style="display: none;">
+                <div class="container-column-set">
+                    <div class="column1">
+                        <h1>SET PRODUCT</h1>
+
+                        <div class="busqueda-id-editar">
+                            <p>Id product</p>
+                            <input id="id-producto" type="text" class="box-input">
+                        </div>
+                        <div class="btn-busqueda-id">
+                            <button id="btn-busqueda-id">Buscar</button>
+                        </div>
+                        <div class="name">
+                            <p>Product Title</p>
+                            <input  id="name"  type="text" class="box-input">
+                        </div>
+            
+                        <div class="description">
+                            <p>Product Description</p>
+                            <input id="description" type="text" >
+                        </div>
+            
+                        <div class="mark">
+                            <p>Brand</p>
+                            <input id="mark" type="text" class="box-input">
+                        </div>
+                        
+                        <div class="amount">
+                            <p>Amount</p>
+                            <input id="amount" type="text" class="box-input">
+                        </div>
+            
+                        <div class="price">
+                            <p>Price</p>
+                            <input id="price" type="text" class="box-input">
+                        </div>
+            
+                        <div class="size">
+                            <p>Size</p>
+                            <input id="size" type="text" class="box-input">
+                        </div>
+            
+                        <div class="categories">
+                            <p>Categories</p>
+                            <input id="categories" type="text" class="box-input">
+                        </div>
+            
+                        <div class="color">
+                            <p>Color</p>
+                            <input id="color" type="text" class="box-input">
+                        </div>  
+                        
+                        
+                        <div class="id-linea">
+                            <p>Id Line</p>
+                            <input id="id-linea" type="text" class="box-input">
+                        </div>
+                    </div>
+            
+            
+                    <div class="column2">
+                        <div class="drag-imagen1">
+                            <div class="icon-drag"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                
+                            <div class="title-drag">
+                                <p>Drag & Drop to Upload File</p>
+                            </div>
+                            <button id="browser-file">Browse File</button>
+                            <input type="file" hidden id="file">
+                        </div>
+                
+                        <div class="drag-imagen2">
+                            <div class="icon-drag"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                            <div class="title-drag">
+                                <p>Drag & Drop to Upload File</p> 
+                            </div>
+                            <button id="browser-file">Browse File</button>            
+                            <input type="file" hidden id="file">
+                        </div>
+                
+                        <div class="drag-imagen3">                        
+                            <div class="icon-drag"><i class="fa-solid fa-cloud-arrow-up"></i></div>              
+                            <div class="title-drag">
+                                <p> Drag & Drop to Upload File</p>
+                            </div>
+                            <button id="browser-file">Browse File</button>
+                            <input type="file" hidden id="file">
+                        </div>
+                        <button id="save-product"><i class="fa-regular fa-floppy-disk"></i>  Save All Product Info</i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="opcion6" style="display: none;">
+                <div class="container-column-delete">
+                    <div class="content-delete">
+                        <h1>DELETE PRODUCT</h1>
+                        <h3 for="">To search for and delete an ID, start by entering the ID in the search bar and clicking on the "Search" button. Once you have located the correct ID in the search results, select it and click on the "Delete" button to remove it from the system. Ensure you have the correct ID before proceeding with deletion, as this action might be irreversible.</h3>
+                        <div class="busqueda-id-editar">
+                            <p>Id product</p>
+                            <input id="id-producto" type="text" class="box-input">
+                        </div>
+    
+                        <button id="delete-product"><i class="fa-regular fa-floppy-disk"></i>  Delete Product</i></button>  
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

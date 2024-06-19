@@ -423,16 +423,15 @@ section{
 
 
 
-
-
-
-
-
 .maing-home{
     overflow: hidden;
+    grid-template-columns: (1,1fr);
     position: relative;
+    align-items: center;
     width: 100%;
     height: 100vh;
+    background-size: cover;
+    background-position: center top;
     display: grid;
 }
 
@@ -491,8 +490,6 @@ section{
     width: 100vw;
     height: 100vh; /* Asegura que las imágenes ocupen toda la altura */
     display: flex;
-    justify-content: center;
-    align-items: center;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
