@@ -32,59 +32,59 @@
 
 
     <div class="container">
-        
+
         <div class="column1">
             <h1>ADD PRODUCT</h1>
-            
+
             <div class="name">
                 <p>Product Title</p>
-                <input type="text" class="box-input">
+                <input type="text" class="box-input" id="productTitle">
             </div>
 
             <div class="description">
                 <p>Product Description</p>
-                <input type="text" >
+                <input type="text" id="productDescription">
             </div>
 
             <div class="mark">
                 <p>Brand</p>
-                <input type="text" class="box-input">
+                <input type="text" class="box-input" id="brand">
             </div>
-            
+
             <div class="amount">
                 <p>Amount</p>
-                <input type="text" class="box-input">
+                <input type="text" class="box-input" id="amount">
             </div>
 
             <div class="price">
                 <p>Price</p>
-                <input type="text" class="box-input">
+                <input type="text" class="box-input" id="price">
             </div>
 
             <div class="size">
                 <p>Size</p>
-                <input type="text" class="box-input">
+                <input type="text" class="box-input" id="size">
             </div>
 
             <div class="categories">
                 <p>Categories</p>
-                <input type="text" class="box-input">
+                <input type="text" class="box-input" id="categories">
             </div>
 
             <div class="color">
                 <p>Color</p>
-                <input type="text" class="box-input">
-            </div>  
+                <input type="text" class="box-input" id="color">
+            </div>
             <div class="id-producto">
                 <p>Id product</p>
-                <input type="text" class="box-input">
-            </div>  
-            
+                <input type="text" class="box-input" id="productId">
+            </div>
+
             <div class="id-linea">
                 <p>Id Line</p>
-                <input type="text" class="box-input">
+                <input type="text" class="box-input" id="lineId">
             </div>
-    </div>
+        </div>
 
 
     <div class="column2">
@@ -139,12 +139,15 @@
 
         
         </div>
-        <button id="save-product"><i class="fa-regular fa-floppy-disk"></i>  Save All Product Info</i></button>
+        <button id="save-product"><i class="fa-regular fa-floppy-disk"></i>  Save All Product Info </button>
     </div>
     <div>
         <a href="../producto/productosSA.html">back</a>
     </div>
     </div>
+    <div id="message"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../../../js/super-admin/productos/upload-image.js"></script>
+    <script src="../../../js/super-admin/productos/add-product.js"></script>
 </body>
 </html>

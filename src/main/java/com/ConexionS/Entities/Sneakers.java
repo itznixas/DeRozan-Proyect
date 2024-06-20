@@ -13,7 +13,6 @@ import java.util.Date;
 public class Sneakers {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_sneakers;
 
     @Column(name = "name", nullable = false)
@@ -40,7 +39,7 @@ public class Sneakers {
     @Column(name = "registration", nullable = false)
     private Date registration;
 
-    @Column(name = "status", unique = true)
+    @Column(name = "status")
     private String status;
 
     @Column(name = "image")

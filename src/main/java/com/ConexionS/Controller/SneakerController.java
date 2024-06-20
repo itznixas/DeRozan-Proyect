@@ -14,6 +14,9 @@ import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,8 +29,17 @@ public class SneakerController {
 
     @PostMapping("/add-sneakers")
     public ResponseEntity<Sneakers> createSneaker(@RequestBody Sneakers sneakers) {
-        Sneakers saveSneaker = sneakerService.createProduct(sneakers);
-        return new ResponseEntity<>(saveSneaker, HttpStatus.CREATED);
+        try {
+            LocalDateTime localDateTime = LocalDateTime.now();
+            Date registrationDate = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
+            sneakers.setRegistration(registrationDate);
+            sneakers.setStatus("activo");
+
+            Sneakers savedSneaker = sneakerService.createSneaker(sneakers);
+            return new ResponseEntity<>(savedSneaker, HttpStatus.CREATED);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+        }
     }
 
     @GetMapping("/get-all-sneakers")
