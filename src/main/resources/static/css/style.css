@@ -170,7 +170,7 @@ header.sticky .nav_login {
 
 section{
     
-    padding: 0 9%;
+    padding:100px 14%;;
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
@@ -418,146 +418,69 @@ section{
 }
 
 
+/*ACA VA EL HOME*/
 
-
-
-
-
-.maing-home{
-    overflow: hidden;
-    grid-template-columns: (1,1fr);
-    position: relative;
-    align-items: center;
+.container-home{
+    padding: 100px 14%;
+}
+.container-home{
+    min-height: 100vh;
+    background-color: gray;
     width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center top;
     display: grid;
-}
-
-.slider-1 input {
-    visibility: hidden;
-    display: none;
-}
-
-.buttons-pp {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    bottom: 50px;
-    gap: 10px;
-    z-index: 10; /* Asegúrate de que los botones estén encima de las imágenes */
-}
-
-.buttons-pp label {
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    opacity: 0.5;
-    cursor: pointer;
-    z-index: 1;
-    transition: 300ms ease-in-out;
-}
-
-.buttons-pp label:hover {
-    transform: scale(1.2);
-    opacity: 1;
-}
-
-.maing-home input:nth-of-type(1):checked ~ .buttons-pp label:nth-of-type(1),
-.maing-home input:nth-of-type(2):checked ~ .buttons-pp label:nth-of-type(2),
-.maing-home input:nth-of-type(3):checked ~ .buttons-pp label:nth-of-type(3) {
-    opacity: 1;
-    transform: scale(1.2);
-    width: 40px;
-}
-
-.content-imgs {
-    overflow: hidden;
-    position: absolute; /* Cambiado de relative a absolute */
-    top: 0;
-    left: 0;
-    width: 300vw;
-    height: 100%; /* Asegura que las imágenes ocupen toda la altura */
-    display: flex;
-    transition: 400ms ease-in-out;
-    
-}
-
-.firstslide, .secondslide, .thirdslide {
-    position: relative;
-    width: 100vw;
-    height: 100vh; /* Asegura que las imágenes ocupen toda la altura */
-    display: flex;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.firstslide {
-    background-image: url(../img/slide-principal-1.jpg);
-}
-
-.secondslide {
-    background-image: url(../img/slider\ principal\ 2.jpg);
-}
-
-.thirdslide {
-    background-image: url(../img/slider\ principal\ 3.jpg);
-}
-
-.slider-1 input:nth-of-type(1):checked ~ .content-imgs {
-    left: 0;
-    background-size: cover;
-}
-
-.slider-1 input:nth-of-type(2):checked ~ .content-imgs {
-    left: -100vw;
-    background-size: cover;
-}
-
-.slider-1 input:nth-of-type(3):checked ~ .content-imgs {
-    left: -200vw;
-    background-size: cover;
-}
-
-
-
-/*ACA VA LA SECTIONS DEROZAN_COLLECTIONS*/
-.container-collections-derozan{
-    
-    height: 100vh;
-    width: 100%;
-    
-}
-.content-collections-derozan{
-    width: 100%;
-}
-.content-collections-derozan h1{
-    text-align: center ;
-    margin-bottom: 20px;
-    font-size: 40px;
-}
-.row-collections-derozan{
-    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
     align-items: center;
-    justify-content: center;
-    gap: 30px;
-    display: flex;
-}
-.image-collections-derozan img{
-    width: 500px;
+    background: url(../img/background-home.jpg);
     object-fit: cover;
-    height: 743px;
-    transition: 0.6s ease;
+    background-position: center;
+    position: relative;
+}
+
+.txt-home h1{
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: .6rem;
+    margin-bottom: 1.4rem;
+    font-size: 4.5rem;
+}
+.txt-home span{
+    font-size: 3.3rem;
+
+}
+.txt-home p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    letter-spacing: .2rem;
+}
+.btn-home{
+    display: inline-block;
+    padding: 13px 25px;
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: .35s ease;
+}
+.btn-home:hover{
+    transform: translateY(-5px);
+    background-color: black;
     
 }
-.image-collections-derozan img:hover{
-    transform: scale(1.1);
+
+
+/*ACA VA LA SECTIONS DISCOUNT*/
+
+.container-discount-derozan{
+    height: 60vh;
+    width: 100%;
+    background: url(../img/nike-joyride.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
 }
-
-
 
 
 
@@ -567,9 +490,14 @@ section{
     width: 100%;
     background-color: var(--background-color);
 }
-.container-best-products h1{
+.title-all{
     text-align: center;
+}
+.title-all h1{
     font-size: 35px;
+}
+.title-all p{
+    font-size: 20px;
 }
 
 .content-best-products{
@@ -577,7 +505,6 @@ section{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     margin-top: 50px;
     gap: 50px;
 }
@@ -585,18 +512,17 @@ section{
 .card-best-products{
     transition: 0.6s ease;
     background-color: white;
-    text-align: center;
     width: 285px;
     height: 400px;
     border-radius: 30px;
+    border: 1px solid black;
+    padding: 6px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-.card-best-products:hover{
-    transform: scale(1.1);
-}
+
 .img-top-product{
     width: 100%;
-    background-color: #25589B;
+    background-color: gray;
     border-radius: 30px;
 }
 .img-top-product img{
@@ -605,8 +531,7 @@ section{
     background-size: cover;
 }
 .text-contet-product{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    padding-left: 20px;
 }
 .text-contet-product p{
     margin-top: 15px;
@@ -619,39 +544,67 @@ section{
     font-weight: 600;
 }
 
-.text-contet-product button{
+.bottom-price-cart{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+#price-in-card{
+    padding-left: 20px;
+}
+.bottom-price-cart h3{
+    justify-content: start;
+}
+.bottom-price-cart button{
+    justify-content: flex-end;
+}
+.bottom-price-cart button{
     margin-top: 15px;
-    border-radius: 20px;
-    color: white;
-    background-color: #25589B;
+    border-radius: 50%;
+    color: green;
+    background-color: greenyellow;
     font-size: 15px;
     border: none;
     height: 50px;
-    width: 250px;
+    width: 50px;
     cursor: pointer;
+    position: relative;
+    right: -150px;
+}
+.bottom-price-cart button:hover{
+    background-color: green;
+    color: greenyellow;
 }
 
 
 
+.container-discount {
+ text-align: center;
+ height: 40vh;
+ background-color: white;
+ display: flex;
+ flex-direction: column;
+}
 
-
-
-
-.container-discount{
+.content-categories{
     display: flex;
     flex-wrap: wrap;
+    height: auto;
+    width: 100%;
     gap: 2rem;
 }
 
-.container-discount .banner-discount{
-    flex: 1 1 42rem;
+.banner-discount{
+    width: 300px;
     overflow: hidden;
-    height: 20rem;
+    border-radius: 20px;
+    height: 10rem;
     position: relative;
 }
 
 .container-discount .banner-discount img{
-    
     height: 100%;
     width: 100%;
     object-fit: cover;
