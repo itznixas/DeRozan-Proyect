@@ -279,8 +279,7 @@ button:focus{
 .description input{
     height: 100px;
     width: 100%;
-}
-.box-input{
+}-input{
     box-sizing: border-box;
     padding: 4px 12px;
     height: 30px;
@@ -308,6 +307,7 @@ button:focus{
     grid-column: 1/1;
     grid-row: 5/5;
 }
+.box
 .price{
     grid-column: 1/1;
     grid-row: 6/6;
