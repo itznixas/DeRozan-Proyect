@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings User</title>
+    <link rel="stylesheet" href="../../../css/adminCSS/info-cuenta/info-admin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+
+<body>
+    <header>
+        <nav class="nav" id="navbar">
+            <a href="../index.html" class="nav_logo">DEROZAN</a>
+            <ul class="nav_items">
+                <li class="nav_item">
+                    <a href="../index.html" class="nav_link">HOME</a>
+                    <a href="catalogo.html" class="nav_link">SNEAKERS</a>
+                    <a href="a.html" class="nav_link">SERVICES</a>
+                    <a href="catalogo.html" class="nav_link">CONTACT</a>
+                </li>
+            </ul>
+    
+            <div id="guest-nav" style="display: block;" >
+                <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
+                <button class="nav_login"><i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
+                <button class="nav_login" id="form-open"><i class="fa-regular fa-user"></i></button>
+            </div>
+        
+            <div id="user-nav" style="display: none;">
+                <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
+                <button class="nav_login"><i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
+                <div class="nav_login user-menu">
+                    <button id="user-btn"><i class="fa-solid fa-user"></i></button>
+                    <div class="dropdown-content">
+                    <a href="#">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="#" id="logout-btn">Logout</a>
+                    </div>
+                </div>
+            </div>
+        
+            <div id="admin-nav" style="display: none;">
+                <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
+                <button class="nav_login"><i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
+                <div class="nav_login user-menu">
+                    <button id="user-btn"><i class="fa-solid fa-user"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#">Profile</a>
+                        <a href="#">Settings</a>
+                        <a href="#">Admin</a>
+                        <a href="#" id="logout-btnAD">Logout</a>
+                    </div>
+                </div>
+            </div>
+        
+            <div id="super-nav" style="display: none;">
+                <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
+                <button class="nav_login"><i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
+                <div class="nav_login user-menu">
+                    <button id="user-btn"><i class="fa-solid fa-user"></i></button>
+                    <div class="dropdown-content">
+                    <a href="#">Profile</a>           
+                    <a href="./html/super-Admin/principalSA.html">admin</a>
+                    <a href="html/super-Admin/info-cuentaSA/userSA.html">Setting</a>
+                    <a href="#" id="logout-btnSA">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- CONTENEDOR PRINCIPAL-->
+    <div class="menu-container">
+        <div class="menu">
+            <!-- Opciones del menú -->
+            <label id="logo">MENU ACTUAL</label>
+            <div class="options-menu">
+                <button onclick="mostrarContenido('opcion1')"><i class='bx bx-user'></i>Profile</button>
+                <button onclick="mostrarContenido('opcion2')"><i class='bx bx-shield-quarter'></i>Security</button>
+                <a href="../principalSA.html"><button><i class='bx bx-shield-quarter'></i>Admin</button></a>
+                <button id="log-out-btn"><i class='bx bx-log-out'></i>Log out</button>
+            </div>
+        </div>
+        <div class="contenido">
+            <!-- CONTENIDO DEL MENU ACA -->
+            <div id="opcion1" style="display: block;">
+                <div class="container-user-info">
+                    <div class="user-info">
+                        <h1>Detalles y seguridad</h1>
+                        <div class="info">
+                            <p><strong>Nombre</strong><span> user</span></p>
+                            <p><strong>Apellido</strong><span></span></p>
+                            <p><strong>Dirección de correo electrónico</strong><span>ada83939@gmail.com</span></p>
+                            <p><strong>Número de teléfono</strong><span></span></p>
+                            <p><strong>Fecha de nacimiento</strong><span></span></p>
+                            <p><strong>Género</strong><span>No especificado</span></p>
+                            <p><strong>Contraseña</strong><span>******</span></p>
+                            <button onclick="mostrarContenido('settings')" class="edit-btn" id="editSAbtn">Editar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+
+            <div id="opcion2" style="display: none;">
+                <div class="container-user-info">
+                    <h1 for="">Password</h1>
+                    <label for="">Please enter your password to change your password.</label>
+                    <div class="form-inputs">
+
+                    <div class="row-1-column">
+                        <div class="column-all">
+                            <label for="">Current password</label>
+                            <input type="password">
+                        </div>                     
+                    </div>
+
+                        <div class="row-2-column">
+                            <div class="column-all">
+                                <label for="">New password</label>
+                                <input type="password">
+                            </div>
+                        </div>
+                        
+                        <div class="row-3-column">
+                            <div class="column-all">
+                                <label for="">Confirm new password Address</label>
+                                <input type="password">
+                            </div>
+                        </div>  
+                        <button id="update-password">Update password</button>
+                    </div> 
+                </div>
+            </div>
+
+            <div id="settings" style="display: none;">
+                <div class="container-user-info">
+                    <h1 for="dsasdasda">Profile settings</h1>
+                    <div class="form-inputs">
+                       <div>
+                           <h4>Personal data</h4>
+                           <p id="solic">Required fields*</p>
+                    </div>
+                       
+                        <div class="row-1-column">
+                            <div class="column-all">
+                                <label for="">Name</label>
+                                <input type="text">
+                            </div>
+                            <div class="column-all">
+                                <label for="">Lastname</label>
+                                <input type="text">
+                            </div>
+                            
+                        </div>
+                        <div class="row-2-column">
+                            <div class="column-all">
+                                <label for="">Email Address</label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="row-4-column">
+                            <div class="column-all">
+                                <label for="">phone number</label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="row-3-column">
+                            <div class="column-all">
+                                <label for="">Date or Birth</label>
+                                <input type="date">
+                            </div>
+                            <div class="column-all">
+                                <label for="">DNI</label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="closes">
+                            <button id="update-password">Update</button>  
+                            <button onclick="mostrarContenido('opcion1')" id="editCloseSA">cancel</button>  
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <script src="../js/super-admin/productos/settings.js"></script>
+
+        
+        </div>
+    </div>
+
+    <script>
+        function mostrarContenido(opcion) {
+        // Oculta todos los contenidos
+        const contenidos = document.querySelectorAll('.contenido > div');
+        contenidos.forEach(c => c.style.display = 'none');
+
+        // Muestra el contenido de la opción seleccionada
+        document.getElementById(opcion).style.display = 'block';
+    } 
+    </script>
+</body>
+</html>
