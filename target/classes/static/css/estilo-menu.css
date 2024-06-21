@@ -241,26 +241,70 @@ button:focus{
 
 
 #update-password{
-    background-color: #000;
-    color: white;
-    height: 40px;
+     display: block;
+    margin: 20px 0;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 5px;
     cursor: pointer;
+    text-align: center;
+    width: fit-content;
+    font-size: 14px;
 }
 
 
+.container-user-info{
+    max-width: 600px;  
+    padding: 20px;
+    background-color: #fff;
+    
+}
 
+.user-info{
+    margin: 50px auto;
+    padding: 20px;
+    
+}
 
+.user-info h1{
+    font-size: 34px;
+    margin-bottom: 20px;
+    text-align: left;
+}
 
-
-.container-column-add{
-    justify-content: center;
-    margin-top: 30px;
-    width: 100%;
-    height: auto;
+.info p{
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    margin: 10px 0;   
+    line-height: 1.5;
 }
+
+.info p span {
+    color: #666;
+    margin-left: 10px;
+}
+
+.info strong {
+    display: inline-block;
+    min-width: 10px;
+}
+
+.edit-btn {
+    display: block;
+    margin: 20px 0;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: fit-content;
+    font-size: 14px;
+}
+.edit-btn:hover {
+    background-color: #ddd;
+}
+
 
 .column1{
     padding: 30px;
@@ -279,7 +323,8 @@ button:focus{
 .description input{
     height: 100px;
     width: 100%;
-}-input{
+}
+.box-input{
     box-sizing: border-box;
     padding: 4px 12px;
     height: 30px;
@@ -307,7 +352,6 @@ button:focus{
     grid-column: 1/1;
     grid-row: 5/5;
 }
-.box
 .price{
     grid-column: 1/1;
     grid-row: 6/6;
@@ -525,4 +569,30 @@ button:focus{
 }
 .content-delete h1{
     text-align: center;
+}
+
+
+.container-user-info #solic{
+    color: #A6A6A6;
+    font-family: 'Poppins';
+    font-size: 14px;
+}
+
+.closes {
+    display: flex;
+    gap: 10px; /* Espacio entre botones */
+}
+
+#editCloseSA{
+    display: block;
+    margin: 20px 0;
+    padding: 10px 15px;
+    background-color: #000000;
+    border: 1px solid #000000;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: fit-content;
+    font-size: 14px;
 }

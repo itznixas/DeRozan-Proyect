@@ -94,10 +94,10 @@ button:focus{
     border: 1px solid gray;
     border-radius: 5px;
 }
-.row-1-column, .row-2-column, .row-3-column{
+.row-1-column, .row-2-column, .row-3-column, .row-4-column{
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 30px;
 }
 .column-all{
     display: flex;
