@@ -5,6 +5,7 @@ com\ConexionS\Service\SneakerService.class
 com\ConexionS\Repository\WishlistRepository.class
 com\ConexionS\Repository\ShoppingBagItemRepository.class
 com\ConexionS\Service\UsersService.class
+com\ConexionS\Entities\GoogleUser.class
 com\ConexionS\Controller\RatingController.class
 com\ConexionS\Entities\Refund.class
 com\ConexionS\Service\InventoryMovementDetailsService.class
@@ -18,8 +19,10 @@ com\ConexionS\Entities\Wishlist.class
 com\ConexionS\Repository\WishlistItemRepository.class
 com\ConexionS\Repository\InventoryMovementDetailRepository.class
 com\ConexionS\Entities\Pay.class
+com\ConexionS\Controller\AuthController.class
 com\ConexionS\Repository\BrandRepository.class
 com\ConexionS\Entities\InventoryMovement.class
+com\ConexionS\Security\WebConfig.class
 com\ConexionS\Entities\Order.class
 com\ConexionS\Entities\WishlistItem.class
 com\ConexionS\Service\ShippingAddressService.class

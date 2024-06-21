@@ -55,35 +55,42 @@ public class SneakerController {
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Sneakers> updateSneaker(@PathVariable Integer id, @RequestBody(required = false) Sneakers sneakersDetails) {
+    @PutMapping("/update-sneakers/{id}")
+    public ResponseEntity<Sneakers> updateSneaker(@PathVariable Integer id, @RequestBody Sneakers sneakersDetails) {
         Optional<Sneakers> sneakersOptional = sneakerService.getSneakerById(id);
 
-        if (sneakersOptional.isPresent()) {
-            Sneakers sneakers = sneakersOptional.get();
-
-            if(sneakersDetails != null && sneakersDetails.getName() != null && sneakersDetails.getBrand() != null && sneakersDetails.getIconicLine() != null
-                    && sneakersDetails.getAmount() != null && sneakersDetails.getColor() != null && sneakersDetails.getDescription() != null
-                    && sneakersDetails.getCategory() != null && sneakersDetails.getSize() != null && sneakersDetails.getPrice() != null && sneakersDetails.getStatus() != null) {
-                sneakers.setName(sneakersDetails.getName());
-                sneakers.setBrand(sneakersDetails.getBrand());
-                sneakers.setIconicLine(sneakersDetails.getIconicLine());
-                sneakers.setAmount(sneakersDetails.getAmount());
-                sneakers.setColor(sneakersDetails.getColor());
-                sneakers.setDescription(sneakersDetails.getDescription());
-                sneakers.setCategory(sneakersDetails.getCategory());
-                sneakers.setSize(sneakersDetails.getSize());
-                sneakers.setPrice(sneakersDetails.getPrice());
-                sneakers.setStatus(sneakersDetails.getStatus());
-
-                Sneakers updateSneaker = sneakerService.updateSneaker(sneakers);
-                return new ResponseEntity<>(updateSneaker, HttpStatus.OK);
-            } else {
-                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-            }
-        } else {
+        if (sneakersOptional.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+
+        Sneakers sneakers = sneakersOptional.get();
+
+        if (sneakersDetails.getName() == null || sneakersDetails.getName().isEmpty() ||
+                sneakersDetails.getBrand() == null || sneakersDetails.getIconicLine() == null ||
+                sneakersDetails.getAmount() == null || sneakersDetails.getColor() == null ||
+                sneakersDetails.getDescription() == null || sneakersDetails.getCategory() == null ||
+                sneakersDetails.getSize() == null || sneakersDetails.getPrice() == null ||
+                sneakersDetails.getStatus() == null) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+
+        sneakers.setName(sneakersDetails.getName());
+        sneakers.setBrand(sneakersDetails.getBrand());
+        sneakers.setIconicLine(sneakersDetails.getIconicLine());
+        sneakers.setAmount(sneakersDetails.getAmount());
+        sneakers.setColor(sneakersDetails.getColor());
+        sneakers.setDescription(sneakersDetails.getDescription());
+        sneakers.setCategory(sneakersDetails.getCategory());
+        sneakers.setSize(sneakersDetails.getSize());
+        sneakers.setPrice(sneakersDetails.getPrice());
+        sneakers.setStatus(sneakersDetails.getStatus());
+
+        LocalDateTime localDateTime = LocalDateTime.now();
+        Date registrationDate = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
+        sneakers.setRegistration(registrationDate);
+        
+        Sneakers updatedSneaker = sneakerService.updateSneaker(sneakers);
+        return new ResponseEntity<>(updatedSneaker, HttpStatus.OK);
     }
 
     @DeleteMapping("/delete/{id}")

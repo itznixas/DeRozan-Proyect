@@ -26,7 +26,7 @@ saveProductButton.addEventListener('click', async () => {
         category: categoriesInput.value,
         color: colorInput.value,
         iconicLine: {
-            id_IconicLine: parseInt(lineIdInput.value) // Assuming lineIdInput contains the iconic line ID
+            id_IconicLine: parseInt(lineIdInput.value)
         },
     };
 
