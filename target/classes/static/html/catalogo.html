@@ -10,104 +10,172 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <header>
-        <nav class="nav">
-          <a href="../index.html" class="nav_logo">DEROZAN</a>
-          <ul class="nav_items">
-            <li class="nav_item">
-              <a href="../index.html" class="nav_link">HOME</a>
-              <a href="catalogo.html" class="nav_link">SNEAKERS</a>
-              <a href="#" class="nav_link">SERVICES</a>
-              <a href="contacto.html" class="nav_link">CONTACT</a>
-            </li>
-          </ul>
-          <div>
-            <button class="nav_login" ><i class="fa-solid fa-magnifying-glass"></i></button>
-            <button class="nav_login"> <i class="fa-regular fa-heart"></i></button>
-            <button class="nav_login"> <i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
-            <button class="nav_login" id="form-open"> <i class="fa-regular fa-user"></i></button>
-          </div>
-        </nav>
-      </header>
-    
-      <script type="text/javascript">
-        window.addEventListener("scroll", function () {
-          var header = document.querySelector("header");
-          header.classList.toggle("sticky", window.scrollY > 0)
-        })
-      </script>
-    
-      <!-- Home -->
-      <section class="home">
-        <div class="form_container">
-          <i class="uil uil-times form_close"></i>
-          <!-- Formulario de Login -->
-          <div class="form login_form">
-            <form action="#">
-              <h2>Login</h2>
-    
-              <div class="input_box">
-                <input type="email" placeholder="Introduce tu correo" required />
-                <i class="uil uil-envelope-alt email"></i>
-              </div>
-              <div class="input_box">
-                <input type="password" placeholder="Introduce tu contraseña" required />
-                <i class="uil uil-lock password"></i>
-                <i class="uil uil-eye-slash pw_hide"></i>
-              </div>
-    
-              <div class="option_field">
-                <span class="checkbox">
-                  <input type="checkbox" id="check" />
-                  <label for="check">Recordarme</label>
-                </span>
-                <a href="#" class="forgot_pw">¿Olvidaste tu contraseña?</a>
-              </div>
-    
-              <button class="button">Iniciar Sesión</button>
-    
-                <div class="login_signup">O</div>
-    
-              <button class="google">Continuar con Google</button>
-              <button class="facebook">Continuar con Facebook</button>
-                
-              <div class="login_signup">¿No tienes una cuenta? <a href="#" id="signup">Regístrate</a></div>
-              
-    
-            </form>
-          </div>
-    
-          <!-- Formulario de Registro -->
-          <div class="form signup_form">
-            <form action="#">
-              <h2>Registro</h2>
-    
-              <div class="input_box">
-                <input type="email" placeholder="Introduce tu correo" required />
-                <i class="uil uil-envelope-alt email"></i>
-              </div>
-              <div class="input_box">
-                <input type="password" placeholder="Crea una contraseña" required />
-                <i class="uil uil-lock password"></i>
-                <i class="uil uil-eye-slash pw_hide"></i>
-              </div>
-              <div class="input_box">
-                <input type="password" placeholder="Confirma tu contraseña" required />
-                <i class="uil uil-lock password"></i>
-                <i class="uil uil-eye-slash pw_hide"></i>
-              </div>
-              <button class="button">Regístrate Ahora</button>
-              <div class="login_signup">O</div>
-                
-              <button class="google">Continuar con Google</button>
-              <button class="facebook">Continuar con Facebook</button>
-                
-    
-              <div class="login_signup">¿Ya tienes una cuenta? <a href="#" id="login">Iniciar Sesión</a></div>
-            </form>
+  <header>
+    <nav class="nav" id="navbar">
+      <a href="index.html" class="nav_logo">DEROZAN</a>
+      <ul class="nav_items">
+        <li class="nav_item">
+          <a href="index.html" class="nav_link">HOME</a>
+          <a href="./html/catalogo.html" class="nav_link">SNEAKERS</a>
+          <a href="a.html" class="nav_link">SERVICES</a>
+          <a href="./html/contacto.html" class="nav_link">CONTACT</a>
+        </li>
+      </ul>
+
+      <div id="guest-nav" style="display: block;" >
+        <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
+        <div class="cart-icon">
+          <button class="open-carrito"><i class="fa-solid fa-cart-shopping"></i> </button>
+          <span>0</span>
+        </div>
+        
+        <button class="nav_login" id="form-open"><i class="fa-regular fa-user"></i></button>
+      </div>
+
+      <div id="user-nav" style="display: none;">
+        <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
+        <div class="cart-icon">
+          <button class="open-carrito"><i class="fa-solid fa-cart-shopping"></i> </button>
+          <span>0</span>
+        </div>
+        <div class="nav_login user-menu">
+          <button id="user-btn"><i class="fa-solid fa-user"></i></button>
+          <div class="dropdown-content">
+            <a href="./html/user/info-user.html">Settings</a>
+            <a href="#" id="logout-btn">Logout</a>
           </div>
         </div>
-      </section>
+      </div>
+
+      <div id="admin-nav" style="display: none;">
+        <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
+        <div class="cart-icon">
+          <button class="open-carrito"><i class="fa-solid fa-cart-shopping"></i> </button>
+          <span>0</span>
+        </div>
+        <div class="nav_login user-menu">
+          <button id="user-btn"><i class="fa-solid fa-user"></i></button>
+          <div class="dropdown-content">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Admin</a>
+            <a href="#" id="logout-btnAD">Logout</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="super-nav" style="display: none;">
+        <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
+        <button class="nav_login"><i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
+        <div class="nav_login user-menu">
+          <button id="user-btn"><i class="fa-solid fa-user"></i></button>
+          <div class="dropdown-content">          
+          <div class="dropdown-content">
+            <a href="#">Profile</a>
+            <a href="./html/super-Admin/principalSA.html">admin</a>
+            <a href="html/super-Admin/info-cuentaSA/menu-user.html">Setting</a>
+            <a href="#" id="logout-btnSA">Logout</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+  </header>
+
+  <script src="./js/logout.js"></script>
+  <script src="./js/logged.js"></script>
+ <script src="./js/scroll.js"></script>
+
+  <!-- Home -->
+<div class="home" id="homeLogin">
+    <div class="form_container">
+        <div class="button_box">
+            <div class="slider_button"></div>
+            <button type="button" class="signup_button">LOGIN</button>
+            <button type="button" class="login_button">REGISTER</button>
+            <i class="uil uil-times form_close" style="color: rgb(111, 111, 133);"></i>
+        </div>
+
+        <div class="form_box">
+            <div class="form_slider">
+                <!-- Formulario de Login -->
+                <div class="form login_form">
+                    <form action="#" id="login-form">
+
+                        <h2>Hello There!</h2>
+
+                        <div class="input_box">
+                          <i class="uil uil-envelope-alt email"></i>
+                          <input type="email" id="email" placeholder="Email" required />
+                        </div>
+
+                        <div class="input_box">
+
+                          <input type="password" id="password" placeholder="Password" required />
+                          <i class="uil uil-lock password"></i>
+                          <i class="uil uil-eye-slash pw_hide"></i>
+                        </div>
+                        <div class="option_field">
+                            <a href="#" class="forgot_pw">Forgot your password?</a>
+                        </div>
+                        <button class="button" id="loginBtn" type="submit">LOGIN</button>
+                        <div class="login_signup">Or Connect With</div>
+                        <button class="google">Google</button>
+                        <button class="facebook">Facebook</button>
+                    </form>
+                </div>
+                <!-- Formulario de Registro -->
+                <div class="form signup_form">
+                    <form action="#" id="signup_form">
+                        <h2>Welcome Back</h2>
+                        <div class="input_box">
+                            <i class="uil uil-chat-bubble-user username"></i>
+                            <input type="text" id="signup_username" placeholder="Your Name" required />
+                        </div>
+                        <div class="input_box">
+                            <input type="email" id="signup_email" placeholder="Your Email" required />
+                            <i class="uil uil-envelope-alt email"></i>
+                        </div>
+                        <div class="input_box">
+                            <input type="password" id="signup_password" placeholder="Create Password" required />
+                            <i class="uil uil-lock password"></i>
+                            <i class="uil uil-eye-slash pw_hide"></i>
+                        </div>
+                        <div>
+                            <span class="checkbox">
+                                <input type="checkbox" id="terms_conditions" required />
+                                <label for="terms_conditions">I have read and accept
+                                    <a href="./html/termino-condiciones.html">The Terms and Conditions</a></label>
+                            </span>
+                        </div>
+                        <button class="button" type="submit">REGISTER</button>
+                        <div class="login_signup">Or Register With</div>
+                        <div class="register-reds">
+                          <button class="google" type="button"><img alt="svgImg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCA0OCA0OCI+CjxwYXRoIGZpbGw9IiNmYmMwMmQiIGQ9Ik00My42MTEsMjAuMDgzSDQyVjIwSDI0djhoMTEuMzAzYy0xLjY0OSw0LjY1Ny02LjA4LDgtMTEuMzAzLDhjLTYuNjI3LDAtMTItNS4zNzMtMTItMTIJczUuMzczLTEyLDEyLTEyYzMuMDU5LDAsNS44NDIsMS4xNTQsNy45NjEsMy4wMzlsNS42NTctNS42NTdDMzQuMDQ2LDYuMDUzLDI5LjI2OCw0LDI0LDRDMTIuOTU1LDQsNCwxMi45NTUsNCwyNHM4Ljk1NSwyMCwyMCwyMAlzMjAtOC45NTUsMjAtMjBDNDQsMjIuNjU5LDQzLjg2MiwyMS4zNSw0My42MTEsMjAuMDgzeiI+PC9wYXRoPjxwYXRoIGZpbGw9IiNlNTM5MzUiIGQ9Ik02LjMwNiwxNC42OTFsNi41NzEsNC44MTlDMTQuNjU1LDE1LjEwOCwxOC45NjEsMTIsMjQsMTJjMy4wNTksMCw1Ljg0MiwxLjE1NCw3Ljk2MSwzLjAzOQlsNS42NTctNS42NTdDMzQuMDQ2LDYuMDUzLDI5LjI2OCw0LDI0LDRDMTYuMzE4LDQsOS42NTYsOC4zMzcsNi4zMDYsMTQuNjkxeiI+PC9wYXRoPjxwYXRoIGZpbGw9IiM0Y2FmNTAiIGQ9Ik0yNCw0NGM1LjE2NiwwLDkuODYtMS45NzcsMTMuNDA5LTUuMTkybC02LjE5LTUuMjM4QzI5LjIxMSwzNS4wOTEsMjYuNzE1LDM2LDI0LDM2CWMtNS4yMDIsMC05LjYxOS0zLjMxNy0xMS4yODMtNy45NDZsLTYuNTIyLDUuMDI1QzkuNTA1LDM5LjU1NiwxNi4yMjcsNDQsMjQsNDR6Ij48L3BhdGg+PHBhdGggZmlsbD0iIzE1NjVjMCIgZD0iTTQzLjYxMSwyMC4wODNMNDMuNTk1LDIwTDQyLDIwSDI0djhoMTEuMzAzYy0wLjc5MiwyLjIzNy0yLjIzMSw0LjE2Ni00LjA4Nyw1LjU3MQljMC4wMDEtMC4wMDEsMC4wMDItMC4wMDEsMC4wMDMtMC4wMDJsNi4xOSw1LjIzOEMzNi45NzEsMzkuMjA1LDQ0LDM0LDQ0LDI0QzQ0LDIyLjY1OSw0My44NjIsMjEuMzUsNDMuNjExLDIwLjA4M3oiPjwvcGF0aD4KPC9zdmc+"/></button>
+                          <button class="facebook" type="button"><i class="fa-brands fa-facebook-f"></i></i></button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <script src="js/script.js"></script>
+
+  <script src="./js/buttom-login.js"></script>
+</script>
+
+<script src="./js/signupAut.js"></script>
+<script src="./js/loginAut.js"></script>
+<script src="./js/script.js"></script>
+
     
     
 
@@ -145,7 +213,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <div class="buttons">
                         <div class="price">$30.99</div>
-                        <button class="cart btn">Add to cart</button>
+                        <button class="add-to-cart">Add to cart</button>
                         <button class="favourite"><i class='bx bx-heart' ></i></button>
                     </div>
                 </div>
@@ -174,7 +242,7 @@
             <div class="card" data-category="running">
                 <div class="product-img"></div>
                 <div class="product-detail">
-                    <span>Nike Dunk</span>
+                    <span >Nike Dunk</span>
                     <div class="rating">
                         <i class='bx bxs-star' ></i>
                         <i class='bx bxs-star' ></i>
@@ -184,7 +252,7 @@
                     </div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <div class="buttons">
-                        <div class="price">$30.99</div>
+                        <div class="price-in-card">$30.99</div>
                         <button class="cart btn">Add to cart</button>
                         <button class="favourite"><i class='bx bx-heart' ></i></button>
                     </div>
@@ -215,7 +283,25 @@
             filterButtons.forEach(button => button.addEventListener("click", filterCards));
         </script>
         
-
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-close">
+        <i class="fa-solid fa-close"></i>
+    </div>
+    <div class="cart-menu">
+        <h3>My Cart</h3>
+        <div class="cart-tems"></div>
+    </div>
+    <div class="sidebar--footer">
+        <div class="total--amount">
+          <h5>Total</h5>
+          <div class="cart-total">$0.00</div>
+        </div>
+        <button class="checkout-btn">Checkout</button>
+    </div>
+  </div>
+<script src="js/add-to-cart.js"></script>
+      
+      
 
 
     <footer>
