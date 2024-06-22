@@ -23,7 +23,7 @@ body{
 
 
 
-.container-column-update{
+.container-column-delete-brand{
     justify-content: center;
     margin-top: 30px;
     width: 100%;
@@ -37,7 +37,7 @@ body{
 }
 
 
-.content-update{
+.content-delete-brand{
     border: 1px solid black;
     padding: 30px;
     justify-content: center;
@@ -48,19 +48,18 @@ body{
     height: 50%;
     width: 50%;
 }
-.content-update h1{
+.content-delete-brand h1{
     text-align: center;
 }
 
-#update-brand{
+#delete-brand{
     text-align: center;
-    background-color: rgb(15, 25, 162);
+    background-color: rgb(253, 9, 9);
     border: none;
     color: white;
     width: 100%;
     height: 40px;
     font-size: 20px;
-    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -73,14 +72,16 @@ body{
     height: 40px;
     font-size: 20px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
-#search-iconic{
-    background-color: blueviolet;
+#search-brand{
+    background-color: rgb(0, 0, 0);
     border: none;
     color: white;
     text-align: center;
     width: 65px;
     height: 25px;
     cursor: pointer;
+    border-radius: 5px;
 }

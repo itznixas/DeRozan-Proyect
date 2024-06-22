@@ -21,9 +21,21 @@ body{
     margin: 0;
 }
 
+header{
+    height: auto;
+    z-index: 100;
+    width: 100%;
+    padding: 0 5%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+    background-color: transparent;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    border: 2px solid black;
+}
 
-
-.container-column-update{
+.container-column-add{
     justify-content: center;
     margin-top: 30px;
     width: 100%;
@@ -37,7 +49,7 @@ body{
 }
 
 
-.content-update{
+.content-add{
     border: 1px solid black;
     padding: 30px;
     justify-content: center;
@@ -48,13 +60,13 @@ body{
     height: 50%;
     width: 50%;
 }
-.content-update h1{
+.content-add h1{
     text-align: center;
 }
 
-#update-brand{
+#add-iconic{
     text-align: center;
-    background-color: rgb(15, 25, 162);
+    background-color: rgb(35, 221, 59);
     border: none;
     color: white;
     width: 100%;
@@ -72,15 +84,6 @@ body{
     width: 20%;
     height: 40px;
     font-size: 20px;
-    cursor: pointer;
-}
-
-#search-iconic{
-    background-color: blueviolet;
-    border: none;
-    color: white;
-    text-align: center;
-    width: 65px;
-    height: 25px;
+    border-radius: 5px;
     cursor: pointer;
 }
