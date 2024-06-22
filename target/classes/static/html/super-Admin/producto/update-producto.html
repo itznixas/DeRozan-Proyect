@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../css/super-adminCSS/productsSA/update-product.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container-column-set">
+        <div class="column1">
+            <h1>SET PRODUCT</h1>
+
+            <div class="busqueda-id-editar">
+                <p>Id product</p>
+                <input id="id-producto" type="text" class="box-input">
+            </div>
+
+            <div class="btn-busqueda-id">
+                <button id="btn-busqueda-id">Buscar</button>
+            </div>
+
+            <div class="name">
+                <p>Product Title</p>
+                <input  id="name"  type="text" class="box-input">
+            </div>
+
+            <div class="description">
+                <p>Product Description</p>
+                <input id="description" type="text" >
+            </div>
+
+            <div class="mark">
+                <p>Brand</p>
+                <input id="mark" type="text" class="box-input">
+            </div>
+            
+            <div class="amount">
+                <p>Amount</p>
+                <input id="amount" type="text" class="box-input">
+            </div>
+
+            <div class="price">
+                <p>Price</p>
+                <input id="price" type="text" class="box-input">
+            </div>
+
+            <div class="size">
+                <p>Size</p>
+                <input id="size" type="text" class="box-input">
+            </div>
+
+            <div class="categories">
+                <p>Categories</p>
+                <input id="categories" type="text" class="box-input">
+            </div>
+
+            <div class="color">
+                <p>Color</p>
+                <input id="color" type="text" class="box-input">
+            </div>  
+            
+            
+            <div class="id-linea">
+                <p>Id Line</p>
+                <input id="id-linea" type="text" class="box-input">
+            </div>
+        </div>
+
+
+        <div class="column2">
+            <div class="drag-imagen1">
+                <div class="icon-drag"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+    
+                <div class="title-drag">
+                    <p>Drag & Drop to Upload File</p>
+                </div>
+                <button id="browser-file">Browse File</button>
+                <input type="file" hidden id="file">
+            </div>
+    
+            <div class="drag-imagen2">
+                <div class="icon-drag"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                <div class="title-drag">
+                    <p>Drag & Drop to Upload File</p> 
+                </div>
+                <button id="browser-file">Browse File</button>            
+                <input type="file" hidden id="file">
+            </div>
+    
+            <div class="drag-imagen3">                        
+                <div class="icon-drag"><i class="fa-solid fa-cloud-arrow-up"></i></div>              
+                <div class="title-drag">
+                    <p> Drag & Drop to Upload File</p>
+                </div>
+                <button id="browser-file">Browse File</button>
+                <input type="file" hidden id="file">
+            </div>
+            <button id="save-product"><i class="fa-regular fa-floppy-disk"></i>  Save All Product Info</i></button>
+            <a href="../producto/productosSA.html"><button id="back">Back</i></button></a>
+        </div>
+
+        
+    </div>
+    <div id="message"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../../../js/super-admin/productos/upload-image.js"></script>
+    <script src="../../../js/super-admin/productos/update-product.js"></script>
+
+</body>
+</html>

@@ -35,7 +35,7 @@ header{
     border: 2px solid black;
 }
 
-.container-column-delete{
+.container-column-add{
     justify-content: center;
     margin-top: 30px;
     width: 100%;
@@ -49,7 +49,7 @@ header{
 }
 
 
-.content-delete{
+.content-add{
     border: 1px solid black;
     padding: 30px;
     justify-content: center;
@@ -60,13 +60,13 @@ header{
     height: 50%;
     width: 50%;
 }
-.content-delete h1{
+.content-add h1{
     text-align: center;
 }
 
-#delete-product{
+#add-iconic{
     text-align: center;
-    background-color: red;
+    background-color: rgb(35, 221, 59);
     border: none;
     color: white;
     width: 100%;

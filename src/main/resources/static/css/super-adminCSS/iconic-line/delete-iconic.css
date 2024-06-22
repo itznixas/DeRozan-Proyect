@@ -21,21 +21,9 @@ body{
     margin: 0;
 }
 
-header{
-    height: auto;
-    z-index: 100;
-    width: 100%;
-    padding: 0 5%;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    transition: 0.5s;
-    background-color: transparent;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    border: 2px solid black;
-}
 
-.container-column-delete{
+
+.container-column-delete-iconic{
     justify-content: center;
     margin-top: 30px;
     width: 100%;
@@ -49,7 +37,7 @@ header{
 }
 
 
-.content-delete{
+.content-delete-iconic{
     border: 1px solid black;
     padding: 30px;
     justify-content: center;
@@ -60,13 +48,13 @@ header{
     height: 50%;
     width: 50%;
 }
-.content-delete h1{
+.content-delete-iconic h1{
     text-align: center;
 }
 
-#delete-product{
+#delete-iconic{
     text-align: center;
-    background-color: red;
+    background-color: rgb(253, 9, 9);
     border: none;
     color: white;
     width: 100%;
@@ -83,5 +71,15 @@ header{
     width: 20%;
     height: 40px;
     font-size: 20px;
+    cursor: pointer;
+}
+
+#search-iconic{
+    background-color: blueviolet;
+    border: none;
+    color: white;
+    text-align: center;
+    width: 65px;
+    height: 25px;
     cursor: pointer;
 }
