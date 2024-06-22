@@ -184,20 +184,7 @@
 <script src="./js/loginAut.js"></script>
 <script src="./js/script.js"></script>
 
-  <!-- Recibir los datos para el login y bd -->
-  <script>
-    let currentSlide = 1;
-    const totalSlides = 3;
-
-    function showNextSlide() {
-      currentSlide = (currentSlide % totalSlides) + 1;
-      document.getElementById('slideOne').checked = currentSlide === 1;
-      document.getElementById('slideTwo').checked = currentSlide === 2;
-      document.getElementById('slideThree').checked = currentSlide === 3;
-    }
-
-    setInterval(showNextSlide, 3000); // 1000 = 1s
-  </script>
+  
 
   <div class="container-home">
     <div class="txt-home">
@@ -211,7 +198,7 @@
   <section class="container-discount">
     <div class="title-all">
       <h1>CATEGORIES</h1>
-      <p>Explore our top sneaker selections featuring the latest designs and trends</p>
+      
     </div>
     <div class="content-categories">
       <div class="banner-discount">
@@ -258,13 +245,10 @@
 
 
 
-
-
-
   <section class="container-best-products">
     <div class="title-all">
       <h1>FEATURED PRODUCTS</h1>
-      <p>Summer Collection New Modern Design</p>
+      
     </div>
     
     <div class="content-best-products">
@@ -330,11 +314,17 @@
 
 
 
-  <section class="container-discount-derozan">
-    <div class="txt-discount">
-      <h6>Verano en descuento</h6>
-      <h4>40% OFF <br> New Arrival</h4>
-      <a href="#" class="btn-home">Shop Now</a>
+  <section class="container-relases-derozan">
+    <div class="new-collection">
+      <h3>New Collection</h3>
+      <p>Discover our <br><span>Discover Our Sneakers</span></p>
+      <button id="section-relases-boton">Explore More</button>
+    </div>
+    <div class="new-discount">
+      <h3>25% off Everything</h3>
+      <p>dsabjidbiodnwdw</p>
+      <button id="section-relases-boton">Shop Sale</button>
+
     </div>
   </section>
 
@@ -345,7 +335,6 @@
 <section class="gallery-container">
   <div class="title-all">
     <h1>GALLERY DEROZAN</h1>
-    <p>Discover the best sneaker styles and exclusive releases in our curated gallery</p>
   </div>
   
   <div class="splide" aria-label="Basic Structure Example">
