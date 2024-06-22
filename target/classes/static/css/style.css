@@ -35,6 +35,8 @@ html::-webkit-scrollbar-thumb{
 }
 
 
+
+
 a {
     text-decoration: none;
 }
@@ -49,8 +51,7 @@ header {
     justify-content: space-between;
     align-items: center;
     transition: 0.6s;
-    padding: 40px 100px;
-
+    padding: 20px 50px; /* Ajuste del padding para pantallas más pequeñas */
 }
 
 .nav {
@@ -78,7 +79,7 @@ header {
 }
 
 .nav_item {
-    column-gap: 25px;
+    column-gap: 15px; /* Ajuste del gap para pantallas más pequeñas */
 }
 
 .nav_link:hover {
@@ -88,7 +89,7 @@ header {
 .nav_login_container {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px; /* Ajuste del gap para pantallas más pequeñas */
 }
 
 .nav_login {
@@ -100,7 +101,6 @@ header {
     box-shadow: none;
 }
 
-
 .nav_login:hover {
     color: #383636;
 }
@@ -109,9 +109,58 @@ header {
     transform: scale(0.98);
 }
 
+/* Media queries para diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 30px; /* Ajuste del padding para tablets */
+    }
+
+    .nav_item {
+        column-gap: 10px; /* Ajuste del gap para tablets */
+    }
+
+    .nav_logo {
+        font-size: 1.5em; /* Ajuste del tamaño de la fuente para tablets */
+    }
+
+    .nav_login {
+        font-size: 16px; /* Ajuste del tamaño de la fuente para tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px; /* Ajuste del padding para móviles */
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav_logo {
+        font-size: 1.2em; /* Ajuste del tamaño de la fuente para móviles */
+    }
+
+    .nav_item {
+        flex-direction: column;
+        align-items: flex-start;
+        column-gap: 0; /* Eliminación del gap para móviles */
+        row-gap: 10px; /* Espacio entre elementos en móviles */
+    }
+
+    .nav_login {
+        font-size: 14px; /* Ajuste del tamaño de la fuente para móviles */
+    }
+}
+
+
 
 header.sticky {
     padding: 5px 10%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: #fff;
 }
 
@@ -425,7 +474,6 @@ section{
 }
 .container-home{
     min-height: 100vh;
-    background-color: gray;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -471,16 +519,73 @@ section{
 
 
 /*ACA VA LA SECTIONS DISCOUNT*/
-
-.container-discount-derozan{
-    height: 60vh;
+.container-relases-derozan{
+    display: flex;
+    height: auto;
+    flex-wrap: wrap;
     width: 100%;
-    background: url(../img/nike-joyride.jpg);
+    gap: 30px;
+}
+
+.container-relases-derozan .new-collection{
+    min-height: 420px;
+    min-width: 900px;
+    background-color: gray;
+    padding: 50px;
+    background-image: url(../img/nike-banner-2-6-20.jpg);
     background-size: cover;
     background-position: center;
-    display: flex;
-    align-items: center;
 }
+.container-relases-derozan .new-discount{
+    min-height: 420px;
+    min-width: 402px;
+    background-color: gray;
+    padding: 50px;
+    background-image: url(../img/nike\ poster.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.new-collection , .new-discount {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: 0.6s ease-in-out;
+}
+.new-collection h3, .new-discount h3{
+    font-size: 30px;
+    font-weight: 400;
+    text-shadow: 0 0 2px white;
+}
+.new-collection p, .new-discount p{
+    font-size: 30px;
+    font-weight: 700;
+    text-shadow: 0 0 2px white;
+    
+}
+
+
+#section-relases-boton{
+    color: black;
+    background-color: white;
+    height: 40px;
+    width: 150px;
+    border: none;
+    transition: 0.4s ease;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#section-relases-boton:hover{
+    color: white;
+    background-color: black;
+}
+
+
+
+
+
 
 
 
@@ -581,11 +686,11 @@ section{
 
 
 .container-discount {
- text-align: center;
- height: 40vh;
- background-color: white;
- display: flex;
- flex-direction: column;
+    text-align: center;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .content-categories{
@@ -603,6 +708,7 @@ section{
     height: 10rem;
     position: relative;
 }
+
 
 .container-discount .banner-discount img{
     height: 100%;
