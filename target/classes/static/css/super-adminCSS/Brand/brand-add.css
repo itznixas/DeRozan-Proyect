@@ -64,7 +64,7 @@ header{
     text-align: center;
 }
 
-#add-iconic{
+#add-brand{
     text-align: center;
     background-color: rgb(35, 221, 59);
     border: none;
@@ -72,6 +72,7 @@ header{
     width: 100%;
     height: 40px;
     font-size: 20px;
+    border-radius: 5px;
     cursor: pointer;
 }
 

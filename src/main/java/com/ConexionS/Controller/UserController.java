@@ -1,6 +1,5 @@
 package com.ConexionS.Controller;
 
-import com.ConexionS.Entities.GoogleUser;
 import com.ConexionS.Entities.Role;
 import com.ConexionS.Entities.Users;
 import com.ConexionS.Service.UsersService;
@@ -38,19 +37,6 @@ public class UserController {
         Users newUser = usersService.createUser(users);
 
         return new ResponseEntity<>(newUser, HttpStatus.CREATED);
-    }
-
-
-    @PostMapping("/register-user-google")
-    public ResponseEntity<String> registerUserGoogle(@RequestBody GoogleUser userGoogleRequest) {
-
-        String email = userGoogleRequest.getEmail();
-        String name = userGoogleRequest.getName();
-        String lastname = userGoogleRequest.getLastName();
-
-        usersService.registerUserGoogle(email, name, lastname);
-
-        return ResponseEntity.ok("User registered successfully with Google");
     }
 
     @GetMapping("/get-all-users")
