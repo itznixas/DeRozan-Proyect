@@ -4,38 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogo Derozan</title>
-    <link rel="stylesheet" href="../css/catalogo.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/catalogo.css"">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
   <header>
     <nav class="nav" id="navbar">
-      <a href="index.html" class="nav_logo">DEROZAN</a>
+      <div class="logo">
+        <a href="../index.html" class="nav_logo">DEROZAN</a>
+      </div>
+      
       <ul class="nav_items">
         <li class="nav_item">
-          <a href="index.html" class="nav_link">HOME</a>
-          <a href="./html/catalogo.html" class="nav_link">SNEAKERS</a>
-          <a href="a.html" class="nav_link">SERVICES</a>
-          <a href="./html/contacto.html" class="nav_link">CONTACT</a>
+          <a href="../index.html" class="nav_link">HOME</a>
+          <a href="catalogo.html" class="nav_link">SNEAKERS</a>
+          <a href="services.html" class="nav_link">SERVICES</a>
+          <a href="contacto.html" class="nav_link">CONTACT</a>
         </li>
       </ul>
 
-      <div id="guest-nav" style="display: block;" >
-        <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
+      <div class="menu-icons" id="guest-nav" >
         <div class="cart-icon">
           <button class="open-carrito"><i class="fa-solid fa-cart-shopping"></i> </button>
           <span>0</span>
         </div>
-        
         <button class="nav_login" id="form-open"><i class="fa-regular fa-user"></i></button>
       </div>
 
       <div id="user-nav" style="display: none;">
-        <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
         <div class="cart-icon">
           <button class="open-carrito"><i class="fa-solid fa-cart-shopping"></i> </button>
           <span>0</span>
@@ -50,8 +47,6 @@
       </div>
 
       <div id="admin-nav" style="display: none;">
-        <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
         <div class="cart-icon">
           <button class="open-carrito"><i class="fa-solid fa-cart-shopping"></i> </button>
           <span>0</span>
@@ -68,8 +63,6 @@
       </div>
 
       <div id="super-nav" style="display: none;">
-        <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
         <button class="nav_login"><i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
         <div class="nav_login user-menu">
           <button id="user-btn"><i class="fa-solid fa-user"></i></button>
@@ -83,13 +76,11 @@
         </div>
       </div>
     </nav>
-
-
   </header>
 
   <script src="./js/logout.js"></script>
   <script src="./js/logged.js"></script>
- <script src="./js/scroll.js"></script>
+  <script src="./js/scroll.js"></script>
 
   <!-- Home -->
 <div class="home" id="homeLogin">
@@ -167,122 +158,117 @@
     </div>
 </div>
 
-  <script src="js/script.js"></script>
-
-  <script src="./js/buttom-login.js"></script>
-</script>
-
-<script src="./js/signupAut.js"></script>
-<script src="./js/loginAut.js"></script>
-<script src="./js/script.js"></script>
+  
 
     
     
 
 
-        <div class="title-and-search">
-            <h1>SNEAKERS CATALOG</h1>
-            <div class="search">
-                <input type="search" placeholder="Search among 100+ products">
-            </div>
-            
+  <div class="search-box">
+      <div class="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" placeholder="Search among 100+ products">
+      </div>
+  </div>
+
+  <div class="filters">
+      <div class="buttons-filter">
+          <button data-filter="all" class="active">All</button>
+          <button data-filter="running">Running</button>
+          <button data-filter="urban">Urban</button>
+          <button data-filter="training">Training</button>
+          <button data-filter="retro">Retro</button>
+      </div>
+  </div>
+        
+  <div class="products-content">
+    <div class="card" data-category="urban">
+      <div class="product-img"></div>
+      <div class="product-detail">
+          <span class="card-title">Adidas Air</span>
+          <div class="rating">
+            <i class='bx bxs-star' ></i>
+            <i class='bx bxs-star' ></i>
+            <i class='bx bxs-star' ></i>
+            <i class='bx bxs-star' ></i>
+            <i class='bx bxs-star-half' ></i>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div class="buttons">
+              <div class="price-in-card">$200</div>
+              <button class="add-to-cart">Add to cart</button>
+              <button class="favourite"><i class='bx bx-heart' ></i></button>
+          </div>
         </div>
+    </div>
 
-        <div class="filters">
-            <div class="buttons-filter">
-                <button data-filter="all" class="active">All</button>
-                <button data-filter="running">Running</button>
-                <button data-filter="urban">Urban</button>
-                <button data-filter="training">Training</button>
-                <button data-filter="retro">Retro</button>
-            </div>
+    <div class="card" data-category="urban">
+      <div class="product-img"></div>
+      <div class="product-detail">
+          <span class="card-title">Air Jordan Retro</span>
+          <div class="rating">
+            <i class='bx bxs-star' ></i>
+            <i class='bx bxs-star' ></i>
+            <i class='bx bxs-star' ></i>
+            <i class='bx bxs-star' ></i>
+            <i class='bx bxs-star-half' ></i>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div class="buttons">
+              <div class="price-in-card">$900</div>
+              <button class="add-to-cart">Add to cart</button>
+              <button class="favourite"><i class='bx bx-heart' ></i></button>
+          </div>
         </div>
-        
-        <div class="products-content">
-            <div class="card" data-category="urban">
-                <div class="product-img"></div>
-                <div class="product-detail">
-                    <span>Nike Dunk</span>
-                    <div class="rating">
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star-half' ></i>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <div class="buttons">
-                        <div class="price">$30.99</div>
-                        <button class="add-to-cart">Add to cart</button>
-                        <button class="favourite"><i class='bx bx-heart' ></i></button>
-                    </div>
-                </div>
-            </div>
+    </div>
 
-            <div class="card" data-category="training">
-                <div class="product-img"></div>
-                <div class="product-detail">
-                    <span>Nike Dunk</span>
-                    <div class="rating">
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star-half' ></i>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <div class="buttons">
-                        <div class="price">$30.99</div>
-                        <button class="cart btn">Add to cart</button>
-                        <button class="favourite"><i class='bx bx-heart' ></i></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" data-category="running">
-                <div class="product-img"></div>
-                <div class="product-detail">
-                    <span >Nike Dunk</span>
-                    <div class="rating">
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star-half' ></i>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <div class="buttons">
-                        <div class="price-in-card">$30.99</div>
-                        <button class="cart btn">Add to cart</button>
-                        <button class="favourite"><i class='bx bx-heart' ></i></button>
-                    </div>
-                </div>
-            </div>
-            
+    <div class="card" data-category="urban">
+      <div class="product-img"></div>
+      <div class="product-detail">
+          <span class="card-title">Nike Dunk</span>
+          <div class="rating">
+            <i class='bx bxs-star' ></i>
+            <i class='bx bxs-star' ></i>
+            <i class='bx bxs-star' ></i>
+            <i class='bx bxs-star' ></i>
+            <i class='bx bxs-star-half' ></i>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div class="buttons">
+              <div class="price-in-card">$30.99</div>
+              <button class="add-to-cart">Add to cart</button>
+              <button class="favourite"><i class='bx bx-heart' ></i></button>
+          </div>
         </div>
+    </div>
 
-        <script>
-            const filterButtons = document.querySelectorAll(".filters .buttons-filter button");
-            const productCards = document.querySelectorAll(".products-content .card");
-        
-            const filterCards = e => {
-                document.querySelector(".active").classList.remove("active");
-                e.target.classList.add("active");
-        
-                const filter = e.target.getAttribute("data-filter");
-        
-                productCards.forEach(card => {
-                    if (filter === "all" || card.getAttribute("data-category") === filter) {
-                        card.classList.remove("hide");
-                    } else {
-                        card.classList.add("hide");
-                    }
-                });
-            };
-        
-            filterButtons.forEach(button => button.addEventListener("click", filterCards));
-        </script>
-        
+  </div>
+
+
+  <script>
+      const filterButtons = document.querySelectorAll(".filters .buttons-filter button");
+      const productCards = document.querySelectorAll(".products-content .card");
+  
+      const filterCards = e => {
+          document.querySelector(".active").classList.remove("active");
+          e.target.classList.add("active");
+  
+          const filter = e.target.getAttribute("data-filter");
+  
+          productCards.forEach(card => {
+              if (filter === "all" || card.getAttribute("data-category") === filter) {
+                  card.classList.remove("hide");
+              } else {
+                  card.classList.add("hide");
+              }
+          });
+      };
+  
+      filterButtons.forEach(button => button.addEventListener("click", filterCards));
+  </script>
+
+
+
   <div class="sidebar" id="sidebar">
     <div class="sidebar-close">
         <i class="fa-solid fa-close"></i>
@@ -299,40 +285,41 @@
         <button class="checkout-btn">Checkout</button>
     </div>
   </div>
-<script src="js/add-to-cart.js"></script>
+  
       
       
 
+  <footer>
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
 
-    <footer>
-
-        <div class="waves">
-            <div class="wave" id="wave1"></div>
-            <div class="wave" id="wave2"></div>
-            <div class="wave" id="wave3"></div>
-            <div class="wave" id="wave4"></div>
-        </div>
-
-
-        <ul class="social-media">
-            <li><a href="#"><i  class='bx bxl-twitter' ></i></a></li>
-            <li><a href="#"><i  class='bx bxl-facebook'></i></a></li>
-            <li><a href="#"><i  class='bx bxl-instagram-alt' ></i></a></li>
-        </ul>
-        
-        <ul class="menu">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="contacto.html">Contact</a></li>
-            <li><a href="avisos-de-privacidad.html">Privacy Policy</a></li>
-            <li><a href="termino-condiciones.html">Terms of Services</a></li>
-        </ul>
-
-        <p >@2024 Derozan Official | All Rights Reserved.</p>
-
-    </footer>
+    <ul class="social-media">
+      <li><a href="#"><i  class='bx bxl-twitter' ></i></a></li>
+      <li><a href="#"><i  class='bx bxl-facebook'></i></a></li>
+      <li><a href="#"><i  class='bx bxl-instagram-alt' ></i></a></li>
+    </ul>
+    
+    <ul class="menu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="contacto.html">Contact</a></li>
+      <li><a href="avisos-de-privacidad.html">Privacy Policy</a></li>
+      <li><a href="termino-condiciones.html">Terms of Services</a></li>
+    </ul>
+    <p >@2024 Derozan Official | All Rights Reserved.</p>
+  </footer>
     
     <script src="./js/interaciones.js"></script>
     <script src="./js/./script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="./js/buttom-login.js"></script>
+    <script src="./js/signupAut.js"></script>
+    <script src="./js/loginAut.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="../js/add-to-cart.js"></script>
     
 
 

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Derozan Official</title>
+  <title>Derozan Oficial</title>
 
 
   <link rel="stylesheet" href="./css/style.css">
@@ -25,35 +25,30 @@
   <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 </head>
 <body>
-
-<body>
-
   <header>
     <nav class="nav" id="navbar">
-      <a href="index.html" class="nav_logo">DEROZAN</a>
+      <div class="logo">
+        <a href="index.html" class="nav_logo">DEROZAN</a>
+      </div>
+      
       <ul class="nav_items">
         <li class="nav_item">
           <a href="index.html" class="nav_link">HOME</a>
-          <a href="./html/catalogo.html" class="nav_link">SNEAKERS</a>
-          <a href="a.html" class="nav_link">SERVICES</a>
-          <a href="./html/contacto.html" class="nav_link">CONTACT</a>
+          <a href="html/catalogo.html" class="nav_link">SNEAKERS</a>
+          <a href="html/services.html" class="nav_link">SERVICES</a>
+          <a href="html/contacto.html" class="nav_link">CONTACT</a>
         </li>
       </ul>
 
-      <div id="guest-nav" style="display: block;" >
-        <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
+      <div class="menu-icons" id="guest-nav">
         <div class="cart-icon">
           <button class="open-carrito"><i class="fa-solid fa-cart-shopping"></i> </button>
           <span>0</span>
         </div>
-        
-        <button class="nav_login" id="form-open"><i class="fa-regular fa-user"></i></button>
+        <button class="nav_login" id="form-open" onclick="toggle()"><i class="fa-regular fa-user"></i></button>
       </div>
 
       <div id="user-nav" style="display: none;">
-        <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
         <div class="cart-icon">
           <button class="open-carrito"><i class="fa-solid fa-cart-shopping"></i> </button>
           <span>0</span>
@@ -68,8 +63,6 @@
       </div>
 
       <div id="admin-nav" style="display: none;">
-        <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
         <div class="cart-icon">
           <button class="open-carrito"><i class="fa-solid fa-cart-shopping"></i> </button>
           <span>0</span>
@@ -86,8 +79,6 @@
       </div>
 
       <div id="super-nav" style="display: none;">
-        <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
         <button class="nav_login"><i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
         <div class="nav_login user-menu">
           <button id="user-btn"><i class="fa-solid fa-user"></i></button>
@@ -101,13 +92,11 @@
         </div>
       </div>
     </nav>
-
-
   </header>
 
   <script src="./js/logout.js"></script>
   <script src="./js/logged.js"></script>
- <script src="./js/scroll.js"></script>
+  <script src="./js/scroll.js"></script>
 
   <!-- Home -->
 <div class="home" id="homeLogin">
@@ -186,9 +175,8 @@
 </div>
 
   <script src="js/script.js"></script>
-
   <script src="./js/buttom-login.js"></script>
-</script>
+
 
 <script src="./js/signupAut.js"></script>
 <script src="./js/loginAut.js"></script>
