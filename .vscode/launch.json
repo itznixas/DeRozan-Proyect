@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ConexionSApplication<ConexionS>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ConexionS.ConexionSApplication",
+            "projectName": "ConexionS",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
