@@ -19,7 +19,7 @@ public class IconicLine {
     @Column(name = "name", unique = true, nullable = false)
     private String name;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "id_brand", nullable = false)
     private Brand brand;
 }

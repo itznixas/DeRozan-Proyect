@@ -17,21 +17,6 @@ public class InventoryMovement {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_movement;
 
-    @Column(name = "time", unique = true, nullable = false)
-    private Date time;
-
-    @Column(name = "descriptionMovement", nullable = false)
-    private String descriptionMovement;
-
-    @Column(name = "movement", nullable = false)
-    private String movement;
-
-    @Column(name = "type", nullable = false)
-    private String type;
-
-    @Column(name = "registration", nullable = false)
-    private Date registration;
-
     @ManyToOne
     @JoinColumn(name = "id_user", nullable = false)
     private  Users users;
@@ -40,7 +25,20 @@ public class InventoryMovement {
     @JoinColumn(name = "id_sneakers", nullable = false)
     private  Sneakers sneakers;
 
-    @OneToMany(mappedBy = "id_movement")
-    private Set<InventoryMovement> inventoryMovement;
+    @Column(name = "type", nullable = false)
+    private String type;
+
+    @Column(name = "initialAmount", nullable = false)
+    private Integer initialAmount;
+
+    @Column(name = "quantityMoved", nullable = false)
+    private Integer quantityMoved;
+
+    @Column(name = "finalAmout", nullable = false)
+    private Integer finalAmount;
+
+    @Column(name = "registration", nullable = false)
+    private Date registration;
+
 
 }

@@ -38,25 +38,25 @@ public class IconicLineController {
     }
 
     @PutMapping("/update-iconic-line/{id}")
-    public ResponseEntity<IconicLine> updateIconicLine(@PathVariable Integer id, @RequestBody(required = false) IconicLine iconicLineDetails) {
+    public ResponseEntity<IconicLine> updateIconicLine(@PathVariable Integer id, @RequestBody IconicLine iconicLineDetails) {
         Optional<IconicLine> iconicLineOptional = iconicLineService.getIconicLineById(id);
 
-        if(iconicLineOptional.isPresent()) {
-
-            IconicLine iconicLine = iconicLineOptional.get();
-
-            if (iconicLineDetails != null && iconicLineDetails.getName() != null) {
-
-                iconicLine.setName(iconicLineDetails.getName());
-                IconicLine updateIconicLine = iconicLineService.updateIconicLine(iconicLine);
-                return new ResponseEntity<>(updateIconicLine, HttpStatus.OK);
-
-            } else {
-                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-            }
-        } else {
+        if (iconicLineOptional.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+
+        IconicLine iconicLine = iconicLineOptional.get();
+
+        if (iconicLineDetails.getName() == null) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+
+        }
+
+        iconicLine.setName(iconicLineDetails.getName());
+        iconicLine.setBrand(iconicLineDetails.getBrand());
+
+        IconicLine updateIconicLine = iconicLineService.updateIconicLine(iconicLine);
+        return new ResponseEntity<>(updateIconicLine, HttpStatus.OK);
     }
 
     @DeleteMapping("/delete-iconic-line/{id}")
