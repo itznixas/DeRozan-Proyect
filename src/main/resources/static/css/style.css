@@ -9,11 +9,7 @@
     font-family: 'Poppins', sans-serif;
     
 }
-:root {
-	--primary-color: #F6761D;
-	--background-color: #f9f5f0;
-	--dark-color: #151515;
-}
+
 
 html{
     scroll-behavior: smooth;
@@ -89,7 +85,7 @@ header {
 .nav_login_container {
     display: flex;
     align-items: center;
-    gap: 10px; /* Ajuste del gap para pantallas más pequeñas */
+    gap: 20px; /* Ajuste del gap para pantallas más pequeñas */
 }
 
 .nav_login {
@@ -109,72 +105,60 @@ header {
     transform: scale(0.98);
 }
 
-/* Media queries para diferentes tamaños de pantalla */
-@media (max-width: 768px) {
-    header {
-        padding: 20px 30px; /* Ajuste del padding para tablets */
-    }
+.menu-icons{
+    display: flex;
+    gap: 10px;
 
-    .nav_item {
-        column-gap: 10px; /* Ajuste del gap para tablets */
-    }
-
-    .nav_logo {
-        font-size: 1.5em; /* Ajuste del tamaño de la fuente para tablets */
-    }
-
-    .nav_login {
-        font-size: 16px; /* Ajuste del tamaño de la fuente para tablets */
-    }
 }
-
-@media (max-width: 480px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px 20px; /* Ajuste del padding para móviles */
-    }
-
-    .nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav_logo {
-        font-size: 1.2em; /* Ajuste del tamaño de la fuente para móviles */
-    }
-
-    .nav_item {
-        flex-direction: column;
-        align-items: flex-start;
-        column-gap: 0; /* Eliminación del gap para móviles */
-        row-gap: 10px; /* Espacio entre elementos en móviles */
-    }
-
-    .nav_login {
-        font-size: 14px; /* Ajuste del tamaño de la fuente para móviles */
-    }
+.menu-icons i{
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    border: none;
 }
-
-
+.fa-cart-shopping{
+    border: none;
+}
+.cart-icon{
+    position: relative;
+}
+.cart-icon span{
+    border: none;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    background-color: green;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+}
 
 header.sticky {
     padding: 5px 10%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: #fff;
+    background-color: #000;
 }
 
 header.sticky .nav_items li a {
-    color: #000;
+    color: #fff;
 }
 
 header.sticky .nav_logo {
-    color: #000;
+    color: #fff;
 }
 
 header.sticky .nav_login {
-    color: #000;
+    color: #fff;
 }
+
 
 
 /* Estilo para ocultar el menú desplegable */
@@ -231,7 +215,7 @@ section{
 /* Home */
 
 .home {
-    position: relative;
+    position: fixed;
     background-size: cover;
     background-position: center;
 }
@@ -838,6 +822,88 @@ section{
     height: 100px;
 	margin: 0 40px;
   }
+
+
+
+  .sidebar {
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    background-color: white;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    padding: 20px;
+    border-bottom-left-radius: 20px;
+}
+.sidebar.open {
+    right: 0;
+    z-index: 1001;
+}
+.sidebar-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+.cart-tems {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1rem;
+}
+.individual-cart-item {
+    display: flex;
+    padding: 10px 5px;
+    border-radius: 5px;
+    color: #000;
+    border: 1px solid black;
+    justify-content: space-between;
+}
+.cart-item-price {
+    color: black;
+}
+.sidebar--footer {
+    position: absolute;
+    bottom: 10px;
+    width: 88%;
+}
+.total--amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 15px 10px;
+}
+.cart-total {
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+}
+.checkout-btn {
+    width: 100%;
+    margin-top: 2rem;
+    background: rgb(9, 189, 9);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+}
+
+.remove-btn{
+    background-color: gray;
+    color: white;
+    border-radius: 5px;
+    padding: 2px 8px;
+    cursor: pointer;
+    margin-left: 5px;
+    border: none;
+}
+
+
 
 
 

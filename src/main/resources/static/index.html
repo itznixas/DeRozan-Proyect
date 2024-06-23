@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Derozan Official</title>
+  <title>Derozan Oficial</title>
 
 
   <link rel="stylesheet" href="./css/style.css">
@@ -25,32 +25,34 @@
   <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 </head>
 <body>
-
-<body>
-
   <header>
     <nav class="nav" id="navbar">
-      <a href="index.html" class="nav_logo">DEROZAN</a>
+      <div class="logo">
+        <a href="index.html" class="nav_logo">DEROZAN</a>
+      </div>
+      
       <ul class="nav_items">
         <li class="nav_item">
           <a href="index.html" class="nav_link">HOME</a>
-          <a href="./html/catalogo.html" class="nav_link">SNEAKERS</a>
-          <a href="a.html" class="nav_link">SERVICES</a>
-          <a href="./html/contacto.html" class="nav_link">CONTACT</a>
+          <a href="html/catalogo.html" class="nav_link">SNEAKERS</a>
+          <a href="html/services.html" class="nav_link">SERVICES</a>
+          <a href="html/contacto.html" class="nav_link">CONTACT</a>
         </li>
       </ul>
 
-      <div id="guest-nav" style="display: block;" >
-        <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
-        <button class="nav_login"><i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
-        <button class="nav_login" id="form-open"><i class="fa-regular fa-user"></i></button>
+      <div class="menu-icons" id="guest-nav">
+        <div class="cart-icon">
+          <button class="open-carrito"><i class="fa-solid fa-cart-shopping"></i> </button>
+          <span>0</span>
+        </div>
+        <button class="nav_login" id="form-open" onclick="toggle()"><i class="fa-regular fa-user"></i></button>
       </div>
 
       <div id="user-nav" style="display: none;">
-        <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
-        <button class="nav_login"><i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
+        <div class="cart-icon">
+          <button class="open-carrito"><i class="fa-solid fa-cart-shopping"></i> </button>
+          <span>0</span>
+        </div>
         <div class="nav_login user-menu">
           <button id="user-btn"><i class="fa-solid fa-user"></i></button>
           <div class="dropdown-content">
@@ -61,9 +63,10 @@
       </div>
 
       <div id="admin-nav" style="display: none;">
-        <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
-        <button class="nav_login"><i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
+        <div class="cart-icon">
+          <button class="open-carrito"><i class="fa-solid fa-cart-shopping"></i> </button>
+          <span>0</span>
+        </div>
         <div class="nav_login user-menu">
           <button id="user-btn"><i class="fa-solid fa-user"></i></button>
           <div class="dropdown-content">
@@ -76,8 +79,6 @@
       </div>
 
       <div id="super-nav" style="display: none;">
-        <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
         <button class="nav_login"><i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
         <div class="nav_login user-menu">
           <button id="user-btn"><i class="fa-solid fa-user"></i></button>
@@ -91,13 +92,11 @@
         </div>
       </div>
     </nav>
-
-
   </header>
 
   <script src="./js/logout.js"></script>
   <script src="./js/logged.js"></script>
- <script src="./js/scroll.js"></script>
+  <script src="./js/scroll.js"></script>
 
   <!-- Home -->
 <div class="home" id="homeLogin">
@@ -176,9 +175,8 @@
 </div>
 
   <script src="js/script.js"></script>
-
   <script src="./js/buttom-login.js"></script>
-</script>
+
 
 <script src="./js/signupAut.js"></script>
 <script src="./js/loginAut.js"></script>
@@ -248,68 +246,21 @@
   <section class="container-best-products">
     <div class="title-all">
       <h1>FEATURED PRODUCTS</h1>
-      
     </div>
 
-    <div class="content-best-products">
-      <div class="card-best-products">
-        <div class="img-top-product">
+    <div class="card-best-products">
+      <div class="img-top-product">
           <img src="../static/img/Adidas-Forum-Low-CL-Shoes-Core-White-IH7830-400x400.png" alt="">
-        </div>
-        <div class="text-contet-product">
-          <p>NIKE</p>
-          <p>YEEZY BOOTS 350</p>
-        </div>
-        <div class="bottom-price-cart">
-          <h3 id="price-in-card">$78</h3>
-          <button><i class='bx bx-cart'></i></button>
-        </div>
       </div>
-
-      <div class="card-best-products">
-        <div class="img-top-product">
-          <img src="../static/img/Adidas-Forum-Low-CL-Shoes-Core-White-IH7830-400x400.png" alt="">
-        </div>
-        <div class="text-contet-product">
+      <div class="text-contet-product">
           <p>NIKE</p>
-          <p>YEEZY BOOTS 350</p>
-        </div>
-        <div class="bottom-price-cart">
-          <h3 id="price-in-card">$78</h3>
-          <button><i class='bx bx-cart'></i></button>
-        </div>
+          <p class="card-title">YEEZY BOOTS 350</p>
       </div>
-
-      <div class="card-best-products">
-        <div class="img-top-product">
-          <img src="../static/img/Adidas-Forum-Low-CL-Shoes-Core-White-IH7830-400x400.png" alt="">
-        </div>
-        <div class="text-contet-product">
-          <p>NIKE</p>
-          <p>YEEZY BOOTS 350</p>
-        </div>
-        <div class="bottom-price-cart">
-          <h3 id="price-in-card">$78</h3>
-          <button><i class='bx bx-cart'></i></button>
-        </div>
+      <div class="bottom-price-cart">
+          <h3 class="price-in-card">$78</h3>
+          <button class="add-to-cart"><i class='bx bx-cart'></i></button>
       </div>
-
-      <div class="card-best-products">
-        <div class="img-top-product">
-          <img src="../static/img/Adidas-Forum-Low-CL-Shoes-Core-White-IH7830-400x400.png" alt="">
-        </div>
-        <div class="text-contet-product">
-          <p>NIKE</p>
-          <p>YEEZY BOOTS 350</p>
-        </div>
-        <div class="bottom-price-cart">
-          <h3 id="price-in-card">$78</h3>
-          <button><i class='bx bx-cart'></i></button>
-        </div>
-      </div>
-
-
-    </div>
+    </div>  
   </section>
 
 
@@ -332,27 +283,27 @@
 
 
 
-<section class="gallery-container">
-  <div class="title-all">
-    <h1>GALLERY DEROZAN</h1>
-  </div>
-
-  <div class="splide" aria-label="Basic Structure Example">
-    <div class="splide__track">
-      <ul class="splide__list">
-        <li class="splide__slide"><img src="../static/img/img-1.jfif" alt=""></li>
-        <li class="splide__slide"><img src="../static//img/img-2.jfif" alt=""></li>
-        <li class="splide__slide"><img src="../static//img/img-3.jfif" alt=""></li>
-        <li class="splide__slide"><img src="../static//img/img-4.jfif" alt=""></li>
-        <li class="splide__slide"><img src="../static//img/img-5.jfif" alt=""></li>
-        <li class="splide__slide"><img src="../static//img/img-6.jfif" alt=""></li>
-        <li class="splide__slide"><img src="../static//img/img-7.jfif" alt=""></li>
-        <li class="splide__slide"><img src="../static//img/img-8.jfif" alt=""></li>
-        <li class="splide__slide"><img src="../static//img/img-9.jfif" alt=""></li>
-      </ul>
+  <section class="gallery-container">
+    <div class="title-all">
+      <h1>GALLERY DEROZAN</h1>
     </div>
-  </div>
-</section>
+
+    <div class="splide" aria-label="Basic Structure Example">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide"><img src="../static/img/img-1.jfif" alt=""></li>
+          <li class="splide__slide"><img src="../static//img/img-2.jfif" alt=""></li>
+          <li class="splide__slide"><img src="../static//img/img-3.jfif" alt=""></li>
+          <li class="splide__slide"><img src="../static//img/img-4.jfif" alt=""></li>
+          <li class="splide__slide"><img src="../static//img/img-5.jfif" alt=""></li>
+          <li class="splide__slide"><img src="../static//img/img-6.jfif" alt=""></li>
+          <li class="splide__slide"><img src="../static//img/img-7.jfif" alt=""></li>
+          <li class="splide__slide"><img src="../static//img/img-8.jfif" alt=""></li>
+          <li class="splide__slide"><img src="../static//img/img-9.jfif" alt=""></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <script>
     var splide = new Splide( '.splide', {
@@ -377,34 +328,60 @@
       }
     }
 
-  } );
-  splide.mount();
+    } );
+    splide.mount();
   </script>
 
 
 
-<section class="patners">
-	<div class="brands">
-	  <img src="../static//img/brand-adidas.svg">
-	  <img src="../static//img/brand-nike.svg">
-	  <img src="../static//img/brand-puma.svg">
-	  <img src="../static//img/brand-reebok.svg">
-    <img src="../static//img/brand-adidas.svg">
-	  <img src="../static//img/brand-nike.svg">
-	  <img src="../static//img/brand-puma.svg">
-	  <img src="../static//img/brand-reebok.svg">
-	</div>
-	<div class="brands">
-	  <img src="../static//img/brand-adidas.svg">
-	  <img src="../static//img/brand-nike.svg">
-	  <img src="../static//img/brand-puma.svg">
-	  <img src="../static//img/brand-reebok.svg">
-    <img src="../static//img/brand-adidas.svg">
-	  <img src="../static//img/brand-nike.svg">
-	  <img src="../static//img/brand-puma.svg">
-	  <img src="../static//img/brand-reebok.svg">
-	</div>
+  <section class="patners">
+    <div class="brands">
+      <img src="../static//img/brand-adidas.svg">
+      <img src="../static//img/brand-nike.svg">
+      <img src="../static//img/brand-puma.svg">
+      <img src="../static//img/brand-reebok.svg">
+      <img src="../static//img/brand-adidas.svg">
+      <img src="../static//img/brand-nike.svg">
+      <img src="../static//img/brand-puma.svg">
+      <img src="../static//img/brand-reebok.svg">
+    </div>
+
+    <div class="brands">
+      <img src="../static//img/brand-adidas.svg">
+      <img src="../static//img/brand-nike.svg">
+      <img src="../static//img/brand-puma.svg">
+      <img src="../static//img/brand-reebok.svg">
+      <img src="../static//img/brand-adidas.svg">
+      <img src="../static//img/brand-nike.svg">
+      <img src="../static//img/brand-puma.svg">
+      <img src="../static//img/brand-reebok.svg">
+    </div>
   </section>
+
+
+
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-close">
+        <i class="fa-solid fa-close"></i>
+    </div>
+    <div class="cart-menu">
+        <h3>My Cart</h3>
+        <div class="cart-tems"></div>
+    </div>
+    <div class="sidebar--footer">
+        <div class="total--amount">
+          <h5>Total</h5>
+          <div class="cart-total">$0.00</div>
+        </div>
+        <button class="checkout-btn">Checkout</button>
+    </div>
+  </div>
+<script src="js/add-to-cart.js"></script>
+
+
+
+
+
 
 
   <footer>
