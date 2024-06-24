@@ -515,8 +515,6 @@ section{
     display: none;
 }
 
-
-
 .product-img{
     width: 300px;
     height: 230px;
@@ -529,13 +527,11 @@ section{
     filter: brightness(0.9);
 }
 .product-detail{
-
     position: absolute;
     bottom: 0;
     transform: translateY(0%);
     border-radius: 20px 50% 0 0; 
     padding: 1rem;
-
     width: 300px;
     height: 190px;
     background-color: #21222d;

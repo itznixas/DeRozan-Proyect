@@ -105,11 +105,6 @@ header {
     transform: scale(0.98);
 }
 
-.menu-icons{
-    display: flex;
-    gap: 10px;
-
-}
 .menu-icons i{
     padding: 10px;
     border-radius: 5px;
@@ -201,8 +196,7 @@ header.sticky .nav_login {
   
   
 
-section{
-    
+section{  
     padding:100px 14%;;
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -211,11 +205,9 @@ section{
 
 
 
-
 /* Home */
 
 .home {
-    position: fixed;
     background-size: cover;
     background-position: center;
 }
@@ -486,12 +478,18 @@ section{
     letter-spacing: .2rem;
 }
 .btn-home{
+    height: 60px;
+    width: 250px;
+    padding: 0.7rem 1.2rem;
+    text-align: center;
+    align-items: center;
     display: inline-block;
-    padding: 13px 25px;
-    background-color: red;
+    background-color: black;
     color: white;
-    font-size: 15px;
-    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    clip-path: polygon(100% 0, 93% 50%, 86% 99%, 0 100%, 7% 47%, 13% 0%);
     letter-spacing: 1px;
     transition: .35s ease;
 }
@@ -503,67 +501,55 @@ section{
 
 
 /*ACA VA LA SECTIONS DISCOUNT*/
-.container-relases-derozan{
+.container-about-us{
     display: flex;
-    height: auto;
+    justify-content: center;
+    background-color: #f9f9f9;
+    flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
-    gap: 30px;
-}
 
-.container-relases-derozan .new-collection{
-    min-height: 420px;
-    min-width: 900px;
-    background-color: gray;
-    padding: 50px;
-    background-image: url(../img/nike-banner-2-6-20.jpg);
-    background-size: cover;
-    background-position: center;
 }
-.container-relases-derozan .new-discount{
-    min-height: 420px;
-    min-width: 402px;
-    background-color: gray;
-    padding: 50px;
-    background-image: url(../img/nike\ poster.jpg);
-    background-size: cover;
-    background-position: center;
+.column-1-about-us{
+    flex: 1;
+    padding: 20px;
 }
-.new-collection , .new-discount {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    transition: 0.6s ease-in-out;
+.column-1-about-us .title-all h1{
+    font-size: 1.5rem;
+    color: #333;
 }
-.new-collection h3, .new-discount h3{
-    font-size: 30px;
-    font-weight: 400;
-    text-shadow: 0 0 2px white;
+.subtitle-all{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-.new-collection p, .new-discount p{
-    font-size: 30px;
-    font-weight: 700;
-    text-shadow: 0 0 2px white;
+.subtitle-all h3{
+    font-size: 2rem;
+    color: #444;
+}
+.subtitle-all p{
+    font-size: 1rem;
+    color: #666;
+}
+.column-2-about-us{
+    flex: 1;
+    padding: 20px;
+    object-fit: cover;
     
 }
-
-
-#section-relases-boton{
-    color: black;
-    background-color: white;
-    height: 40px;
-    width: 150px;
-    border: none;
-    transition: 0.4s ease;
-    padding: 10px 15px;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
+.column-2-about-us img{
+    height: 500px;
+    width: 500px;
 }
-#section-relases-boton:hover{
-    color: white;
-    background-color: black;
+.btn-about-us a{
+    text-align: center;
+    display: inline-block;
+    height: 45px;
+    width: 250px;
+    padding: 10px 20px;
+    background-color: #303842;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
 }
 
 
@@ -573,14 +559,17 @@ section{
 
 
 
-/*ACA VA LA SECTIONS products*/
-.container-best-products{
+
+/*SECTION FEATURED PRODUCT*/
+.container-featured{
     height: auto;
     width: 100%;
     background-color: var(--background-color);
 }
 .title-all{
     text-align: center;
+    margin-bottom: 15px;
+    border-bottom: 2px solid black;
 }
 .title-all h1{
     font-size: 35px;
@@ -589,8 +578,8 @@ section{
     font-size: 20px;
 }
 
-.content-best-products{
-    height: 100%;
+.content-cards-featured{
+    height: auto;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -598,7 +587,7 @@ section{
     gap: 50px;
 }
 
-.card-best-products{
+.card-featured{
     transition: 0.6s ease;
     background-color: white;
     width: 285px;
@@ -634,10 +623,10 @@ section{
 }
 
 .bottom-price-cart{
+    padding-left: 20px;
     display: flex;
     flex-direction: row;
     margin: 0;
-    padding: 0;
     align-items: center;
 }
 #price-in-card{
@@ -650,10 +639,9 @@ section{
     justify-content: flex-end;
 }
 .bottom-price-cart button{
-    margin-top: 15px;
     border-radius: 50%;
-    color: green;
-    background-color: greenyellow;
+    color: #228B22;
+    background-color: #8CFF8C;
     font-size: 15px;
     border: none;
     height: 50px;
@@ -669,7 +657,9 @@ section{
 
 
 
-.container-discount {
+
+
+.container-categories {
     text-align: center;
     height: auto;
     background-color: white;
@@ -684,8 +674,14 @@ section{
     width: 100%;
     gap: 2rem;
 }
+.content-categories .btn-home{
+    position: relative;
+    bottom: -55px;
+    height: 40px;
+    width: 200px;
+}
 
-.banner-discount{
+.banner-categories{
     width: 300px;
     overflow: hidden;
     border-radius: 20px;
@@ -694,58 +690,29 @@ section{
 }
 
 
-.container-discount .banner-discount img{
+.container-categories .banner-categories img{
     height: 100%;
     width: 100%;
     object-fit: cover;
     transition: 0.6s ease;
 }
 
-.container-discount .banner-discount:hover img{
+.container-categories .banner-categories:hover img{
     transform: scale(1.1);
 }
 
-.container-discount .banner-discount .content-discount{
+.container-categories .banner-categories .content-categories{
     position: absolute;
     top: 50%;
     left: 3rem;
     transform: translateY(-50%);
 }
 
-.container-discount .banner-discount .content-discount span{
-    font-size: 1.5rem;
-    color: white;
-    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
-}
-
-.container-discount .banner-discount .content-discount h3{
+.container-categories .banner-categories .content-categories h3{
     font-size: 2.2rem;
     color: white;
     padding-top: .5rem;
 }
-
-.container-discount .banner-discount .content-discount .btn-discount span{
-    color: #fff;
-}
-.btn-discount{
-    height: 50px;
-    width: 200px;
-    display: flex;
-    gap: .7rem;
-    align-items: center;
-    margin-top: 1rem;
-    padding: .9rem 1rem;
-    border-radius: .5rem;
-    background: black;
-    color: #fff;
-    cursor: pointer;
-    border: none;
-}
-
-.btn-discount:hover{
-    background: aqua;
-}
-
 
 
 
@@ -772,9 +739,39 @@ section{
     transition: 0.6s ease;
 }
 
-.splide__slide img:hover{
-    transform: scale(1.1);
+/*SECTION BANNER NEW COLLECTION*/
+.newSeason{
+    display: flex;
 }
+.nsItem{
+    flex: 1;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.nsItem img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+.nsTitle{
+    font-size: 40px;
+}
+.nsButton{
+    padding: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+
+
 
 
 
@@ -912,7 +909,7 @@ section{
 
 
 
-footer{
+.footer{
 
     padding: 20px 50px;
     width: 100%;
@@ -922,7 +919,7 @@ footer{
     align-items: center;
     position: relative;
     flex-direction: column;
-    margin-top: 200px;
+    margin-top: 100px;
     height: 300px;
 
     background-color: #000000; 
@@ -930,7 +927,7 @@ footer{
     text-align: center;
     
 }
-footer .social-media, .menu{
+.footer .social-media, .menu{
     position: relative;
     display: flex;
     justify-content: center;
@@ -939,21 +936,21 @@ footer .social-media, .menu{
     flex-wrap: wrap;
 
 }
-footer .social-media li{
+.footer .social-media li{
     list-style: none;
 }
-footer .social-media li a{
+.footer .social-media li a{
     font-size: 4em;
     color: white;
     margin: 0 10px;
     display: inline-block;
     transition: 0.5s;
 }
-footer .social-media li a:hover{
+.footer .social-media li a:hover{
     transform: translateY(-10px);
 }
 
-footer .menu li a{
+.footer .menu li a{
     font-size: 2em;
     color: white;
     text-decoration: none;
@@ -963,12 +960,12 @@ footer .menu li a{
     opacity: 1;
 }
 
-footer .menu li a:hover{
+.footer .menu li a:hover{
 
     transform: translateY(-10px);
 }
 
-footer p{
+.footer p{
     color: white;
     text-align: center;
     margin-top: 10px;
@@ -976,7 +973,7 @@ footer p{
     font-size: 1.5em;
 }
 
-footer .wave{
+.footer .wave{
     position: absolute;
     top: -100px;
     left: 0;
@@ -986,28 +983,28 @@ footer .wave{
     background-size: 1000px 100px;
 }
 
-footer .wave#wave1{
+.footer .wave#wave1{
     z-index: 1000;
     opacity: 1;
     bottom: 0;
     animation: animateWave 4s linear infinite;
 }
 
-footer .wave#wave2{
+.footer .wave#wave2{
     z-index: 999;
     opacity: 0.5;
     bottom: 10px;
     animation: animateWave_02 4s linear infinite;
 }
 
-footer .wave#wave3{
+.footer .wave#wave3{
     z-index: 1000;
     opacity: 0.2;
     bottom: 15px;
     animation: animateWave 3s linear infinite;
 }
 
-footer .wave#wave4{
+.footer .wave#wave4{
     z-index: 999;
     opacity: 0.7;
     bottom: 20px;
@@ -1031,5 +1028,65 @@ footer .wave#wave4{
 
     100%{
         background-position: 1000px;
+    }
+}
+
+
+
+
+
+
+
+
+/*MEDIA QUERIES*/
+@media screen and (max-width:480px){
+
+    .txt-home h1{
+        font-weight: 800;
+        line-height: 1.2;
+        letter-spacing: .1rem;
+        margin-bottom: 1.4rem;
+        font-size: 4rem;
+    }
+    .txt-home p {
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 3rem;
+        
+    }
+
+    .newSeason{
+        flex-direction: column;
+    }
+
+    .nsItem:nth-child(2){
+        padding: 50px;
+    }
+    .splide__slide img{
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        transition: none;
+    }
+    footer{
+        margin-top: 100px;
+    }
+    .footer{
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #000000;
+        color: white;
+        text-align: center;
+    }
+    .footer .social-media li a{
+        font-size: 2em;
+        color: white;
+        margin: 0 10px;
+        display: inline-block;
     }
 }
