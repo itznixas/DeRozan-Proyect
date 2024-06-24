@@ -6,6 +6,7 @@ com\ConexionS\Repository\WishlistRepository.class
 com\ConexionS\Repository\ShoppingBagItemRepository.class
 com\ConexionS\Service\UsersService.class
 com\ConexionS\Controller\RatingController.class
+com\ConexionS\Entities\SneakersImg.class
 com\ConexionS\Service\ShoppingBagService.class
 com\ConexionS\Entities\Ratings.class
 com\ConexionS\Repository\ShippingAddressRepository.class

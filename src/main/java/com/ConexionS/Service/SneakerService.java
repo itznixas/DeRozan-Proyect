@@ -64,21 +64,4 @@ public class SneakerService {
         sneakerRepository.deleteById(id);
     }
 
-    public String obtenerRutaImagen(Integer id) {
-        Sneakers sneakers = sneakerRepository.findById(id).orElseThrow(() -> new RuntimeException("Producto no encontrado"));
-        return sneakers.getImage();
-    }
-
-    public void deleteImage(Integer id) {
-        Sneakers sneakers = sneakerRepository.findById(id).orElseThrow(() -> new RuntimeException("No encontrado."));
-        String imagePath = sneakers.getImage();
-        if (imagePath != null && !imagePath.isEmpty()) {
-            File imagefile = new File(imagePath);
-            if (imagefile.exists()) {
-                imagefile.delete();
-            }
-        }
-        sneakers.setImage(null);
-        sneakerRepository.save(sneakers);
-    }
 }

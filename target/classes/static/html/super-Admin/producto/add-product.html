@@ -8,48 +8,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
- 
-
-    <div class="container">
-
+<div class="container">
+    <form enctype="multipart/form-data">
         <div class="column1">
             <h1>ADD PRODUCT</h1>
-
             <div class="name">
                 <p>Product Title</p>
                 <input type="text" class="box-input" id="productTitle">
             </div>
-
             <div class="description">
                 <p>Product Description</p>
                 <input type="text" id="productDescription">
             </div>
-
             <div class="mark">
                 <p>Brand</p>
                 <input type="text" class="box-input" id="brand">
             </div>
-
             <div class="amount">
                 <p>Amount</p>
                 <input type="text" class="box-input" id="amount">
             </div>
-
             <div class="price">
                 <p>Price</p>
                 <input type="text" class="box-input" id="price">
             </div>
-
             <div class="size">
                 <p>Size</p>
                 <input type="text" class="box-input" id="size">
             </div>
-
             <div class="categories">
                 <p>Categories</p>
                 <input type="text" class="box-input" id="categories">
             </div>
-
             <div class="color">
                 <p>Color</p>
                 <input type="text" class="box-input" id="color">
@@ -58,77 +48,27 @@
                 <p>Id product</p>
                 <input type="text" class="box-input" id="productId">
             </div>
-
             <div class="id-linea">
                 <p>Id Line</p>
                 <input type="text" class="box-input" id="lineId">
             </div>
         </div>
-
-
-    <div class="column2">
-
-        <div class="drag-imagen1">
-            
-            <div class="icon-drag"><i class="fa-solid fa-cloud-arrow-up"></i>
+        <div class="column2">
+            <div class="image-upload">
+                <p>Upload Image 1</p>
+                <input type="file" class="box-input" id="file1">
             </div>
-
-            <div class="title-drag">
-                <p>
-                    Drag & Drop to Upload File
-                </p>
-                
-            </div>
-
-            <button id="browser-file">Browse File</button>
-
-            <input type="file" hidden id="file">
         </div>
-
-        <div class="drag-imagen2">
-            
-            <div class="icon-drag"><i class="fa-solid fa-cloud-arrow-up"></i>
-            </div>
-
-            <div class="title-drag">
-                <p>
-                    Drag & Drop to Upload File
-                </p> 
-            </div>
-
-            <button id="browser-file">Browse File</button>
-
-            <input type="file" hidden id="file">
-        </div>
-
-        <div class="drag-imagen3">
-            
-            <div class="icon-drag"><i class="fa-solid fa-cloud-arrow-up"></i>
-            </div>
-
-            <div class="title-drag">
-                <p>
-                    Drag & Drop to Upload File
-                </p>
-            </div>
-
-            <button id="browser-file">Browse File</button>
-
-            <input type="file" hidden id="file">
-
-        
-        </div>
-        <button id="save-product"><i class="fa-regular fa-floppy-disk"></i>  Save All Product Info </button>
-    </div>
-    <div >
-        <a id="back_volver" href="../producto/productosSA.html" >
+        <button type="button" id="save-product"><i class="fa-regular fa-floppy-disk"></i> Save All Product Info </button>
+    </form>
+    <div>
+        <a id="back_volver" href="../producto/productosSA.html">
             <i class="fa-solid fa-backward"></i>
         </a>
     </div>
-    </div>
-    <div id="message"></div>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="../../../js/super-admin/productos/upload-image.js"></script>
-    <script src="../../../js/super-admin/productos/add-product.js"></script>
+</div>
+<div id="message"></div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="../../../js/super-admin/productos/add-product.js"></script>
 </body>
 </html>
