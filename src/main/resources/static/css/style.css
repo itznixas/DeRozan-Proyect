@@ -38,6 +38,7 @@ a {
 }
 
 header {
+    background-color: #000;
     position: fixed;
     top: 0;
     left: 0;
@@ -461,6 +462,11 @@ section{
 }
 
 .txt-home h1{
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+    background: linear-gradient(90deg, #800080, #ff00ff, #ff69b4);
+    -webkit-background-clip: text;
+    background-clip: text;
     font-weight: 800;
     line-height: 1.2;
     letter-spacing: .6rem;
@@ -665,6 +671,7 @@ section{
     background-color: white;
     display: flex;
     flex-direction: column;
+    background-color: #f9f9f9;
 }
 
 .content-categories{
@@ -672,7 +679,7 @@ section{
     flex-wrap: wrap;
     height: auto;
     width: 100%;
-    gap: 2rem;
+    gap: 2rem;   
 }
 .content-categories .btn-home{
     position: relative;
@@ -720,6 +727,7 @@ section{
 
 
 .gallery-container{
+    
     padding: 50px 15px;
     max-width: 1540px;
     margin: 0 auto;
@@ -785,6 +793,7 @@ section{
 	}
   }
 .patners{
+    background-color: #f9f9f9;
 	overflow: hidden;
 	padding: 60px 0;
 	white-space: nowrap;
