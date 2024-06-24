@@ -13,9 +13,20 @@ addIconicLine.addEventListener('click', async () => {
 
     try{
        const response = await axios.post('/api/iconic-lines/add-iconic-line', iconicLineData)
-        messageElement.textContent = 'Iconic Line saved successfully';
+        
+        new Noty({
+            type: 'success',
+            layout: 'topRight',
+            text: 'The iconic Line have been created correctly.',
+            timeout: 3000    
+          }).show();
     }catch (error) {
-        console.error('Error saving Iconic Line:', error);
-        messageElement.textContent = 'Error saving Iconic Line: ' + error.message;
+        console.error('Error saving Iconic Line:', error.message);
+        new Noty({
+            type: 'error',
+            layout: 'topRight',
+            text: 'The iconic Line could not be created correctly',
+            timeout: 3000
+          }).show();
     }
 });

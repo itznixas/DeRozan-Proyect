@@ -74,7 +74,7 @@ body {
 #update-user, #back {
     padding: 10px 25px;
     font-size: 16px;
-    background-color: #4DBDED;
+    background-color: #000000;
     color: white;
     border: none;
     border-radius: 5px;
@@ -96,6 +96,15 @@ body {
     color: #666;
 }
 
+
+#search-user{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    padding: 10px 25px;
+    color: white;
+}
 /* Estilo específico para los campos mostrados después de buscar usuario */
 
 #user-details {

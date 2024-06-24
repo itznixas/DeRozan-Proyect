@@ -20,9 +20,18 @@ saveProductButton.addEventListener('click', async () => {
                 'Content-Type': 'multipart/form-data'
             }
         });
-        document.getElementById('message').textContent = 'Product saved successfully';
+        new Noty({
+            type: 'success',
+            layout: 'topRight',
+            text: 'The sneakers have been created correctly.',
+            timeout: 3000    
+          }).show();
     } catch (error) {
-        console.error('Error saving product:', error);
-        document.getElementById('message').textContent = 'Error saving product: ' + error.message;
+        new Noty({
+            type: 'error',
+            layout: 'topRight',
+            text: 'The sneakers could not be created correctly',
+            timeout: 3000
+          }).show();
     }
 });

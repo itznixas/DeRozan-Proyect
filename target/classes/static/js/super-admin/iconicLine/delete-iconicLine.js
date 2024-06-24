@@ -8,7 +8,13 @@ searchIconicLine.addEventListener('click', async () => {
     const id = idIconicLine.value;
 
     if (!id) {
-        messageElement.textContent = 'Please enter a product ID';
+        
+        new Noty({
+            type: 'info',
+            layout: 'topLeft',
+            text: 'Please enter a iconic line ID.',
+            timeout: 3000
+          }).show();
         return;
     }
 
@@ -18,15 +24,38 @@ searchIconicLine.addEventListener('click', async () => {
             const iconicLine = response.data;
             nameIconicLine.value = iconicLine.name;
         } else {
-            messageElement.textContent = 'Iconic Line not found';
+            new Noty({
+                type: 'info',
+                layout: 'topLeft',
+                text: 'Iconic Line not found.',
+                timeout: 3000
+              }).show();
         }
 
     }catch (error) {
         console.error('Error fetching Iconic Line: ', error);
+        new Noty({
+            type: 'warning',
+            layout: 'topRight',
+            text: 'Error fetching Iconic Line, look at the console',
+            timeout: 3000
+          }).show();
         if (error.response && error.response.status === 404) {
-            messageElement.textContent = 'Iconic Line not found';
+            console.error(messageElement.textContent = 'Iconic Line not found');
+            new Noty({
+                type: 'info',
+                layout: 'topLeft',
+                text: 'Iconic Line not found, look at the console',
+                timeout: 3000
+              }).show();
         } else {
-            messageElement.textContent = 'Error fetching Iconic Line: ' + error.message;
+           console.error(messageElement.textContent = 'Error fetching Iconic Line: ' + error.message);
+            new Noty({
+                type: 'warning',
+                layout: 'topRight',
+                text: 'Error fetching Iconic Line, look at the console',
+                timeout: 3000
+              }).show();
         }
     }
 });
@@ -35,7 +64,13 @@ deleteIconicLine.addEventListener('click', async () => {
     const id = idIconicLine.value;
 
     if (!id) {
-        messageElement.textContent = 'Please enter a product ID';
+    
+        new Noty({
+            type: 'info',
+            layout: 'topLeft',
+            text: 'Please enter a iconic line ID.',
+            timeout: 3000
+          }).show();
         return;
     }
 
@@ -43,15 +78,39 @@ deleteIconicLine.addEventListener('click', async () => {
         const response = await axios.delete(`/api/iconic-lines/delete-iconic-line/${id}`);
         if (response.status === 204) {
             messageElement.textContent = 'Iconic Line deleted successfully';
+            new Noty({
+                type: 'success',
+                layout: 'topRight',
+                text: 'The iconic Line have been deleted correctly.',
+                timeout: 3000    
+              }).show();
+
         } else {
-            messageElement.textContent = 'Failed to delete Iconic Line';
+            new Noty({
+                type: 'error',
+                layout: 'topRight',
+                text: 'Failed to delete Iconic Line',
+                timeout: 3000
+              }).show();
         }
     } catch (error) {
         console.error('Error deleting Iconic Line: ', error);
         if (error.response && error.response.status === 404) {
-            messageElement.textContent = 'Iconic Line not found';
+
+            new Noty({
+                type: 'warning',
+                layout: 'topRight',
+                text: 'Iconic Line not found',
+                timeout: 3000
+              }).show();
         } else {
-            messageElement.textContent = 'Error deleting Iconic Line: ' + error.message;
+            console.error(messageElement.textContent = 'Error deleting Iconic Line: ' + error.message);
+            new Noty({
+                type: 'warning',
+                layout: 'topRight',
+                text: 'Error deleting Iconic Line, look at the console',
+                timeout: 3000
+              }).show();
         }
     }
 });

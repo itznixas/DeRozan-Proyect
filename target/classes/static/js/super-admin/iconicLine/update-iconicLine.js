@@ -9,7 +9,12 @@ searchIconicLine.addEventListener('click', async () => {
     const id = idIconicLine.value;
 
     if(id == null) {
-        messageElement.textContent = 'Please enter a Iconic Line ID';
+        new Noty({
+            type: 'info',
+            layout: 'topLeft',
+            text: 'Please enter a Iconic Line ID.',
+            timeout: 3000
+          }).show();
         return;
     }
 
@@ -20,15 +25,32 @@ searchIconicLine.addEventListener('click', async () => {
             nameIconicLine.value = iconicLine.name;
             brandIconicLine.value = iconicLine.brand.id_brand;
         } else {
-            messageElement.textContent = 'Iconic Line not found';
+            new Noty({
+                type: 'warning',
+                layout: 'topRight',
+                text: 'Iconic Line not found',
+                timeout: 3000
+              }).show();
         }
 
     }catch (error) {
         console.error('Error fetching Iconic Line: ', error);
         if (error.response && error.response.status === 404) {
-            messageElement.textContent = 'Iconic Line not found';
+            console.error(messageElement.textContent = 'Iconic Line not found');
+            new Noty({
+                type: 'warning',
+                layout: 'topRight',
+                text: 'Iconic Line not found, look at the console',
+                timeout: 3000
+              }).show();
         } else {
-            messageElement.textContent = 'Error fetching Iconic Line: ' + error.message;
+             console.error(messageElement.textContent = 'Error fetching Iconic Line: ' + error.message);
+            new Noty({
+                type: 'warning',
+                layout: 'topRight',
+                text: 'Error fetching Iconic Line, look at the console',
+                timeout: 3000
+              }).show();
         }
     }
 });
@@ -50,13 +72,31 @@ updateIconicLine.addEventListener('click', async () => {
         const response = await axios.put(`/api/iconic-lines/update-iconic-line/${id}`, updateIconicLine);
 
         if (response.status === 200) {
-            messageElement.textContent = 'Iconic Line updated successfully';
+           
+            new Noty({
+                type: 'success',
+                layout: 'topRight',
+                text: 'Iconic Line updated successfully.',
+                timeout: 3000    
+              }).show();
+
         } else {
-            messageElement.textContent = 'Failed to update Iconic Line';
+            
+            new Noty({
+                type: 'error',
+                layout: 'topRight',
+                text: 'Failed to update Iconic Line',
+                timeout: 3000
+              }).show();
         }
 
     }catch (error){
-        console.error('Error updating Iconic Line: ', error);
-        messageElement.textContent = 'Error updating Iconic Line: ' + error.message;
+        console.error('Error updating Iconic Line: ', error.message);   
+        new Noty({
+            type: 'warning',
+            layout: 'topRight',
+            text: 'Error updating Iconic Line',
+            timeout: 3000
+          }).show();
     }
 });

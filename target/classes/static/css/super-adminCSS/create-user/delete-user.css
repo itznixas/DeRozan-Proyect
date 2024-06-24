@@ -42,7 +42,7 @@ body {
 .busqueda-id-editar button {
     padding: 8px 15px; /* Ajuste del padding */
     font-size: 14px; /* Reducción del tamaño de la fuente */
-    background-color: #4DBDED;
+    background-color: #000000;
     color: white;
     border: none;
     border-radius: 5px;
@@ -67,7 +67,7 @@ body {
 .busqueda-id-editar button {
     padding: 10px 15px;
     font-size: 16px;
-    background-color: #4DBDED;
+    background-color: #000000;
     color: white;
     border: none;
     border-radius: 5px;
@@ -107,7 +107,7 @@ body {
     width: 100%;
     padding: 12px 0;
     font-size: 16px;
-    background-color: #4DBDED;
+    background-color: #000000;
     color: white;
     border: none;
     border-radius: 5px;
@@ -123,13 +123,14 @@ body {
 }
 
 #back {
+    border: 5px solid black;
     display: block;
     width: fit-content;
     padding: 12px 20px;
     font-size: 16px;
-    background-color: #555;
-    color: white;
-    border: none;
+    background-color: #fffcfc;
+    color: rgb(0, 0, 0);
+
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
@@ -139,7 +140,7 @@ body {
 }
 
 #back:hover {
-    background-color: #777;
+    background-color: #d3d1d1;
 }
 
 /* Media query para pantallas pequeñas */

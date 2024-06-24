@@ -6,23 +6,51 @@ deleteProduct.addEventListener('click', async () => {
     const id = productId.value;
 
     if (!id) {
-        messageElement.textContent = 'Please enter a product ID';
+        new Noty({
+            type: 'info',
+            layout: 'topLeft',
+            text: 'Please fill in all fields.',
+            timeout: 3000
+          }).show();
         return;
     }
 
     try {
         const response = await axios.delete(`/api/sneakers/delete/${id}`);
         if (response.status === 204) {
-            messageElement.textContent = 'Product deleted successfully';
+           
+            new Noty({
+                type: 'success',
+                layout: 'topRight',
+                text: 'The sneakers deleted successfully.',
+                timeout: 3000    
+              }).show();
         } else {
-            messageElement.textContent = 'Failed to delete product';
+            
+            new Noty({
+                type: 'error',
+                layout: 'topRight',
+                text: 'Failed to delete the sneakers',
+                timeout: 3000
+              }).show();
         }
     } catch (error) {
         console.error('Error deleting product: ', error);
         if (error.response && error.response.status === 404) {
-            messageElement.textContent = 'Product not found';
+            new Noty({
+                type: 'warning',
+                layout: 'topRight',
+                text: 'Sneaker not found',
+                timeout: 3000
+              }).show();
         } else {
-            messageElement.textContent = 'Error deleting product: ' + error.message;
+            console.error('Error deleting product: ' + error.message);
+            new Noty({
+                type: 'warning',
+                layout: 'topRight',
+                text: 'Sneaker error deleting',
+                timeout: 3000
+              }).show();
         }
     }
 });
