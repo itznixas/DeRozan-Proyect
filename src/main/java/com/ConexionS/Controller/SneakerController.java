@@ -1,5 +1,7 @@
 package com.ConexionS.Controller;
 
+import com.ConexionS.Entities.Brand;
+import com.ConexionS.Entities.IconicLine;
 import com.ConexionS.Entities.Sneakers;
 import com.ConexionS.Service.SneakerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +11,9 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -28,8 +32,45 @@ public class SneakerController {
     private SneakerService sneakerService;
 
     @PostMapping("/add-sneakers")
-    public ResponseEntity<Sneakers> createSneaker(@RequestBody Sneakers sneakers) {
+    public ResponseEntity<Sneakers> createSneaker(
+            @RequestParam("name") String name,
+            @RequestParam("id_sneakers") Integer id_sneakers,
+            @RequestParam("description") String description,
+            @RequestParam("price") Double price,
+            @RequestParam("size") Double size,
+            @RequestParam("color") String color,
+            @RequestParam("category") String category,
+            @RequestParam("amount") Integer amount,
+            @RequestParam("brand.id_brand") Integer brandId,
+            @RequestParam("iconicLine.id_IconicLine") Integer iconicLineId,
+            @RequestParam("file") MultipartFile imagen
+    ) {
         try {
+            Sneakers sneakers = new Sneakers();
+            sneakers.setId_sneakers(id_sneakers);
+            sneakers.setName(name);
+            sneakers.setDescription(description);
+            sneakers.setPrice(price);
+            sneakers.setSize(size);
+            sneakers.setColor(color);
+            sneakers.setCategory(category);
+            sneakers.setAmount(amount);
+            sneakers.setBrand(new Brand(brandId));
+            sneakers.setIconicLine(new IconicLine(iconicLineId));
+
+            if (!imagen.isEmpty()) {
+                Path directorioImagenes = Paths.get("src/main/resources/static/img");
+                String rutaAbsoluta = directorioImagenes.toFile().getAbsolutePath();
+                try {
+                    byte[] bytesImg = imagen.getBytes();
+                    Path rutaCompleta = Paths.get(rutaAbsoluta + "//" + imagen.getOriginalFilename());
+                    Files.write(rutaCompleta, bytesImg);
+                    sneakers.setImage(imagen.getOriginalFilename());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
             LocalDateTime localDateTime = LocalDateTime.now();
             Date registrationDate = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
             sneakers.setRegistration(registrationDate);
@@ -41,6 +82,8 @@ public class SneakerController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
+
+
 
     @GetMapping("/get-all-sneakers")
     public ResponseEntity<List<Sneakers>> getAllSneaker() {
@@ -103,32 +146,5 @@ public class SneakerController {
         }
     }
 
-    @DeleteMapping("/delete-image/{id}")
-    public ResponseEntity<Void> deleteImage(@PathVariable Integer id) {
-        try {
-            sneakerService.deleteImage(id);
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        } catch (RuntimeException e) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-    }
 
-    @GetMapping("/image/{id}")
-    public ResponseEntity<Resource> downloadImage(@PathVariable Integer id) {
-        try {
-            String imagePath = sneakerService.obtenerRutaImagen(id);
-            Path file = Paths.get(imagePath);
-            if (!Files.exists(file) || !Files.isReadable(file)) {
-                throw new RuntimeException("No se puede leer el archivo: " + imagePath);
-            }
-            Resource resource = new UrlResource(file.toUri());
-            return ResponseEntity.ok()
-                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + file.getFileName().toString() + "\"")
-                    .body(resource);
-        } catch (MalformedURLException e) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        } catch (RuntimeException e) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-    }
 }

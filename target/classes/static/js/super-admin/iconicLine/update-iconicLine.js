@@ -59,4 +59,4 @@ updateIconicLine.addEventListener('click', async () => {
         console.error('Error updating Iconic Line: ', error);
         messageElement.textContent = 'Error updating Iconic Line: ' + error.message;
     }
-})
+});

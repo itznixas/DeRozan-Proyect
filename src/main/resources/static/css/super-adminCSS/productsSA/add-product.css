@@ -13,7 +13,7 @@ header{
     justify-content: center;
     transition: 0.5s;
     background-color: transparent;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border: 2px solid black;
 }
 
@@ -22,13 +22,13 @@ header{
 }
 
 
-.titlenav{  
+.titlenav{
     text-decoration: none;
     color: black;
     font-weight: 400;
 }
 
-ul li {  
+ul li {
     margin: 0;
     display: inline-block;
     padding-right:  25px;
@@ -194,18 +194,18 @@ a:hover{
     flex-direction: column;
 }
 .drag-imagen1 .icon-drag{
-    font-size: 50px; 
+    font-size: 50px;
 }
 .title-drag{
     font-size: 20px;
     font-weight: 500;
 }
 .drag-imagen2 .icon-drag{
-    font-size: 40px; 
+    font-size: 40px;
 }
 
 .drag-imagen3 .icon-drag{
-    font-size: 40px; 
+    font-size: 40px;
 }
 .drag-imagen1 button, .drag-imagen2 button, .drag-imagen3 button{
     padding: 10px 25px;
@@ -241,7 +241,7 @@ a:hover{
     font-size: 20px;
     border-radius: 5px;
     border: none;
-    
+
 }
 #save-product:hover{
     background-color: #ffbb2a;

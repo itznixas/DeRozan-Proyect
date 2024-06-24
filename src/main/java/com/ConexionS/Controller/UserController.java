@@ -27,7 +27,7 @@ public class UserController {
         Date registrationDate = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
         users.setRegistrationDate(registrationDate);
 
-        users.setStatus("activo");
+        users.setStatus("active");
 
         Role defaultRole = new Role();
         defaultRole.setId_role(1);
@@ -38,6 +38,26 @@ public class UserController {
 
         return new ResponseEntity<>(newUser, HttpStatus.CREATED);
     }
+
+    @PostMapping("/register-admin")
+    public ResponseEntity<Users> registerAdmin(@RequestBody Users users) {
+        LocalDateTime localDateTime = LocalDateTime.now();
+        Date registrationDate = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
+        users.setRegistrationDate(registrationDate);
+        users.setStatus("active");
+
+        // Verificar si el rol está presente
+        if (users.getRole() == null) {
+            // Manejar el caso donde el rol no está asignado
+            throw new IllegalArgumentException("El rol del usuario no puede ser nulo.");
+        }
+
+        // Save the user
+        Users newUser = usersService.createUser(users);
+
+        return new ResponseEntity<>(newUser, HttpStatus.CREATED);
+    }
+
 
     @GetMapping("/get-all-users")
     public ResponseEntity<List<Users>> getAllUsers() {
@@ -65,6 +85,8 @@ public class UserController {
             existingUser.setEmail(usersDetails.getEmail() != null ? usersDetails.getEmail() : existingUser.getEmail());
             existingUser.setStatus(usersDetails.getStatus() != null ? usersDetails.getStatus() : existingUser.getStatus());
             existingUser.setDni(usersDetails.getDni() != null ? usersDetails.getDni() : existingUser.getDni());
+            existingUser.setRole(usersDetails.getRole() != null ? usersDetails.getRole() : existingUser.getRole());
+            existingUser.setPassword(usersDetails.getPassword() != null ? usersDetails.getPassword() : existingUser.getPassword());
 
             Users updatedUser = usersService.updateUser(existingUser);
             return new ResponseEntity<>(updatedUser, HttpStatus.OK);

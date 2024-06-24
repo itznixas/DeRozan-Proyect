@@ -22,4 +22,8 @@ public class IconicLine {
     @ManyToOne
     @JoinColumn(name = "id_brand", nullable = false)
     private Brand brand;
+
+    public IconicLine(Integer iconicLineId) {
+        this.id_IconicLine = iconicLineId;
+    }
 }

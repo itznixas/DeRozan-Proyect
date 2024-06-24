@@ -21,4 +21,8 @@ public class Brand {
 
     @Column(name = "name", unique = true, nullable = false)
     private String name;
+
+    public Brand(Integer id_brand) {
+        this.id_brand = id_brand;
+    }
 }
