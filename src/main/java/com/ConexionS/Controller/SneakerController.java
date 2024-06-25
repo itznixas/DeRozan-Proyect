@@ -59,7 +59,7 @@ public class SneakerController {
             sneakers.setIconicLine(new IconicLine(iconicLineId));
 
             if (!imagen.isEmpty()) {
-                Path directorioImagenes = Paths.get("src/main/resources/static/img");
+                Path directorioImagenes = Paths.get("src/main/resources/static/img/sneakers");
                 String rutaAbsoluta = directorioImagenes.toFile().getAbsolutePath();
                 try {
                     byte[] bytesImg = imagen.getBytes();

@@ -1,15 +1,58 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('JavaScript cargado correctamente');
-    const addToCartButtons = document.querySelectorAll('.add-to-cart');
-    const cartItemCount = document.querySelector('.cart-icon span');
+    const sidebar = document.getElementById('sidebar');
+    const cartItemCountSpans = document.querySelectorAll('.cart-icon span');
     const cartItemList = document.querySelector('.cart-tems');
     const cartTotal = document.querySelector('.cart-total');
-    const cartIcon = document.querySelector('.open-carrito'); // Asegúrate de que el selector sea correcto
-    const sidebar = document.getElementById('sidebar'); // Selecciona el sidebar por id
-
     let cartItems = [];
-    let totalamount = 0;
+    let totalAmount = 0;
+    let totalItems = 0;
 
+    function updateCartUI() {
+        updateCartItemCount();
+        updateCartItemList();
+        updateCartTotal();
+    }
+
+    function updateCartItemCount() {
+        cartItemCountSpans.forEach(span => {
+            span.textContent = totalItems;
+        });
+    }
+
+    function updateCartItemList() {
+        cartItemList.innerHTML = '';
+        cartItems.forEach((item, index) => {
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item', 'individual-cart-item');
+            cartItem.innerHTML = `
+                <span>(${item.quantity}x) ${item.name}</span>
+                <span class="cart-item-price">${(item.price * item.quantity).toFixed(2)}</span>
+                <button class="remove-btn" data-index="${index}"><i class="fa-solid fa-times"></i></button>
+            `;
+            cartItemList.append(cartItem);
+        });
+
+        const removeButtons = document.querySelectorAll('.remove-btn');
+        removeButtons.forEach((button) => {
+            button.addEventListener('click', (event) => {
+                const index = event.target.closest('button').dataset.index;
+                removeItemFromCart(index);
+            });
+        });
+    }
+
+    function removeItemFromCart(index) {
+        const removedItem = cartItems.splice(index, 1)[0];
+        totalAmount -= removedItem.price * removedItem.quantity;
+        totalItems -= removedItem.quantity;
+        updateCartUI();
+    }
+
+    function updateCartTotal() {
+        cartTotal.textContent = `$${totalAmount.toFixed(2)}`;
+    }
+
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
     addToCartButtons.forEach((button, index) => {
         button.addEventListener('click', () => {
             const itemNameElement = document.querySelectorAll('.card-title')[index];
@@ -30,66 +73,25 @@ document.addEventListener('DOMContentLoaded', () => {
                     cartItems.push(item);
                 }
 
-                totalamount += item.price;
-
+                totalAmount += item.price;
+                totalItems++;
                 updateCartUI();
             } else {
                 console.error('Elemento no encontrado:', itemNameElement, itemPriceElement);
             }
         });
+    });
 
-        function updateCartUI() {
-            updateCartItemCount(cartItems.length);
-            updateCartItemList();
-            updateCartTotal();
-        }
-
-        function updateCartItemCount(count) {
-            cartItemCount.textContent = count;
-        }
-
-        function updateCartItemList() {
-            cartItemList.innerHTML = '';
-            cartItems.forEach((item, index) => {
-                const cartItem = document.createElement('div');
-                cartItem.classList.add('cart-item', 'individual-cart-item');
-                cartItem.innerHTML = `
-                    <span>(${item.quantity}x) ${item.name}</span>
-                    <span class="cart-item-price">${(item.price * item.quantity).toFixed(2)}
-                        <button class="remove-btn" data-index="${index}"><i class="fa-solid fa-times"></i></button>
-                    </span>
-                `;
-                cartItemList.append(cartItem);
-            });
-
-            const removeButtons = document.querySelectorAll('.remove-btn');
-            removeButtons.forEach((button) => {
-                button.addEventListener('click', (event) => {
-                    const index = event.target.dataset.index;
-                    removeItemFromCart(index);
-                });
-            });
-        }
-
-        function removeItemFromCart(index) {
-            const removedItem = cartItems.splice(index, 1)[0];
-            totalamount -= removedItem.price * removedItem.quantity;
-            updateCartUI();
-        }
-
-        function updateCartTotal() {
-            cartTotal.textContent = `$${totalamount.toFixed(2)}`;
-        }
-
+    // Eventos para abrir y cerrar el sidebar
+    const cartIcons = document.querySelectorAll('.open-carrito');
+    cartIcons.forEach(cartIcon => {
         cartIcon.addEventListener('click', () => {
             sidebar.classList.toggle('open');
         });
+    });
 
-        const closeButton = document.querySelector('.sidebar-close');
-        closeButton.addEventListener('click', () => {
-            sidebar.classList.remove('open');
-        });
+    const closeButton = document.querySelector('.sidebar-close');
+    closeButton.addEventListener('click', () => {
+        sidebar.classList.remove('open');
     });
 });
-
-
