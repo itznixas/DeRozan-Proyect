@@ -1,0 +1,126 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content-update {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px;
+}
+
+.content-update h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#update-user-form {
+    display: grid;
+    gap: 20px;
+}
+
+.form-group {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr; /* Una columna por defecto */
+}
+
+.form-group .input-group {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr; /* Dos columnas para los campos en el input-group */
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.box-input {
+    padding: 10px;
+    width: calc(100% - 20px); /* Ancho del campo ajustado para tener espacio para el padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los botones */
+    margin-top: 20px;
+}
+
+#update-user, #back {
+    padding: 10px 25px;
+    font-size: 16px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#update-user:hover, #back:hover {
+    background-color: #ffbb2a;
+    color: black;
+}
+
+#message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+
+#search-user{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    padding: 10px 25px;
+    color: white;
+}
+/* Estilo específico para los campos mostrados después de buscar usuario */
+
+#user-details {
+    display: grid;
+    gap: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .content-update {
+        padding: 20px;
+    }
+
+    .form-group .input-group {
+        grid-template-columns: 1fr; /* Cambio a una columna en pantallas pequeñas */
+    }
+}

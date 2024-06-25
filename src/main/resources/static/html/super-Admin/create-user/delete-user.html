@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete User</title>
+    <link rel="stylesheet" href="../../../css/super-adminCSS/create-user/delete-user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="content-delete">
+        <h1>DELETE USER</h1>
+        <h3>Enter the User ID to find the user's email. Confirm the user by clicking the "Search" button and proceed with caution as this action is irreversible.</h3>
+
+        <div class="busqueda-id-editar">
+            <label for="userId">User ID</label>
+            <input id="userId" type="text" class="box-input">
+            <button id="search-user"><i class="fa-solid fa-search"></i> Search</button>
+        </div>
+
+        <div id="user-email">
+            <label for="email">User Email</label>
+            <input id="email" type="email" class="box-input" readonly>
+        </div>
+
+        <button id="delete-user"><i class="fa-regular fa-floppy-disk"></i> Delete User</button>
+        <a href="../create-user/user-main.html" id="back"><i class="fa-solid fa-backward"></i> Back</a>
+    </div>
+
+</div>
+
+<div id="message"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="../../../js/super-admin/user/delete-user.js"></script>
+
+</body>
+</html>

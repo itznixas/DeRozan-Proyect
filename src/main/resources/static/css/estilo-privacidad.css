@@ -1,0 +1,126 @@
+body{
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    background-color: white;
+}
+
+
+header.stickys{
+    padding: 5px 10%;
+    background-color: #000000;
+}
+
+.navs {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.navs,
+.nav_items {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_logos,
+.nav_links,
+.button {
+    color: #000000;
+}
+
+.nav_logos {
+    font-size: 2em;
+}
+
+.nav_items {
+    column-gap: 25px;
+}
+
+.nav_links:hover {
+    color: #585252;
+}
+
+.nav_logins {
+    padding: 4px 12px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    right: 30px;
+    border: none; 
+    box-shadow: none;
+}
+
+.buttons:active {
+    transform: scale(0.98);
+}
+
+header.stickys .nav_items li a {
+    color: #ffffff;
+}
+
+header.stickys .nav_logos{
+    color: #ffffff;
+}
+header.stickys .nav_logins{
+    color: #ffffff;
+        
+}
+
+.container-politica-y-condiciones{
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+    position: relative;
+    margin-bottom: 100px;
+}
+.container-row{
+    padding-top:  10px;
+    margin-left: 8.3333333333%;
+    width: 83.3333333333%;
+}
+
+.container-padding{
+    width: 100%;
+    justify-content: center;
+    padding-left: 140px;
+    padding-right: 140px;
+    box-sizing: border-box;
+}
+.container-text{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+.title-aviso{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.texto-normal{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.title-general{
+    font-size: 30px;
+    font-weight: 800;
+}
+.title-subtitulo{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+
+@font-face {
+    font-family: AdihausDIN;
+    src: url(fonts/729-font.ttf);
+}
+
+
+

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Derozan Oficial</title>
+
+
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/themes/mint.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+  <link rel="icon" href="../Imagines/logo.png" type="image/x-icon">
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="nav" id="navbar">
+      <div class="logo">
+        <a href="index.html" class="nav_logo">DEROZAN</a>
+      </div>
+      
+      <ul class="nav_items">
+        <li class="nav_item">
+          <a href="index.html" class="nav_link">HOME</a>
+          <a href="html/catalogo.html" class="nav_link">SNEAKERS</a>
+          <a href="html/services.html" class="nav_link">SERVICES</a>
+          <a href="html/contacto.html" class="nav_link">CONTACT</a>
+        </li>
+      </ul>
+
+      <div class="menu-icons" id="guest-nav" >
+        <div class="cart-icon">
+          <button class="open-carrito"><i class="fa-solid fa-cart-shopping"></i> </button>
+          <span>0</span>
+        </div>
+        <button class="nav_login" id="form-open"><i class="fa-regular fa-user"></i></button>
+      </div>
+
+      <div id="user-nav" style="display: none;">
+        <div class="cart-icon">
+          <button class="open-carrito"><i class="fa-solid fa-cart-shopping"></i> </button>
+          <span>0</span>
+        </div>
+        <div class="nav_login user-menu">
+          <button id="user-btn"><i class="fa-solid fa-user"></i></button>
+          <div class="dropdown-content">
+            <a href="./html/user/info-user.html">Settings</a>
+            <a href="#" id="logout-btn">Logout</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="admin-nav" style="display: none;">
+        <div class="cart-icon">
+          <button class="open-carrito"><i class="fa-solid fa-cart-shopping"></i> </button>
+          <span>0</span>
+        </div>
+        <div class="nav_login user-menu">
+          <button id="user-btn"><i class="fa-solid fa-user"></i></button>
+          <div class="dropdown-content">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Admin</a>
+            <a href="#" id="logout-btnAD">Logout</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="super-nav" style="display: none;">
+        <button class="nav_login"><i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
+        <div class="nav_login user-menu">
+          <button id="user-btn"><i class="fa-solid fa-user"></i></button>
+          <div class="dropdown-content">          
+          <div class="dropdown-content">
+            <a href="#">Profile</a>
+            <a href="./html/super-Admin/principalSA.html">admin</a>
+            <a href="html/super-Admin/info-cuentaSA/menu-user.html">Setting</a>
+            <a href="#" id="logout-btnSA">Logout</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <script src="./js/logout.js"></script>
+  <script src="./js/logged.js"></script>
+  <script src="./js/scroll.js"></script>
+
+  <!-- Home -->
+<div class="home" id="homeLogin">
+    <div class="form_container">
+        <div class="button_box">
+            <div class="slider_button"></div>
+            <button type="button" class="signup_button">LOGIN</button>
+            <button type="button" class="login_button">REGISTER</button>
+            <i class="uil uil-times form_close" style="color: rgb(111, 111, 133);"></i>
+        </div>
+
+        <div class="form_box">
+            <div class="form_slider">
+                <!-- Formulario de Login -->
+                <div class="form login_form">
+                    <form action="#" id="login-form">
+
+                        <h2>Hello There!</h2>
+
+                        <div class="input_box">
+                          <i class="uil uil-envelope-alt email"></i>
+                          <input type="email" id="email" placeholder="Email" required />
+                        </div>
+
+                        <div class="input_box">
+
+                          <input type="password" id="password" placeholder="Password" required />
+                          <i class="uil uil-lock password"></i>
+                          <i class="uil uil-eye-slash pw_hide"></i>
+                        </div>
+                        <div class="option_field">
+                            <a href="#" class="forgot_pw">Forgot your password?</a>
+                        </div>
+                        <button class="button" id="loginBtn" type="submit">LOGIN</button>
+                        <div class="login_signup">Or Connect With</div>
+                        <button class="google">Google</button>
+                        <button class="facebook">Facebook</button>
+                    </form>
+                </div>
+                <!-- Formulario de Registro -->
+                <div class="form signup_form">
+                    <form action="#" id="signup_form">
+                        <h2>Welcome Back</h2>
+                        <div class="input_box">
+                            <i class="uil uil-chat-bubble-user username"></i>
+                            <input type="text" id="signup_username" placeholder="Your Name" required />
+                        </div>
+                        <div class="input_box">
+                            <input type="email" id="signup_email" placeholder="Your Email" required />
+                            <i class="uil uil-envelope-alt email"></i>
+                        </div>
+                        <div class="input_box">
+                            <input type="password" id="signup_password" placeholder="Create Password" required />
+                            <i class="uil uil-lock password"></i>
+                            <i class="uil uil-eye-slash pw_hide"></i>
+                        </div>
+                        <div>
+                            <span class="checkbox">
+                                <input type="checkbox" id="terms_conditions" required />
+                                <label for="terms_conditions">I have read and accept
+                                    <a href="./html/termino-condiciones.html">The Terms and Conditions</a></label>
+                            </span>
+                        </div>
+                        <button class="button" type="submit">REGISTER</button>
+                        <div class="login_signup">Or Register With</div>
+                        <div class="register-reds">
+                          <button class="google" type="button"><img alt="svgImg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCA0OCA0OCI+CjxwYXRoIGZpbGw9IiNmYmMwMmQiIGQ9Ik00My42MTEsMjAuMDgzSDQyVjIwSDI0djhoMTEuMzAzYy0xLjY0OSw0LjY1Ny02LjA4LDgtMTEuMzAzLDhjLTYuNjI3LDAtMTItNS4zNzMtMTItMTIJczUuMzczLTEyLDEyLTEyYzMuMDU5LDAsNS44NDIsMS4xNTQsNy45NjEsMy4wMzlsNS42NTctNS42NTdDMzQuMDQ2LDYuMDUzLDI5LjI2OCw0LDI0LDRDMTIuOTU1LDQsNCwxMi45NTUsNCwyNHM4Ljk1NSwyMCwyMCwyMAlzMjAtOC45NTUsMjAtMjBDNDQsMjIuNjU5LDQzLjg2MiwyMS4zNSw0My42MTEsMjAuMDgzeiI+PC9wYXRoPjxwYXRoIGZpbGw9IiNlNTM5MzUiIGQ9Ik02LjMwNiwxNC42OTFsNi41NzEsNC44MTlDMTQuNjU1LDE1LjEwOCwxOC45NjEsMTIsMjQsMTJjMy4wNTksMCw1Ljg0MiwxLjE1NCw3Ljk2MSwzLjAzOQlsNS42NTctNS42NTdDMzQuMDQ2LDYuMDUzLDI5LjI2OCw0LDI0LDRDMTYuMzE4LDQsOS42NTYsOC4zMzcsNi4zMDYsMTQuNjkxeiI+PC9wYXRoPjxwYXRoIGZpbGw9IiM0Y2FmNTAiIGQ9Ik0yNCw0NGM1LjE2NiwwLDkuODYtMS45NzcsMTMuNDA5LTUuMTkybC02LjE5LTUuMjM4QzI5LjIxMSwzNS4wOTEsMjYuNzE1LDM2LDI0LDM2CWMtNS4yMDIsMC05LjYxOS0zLjMxNy0xMS4yODMtNy45NDZsLTYuNTIyLDUuMDI1QzkuNTA1LDM5LjU1NiwxNi4yMjcsNDQsMjQsNDR6Ij48L3BhdGg+PHBhdGggZmlsbD0iIzE1NjVjMCIgZD0iTTQzLjYxMSwyMC4wODNMNDMuNTk1LDIwTDQyLDIwSDI0djhoMTEuMzAzYy0wLjc5MiwyLjIzNy0yLjIzMSw0LjE2Ni00LjA4Nyw1LjU3MQljMC4wMDEtMC4wMDEsMC4wMDItMC4wMDEsMC4wMDMtMC4wMDJsNi4xOSw1LjIzOEMzNi45NzEsMzkuMjA1LDQ0LDM0LDQ0LDI0QzQ0LDIyLjY1OSw0My44NjIsMjEuMzUsNDMuNjExLDIwLjA4M3oiPjwvcGF0aD4KPC9zdmc+"/></button>
+                          <button class="facebook" type="button"><i class="fa-brands fa-facebook-f"></i></i></button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <script src="js/script.js"></script>
+  <script src="./js/buttom-login.js"></script>
+
+
+<script src="./js/signupAut.js"></script>
+<script src="./js/loginAut.js"></script>
+<script src="./js/script.js"></script>
+
+  
+
+  <div class="container-home">
+    <div class="txt-home">
+      <h1>Sneakers New <br><span>Arrivals</span></h1>
+      <p>New Colors, now also avaiable in men sizing</p>
+      <a href="html/catalogo.html" class="btn-home">View Collection</a>
+    </div>
+  </div>
+
+
+  <section class="container-categories">
+    <div class="title-all">
+      <h1>CATEGORIES</h1>
+      
+    </div>
+    <div class="content-categories">
+      <div class="banner-categories">
+        <img src="../static/img/83,000+ Running Shoes Pictures.jpg" alt="">
+          <div class="content-categories">  
+            <div class="btn-home">Running</div>               
+          </div>
+      </div>
+
+      <div class="banner-categories">
+        <img src="../static/img/retro.jpg" alt="">
+          <div class="content-categories">
+            <div class="btn-home">Retro</div> 
+          </div>
+      </div>
+
+      <div class="banner-categories">
+          <img src="../static/img/urban.jpg" alt="">
+          <div class="content-categories">     
+            <div class="btn-home">Urban</div>         
+          </div>
+      </div>
+
+      <div class="banner-categories">
+        <img src="../static/img/training.jpg" alt="">
+        <div class="content-categories">
+          <div class="btn-home">Training</div> 
+        </div>
+    </div>
+    </div>
+</section>
+
+
+
+  <section class="container-featured">
+    <div class="title-all">
+      <h1>FEATURED PRODUCTS</h1>
+    </div>
+
+    <div class="content-cards-featured">
+      <div class="card-featured">
+        <div class="img-top-product">
+            <img src="../static/img/Adidas-Forum-Low-CL-Shoes-Core-White-IH7830-400x400.png" alt="">
+        </div>
+        <div class="text-contet-product">
+            <p>NIKE</p>
+            <p class="card-title">YEEZY BOOTS 350</p>
+        </div>
+        <div class="bottom-price-cart">
+            <h3 class="price-in-card">$78</h3>
+            <button class="add-to-cart"><i class='bx bx-cart'></i></button>
+        </div>
+      </div>
+
+      <div class="card-featured">
+        <div class="img-top-product">
+            <img src="../static/img/Adidas-Forum-Low-CL-Shoes-Core-White-IH7830-400x400.png" alt="">
+        </div>
+        <div class="text-contet-product">
+            <p>NIKE</p>
+            <p class="card-title">YEEZY BOOTS 350</p>
+        </div>
+        <div class="bottom-price-cart">
+            <h3 class="price-in-card">$78</h3>
+            <button class="add-to-cart"><i class='bx bx-cart'></i></button>
+        </div>
+      </div>
+
+      <div class="card-featured">
+        <div class="img-top-product">
+            <img src="../static/img/Adidas-Forum-Low-CL-Shoes-Core-White-IH7830-400x400.png" alt="">
+        </div>
+        <div class="text-contet-product">
+            <p>NIKE</p>
+            <p class="card-title">YEEZY BOOTS 350</p>
+        </div>
+        <div class="bottom-price-cart">
+            <h3 class="price-in-card">$78</h3>
+            <button class="add-to-cart"><i class='bx bx-cart'></i></button>
+        </div>
+      </div>
+
+      <div class="card-featured">
+        <div class="img-top-product">
+            <img src="../static/img/Adidas-Forum-Low-CL-Shoes-Core-White-IH7830-400x400.png" alt="">
+        </div>
+        <div class="text-contet-product">
+            <p>NIKE</p>
+            <p class="card-title">YEEZY BOOTS 350</p>
+        </div>
+        <div class="bottom-price-cart">
+            <h3 class="price-in-card">$78</h3>
+            <button class="add-to-cart"><i class='bx bx-cart'></i></button>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+
+
+
+  <section class="container-about-us">
+    <div class="column-2-about-us">
+      <img src="img/westcol-about-us.jpg" alt="">
+    </div>
+
+    <div class="column-1-about-us">
+      <div class="title-all">
+        <h1>ABOUT US</h1>
+      </div>
+      <div class="subtitle-all">
+        <h3>E-commerce de Sneakers</h3>
+        <p>El e-commerce de sneakers. En la última década, hemos sido testigos de una revolución en la forma en que compramos calzado deportivo, impulsada por la tecnología y el cambio en las preferencias de los consumidores.<br><br>
+          Las sneakers no son solo zapatos; se han convertido en un símbolo de identidad, moda y cultura. Con el auge de las tiendas online, los aficionados de todo el mundo pueden acceder a una variedad increíble de modelos, ediciones limitadas y colaboraciones exclusivas, todo con unos pocos clics.
+        </p>
+      </div>
+      <div class="btn-about-us">
+        <a href="">Read More</a>
+      </div>      
+    </div>
+
+    
+  </section>
+
+
+
+
+
+  <section class="gallery-container">
+    <div class="title-all">
+      <h1>GALLERY DEROZAN</h1>
+    </div>
+
+    <div class="splide" aria-label="Basic Structure Example">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide"><img src="../static/img/img-1.jfif" alt=""></li>
+          <li class="splide__slide"><img src="../static//img/img-2.jfif" alt=""></li>
+          <li class="splide__slide"><img src="../static//img/img-3.jfif" alt=""></li>
+          <li class="splide__slide"><img src="../static//img/img-4.jfif" alt=""></li>
+          <li class="splide__slide"><img src="../static//img/img-5.jfif" alt=""></li>
+          <li class="splide__slide"><img src="../static//img/img-6.jfif" alt=""></li>
+          <li class="splide__slide"><img src="../static//img/img-7.jfif" alt=""></li>
+          <li class="splide__slide"><img src="../static//img/img-8.jfif" alt=""></li>
+          <li class="splide__slide"><img src="../static//img/img-9.jfif" alt=""></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var splide = new Splide( '.splide', {
+    perPage: 3,
+    rewind : true,
+    type: 'loop',
+    snap: true,
+    arrows: true,
+    pagination: true,
+    autoplay: true,
+    padding: '3rem',
+    gap: '1.5rem',
+    drag: 'free',
+    breakpoints:{
+      640:{
+        perPage:2,
+        gap: '.7rem'
+      },
+      480:{
+        perPage:1,
+        gap: '.7rem'
+      }
+    }
+
+    } );
+    splide.mount();
+  </script>
+
+
+
+
+
+  <div class="newSeason">
+    <div class="nsItem">
+      <img src="img/new-season1.jpg" alt="">
+    </div>
+
+    <div class="nsItem">
+      <h3 class="nsTitleSm">WINTER NEW ARRIVALS</h3>
+      <h1 class="nsTitle">New Season</h1>
+      <h1 class="nsTitle">New Collection</h1>
+      <a href="html/catalogo.html">
+        <button class="nsButton">CHOOSE YOUR STYLE</button>
+      </a>
+    </div>
+
+    <div class="nsItem">
+      <img src="img/new-season2.jpg" alt="">
+    </div>
+  </div>
+
+  <section class="patners">
+    <div class="brands">
+      <img src="../static//img/brand-adidas.svg">
+      <img src="../static//img/brand-nike.svg">
+      <img src="../static//img/brand-puma.svg">
+      <img src="../static//img/brand-reebok.svg">
+      <img src="../static//img/brand-adidas.svg">
+      <img src="../static//img/brand-nike.svg">
+      <img src="../static//img/brand-puma.svg">
+      <img src="../static//img/brand-reebok.svg">
+    </div>
+
+    <div class="brands">
+      <img src="../static//img/brand-adidas.svg">
+      <img src="../static//img/brand-nike.svg">
+      <img src="../static//img/brand-puma.svg">
+      <img src="../static//img/brand-reebok.svg">
+      <img src="../static//img/brand-adidas.svg">
+      <img src="../static//img/brand-nike.svg">
+      <img src="../static//img/brand-puma.svg">
+      <img src="../static//img/brand-reebok.svg">
+    </div>
+  </section>
+
+
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-close">
+        <i class="fa-solid fa-close"></i>
+    </div>
+    <div class="cart-menu">
+        <h3>My Cart</h3>
+        <div class="cart-tems"></div>
+    </div>
+    <div class="sidebar--footer">
+        <div class="total--amount">
+          <h5>Total</h5>
+          <div class="cart-total">$0.00</div>
+        </div>
+        <button class="checkout-btn">Checkout</button>
+    </div>
+  </div>
+<script src="js/add-to-cart.js"></script>
+
+
+
+
+  <footer>
+    <div class="footer">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+  
+  
+      <ul class="social-media">
+        <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+        <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
+        <li><a href="#"><i class='bx bxl-instagram-alt'></i></a></li>
+      </ul>
+  
+      <ul class="menu">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./html/contacto.html">Contact</a></li>
+        <li><a href="./html/avisos-de-privacidad.html">Privacy Policy</a></li>
+        <li><a href="./html/termino-condiciones.html">Terms of Services</a></li>
+      </ul>
+  
+      <p>@2024 Derozan Official | All Rights Reserved.</p>
+    </div>
+    
+
+  </footer>
+
+  <script src="./js/interaciones.js"></script>
+  <script src="./js/./script.js"></script>
+
+
+</body>
+
+</html>
