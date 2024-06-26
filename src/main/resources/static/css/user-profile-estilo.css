@@ -159,19 +159,11 @@ body {
 }
 
 .contenido{
+    
     height: 100%;
     width: 100%;
 }
 
-#opcion1{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    background-color: #eee;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
 .title-category{
     text-align: center;
     padding-top: 30px;
@@ -397,16 +389,8 @@ input:focus + .lbl-nombre:after, input:valid + .lbl-nombre:after{
 .eliminar-producto .input-field{
     width: 500px;
     position: relative;
-    left: 33px;
 }
-.eliminar-producto .buttons-add-save{
-    gap: 50px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width: 100%;
-    margin-top: 50px;
-}
+
 .eliminar-producto .buttons-add-save .contenedor-btn-file{
     width: 250px;
 }
@@ -415,8 +399,8 @@ input:focus + .lbl-nombre:after, input:valid + .lbl-nombre:after{
 }
 
 .añadir-producto .buttons-add-save{
+    
     gap: 50px;
-    justify-content: center;
     align-items: center;
     display: flex;
     width: 100%;
@@ -444,10 +428,13 @@ input:focus + .lbl-nombre:after, input:valid + .lbl-nombre:after{
     grid-gap: 24px;
     margin-top: 24px;
     width:100%;
+    height: 500px;
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+    overflow-x: auto;
     color: black;
     display: flex;
     justify-content: center;
-    background-color: white;
+    background-color: #eee;
 }
 .table-data > div {
     border-radius: 20px;
@@ -583,7 +570,7 @@ input:focus + .lbl-nombre:after, input:valid + .lbl-nombre:after{
     height: 100%;
     width: 100%;
 }
-#sadd-brand, #search-brand, #update-brand , #search-brand, #update-brand, #add-iconic, #search-iconic, #update-iconic, #update-brand, #new-user-btn, #update-user, #delete-user, #update-user, #search-user, #editSAbtn{
+#sadd-brand, #search-brand, #update-brand , #search-brand, #update-brand, #add-iconic, #search-iconic, #update-iconic, #update-brand, #new-user-btn, #update-user, #delete-user, #update-user, #search-user, #editSAbtn, #editCloseSA{
     box-shadow: 0 0 12px rgba(0, 0, 0, .15);
     text-align: center;
     background: black;
@@ -669,23 +656,16 @@ select::-ms-expand {
     height: 100%;
     background-color: white;
 }
-.container-user-info{
-    padding: 70px;
-    display: flex;
-    gap: 50px;
-    width: 100%;
-    height: 100%;
-    color: black;
-    flex-wrap: wrap;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+
 .user-info{
     display: flex;
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    padding: 70px;
+    width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     flex-direction: column;
-    gap: 50px;
+    gap: 30px;
+
 }
 .info{
     display: flex;
@@ -696,24 +676,29 @@ select::-ms-expand {
     font-size: 30px;
 }
 .settings-menu-user{
-    padding: 70px;
     width: 100%;
     height: 100%;
     background-color: white;
 }
 .container-user-info{
-    padding: 70px;
     display: flex;
-    gap: 50px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     color: black;
-    flex-wrap: wrap;
     background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
 }
 .form-inputs{
+    flex-wrap: wrap;
     display: flex;
-    gap: 30px;
-    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 90px;
+}
+.closes{
+    display: flex;
+    gap: 20px;
 }

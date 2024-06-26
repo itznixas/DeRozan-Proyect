@@ -32,6 +32,11 @@
 
             <!-- MENU -->
             <div class="menu">
+                <div class="enlace" onclick="mostrarContenido('opcion5')">
+                    <i class='bx bx-user-circle'></i>
+                    <span>Profile</span>
+                </div>
+
                 <div class="enlace" id="" onclick="mostrarContenido('opcion1')">
                     <i class="bx bx-grid-alt"></i>
                     <span>Sneakers</span>
@@ -48,14 +53,10 @@
                 </div>
 
                 <div class="enlace" onclick="mostrarContenido('opcion4')">
-                    <i class="bx bx-message-square"></i>
+                    <i class='bx bxs-user-plus'></i>
                     <span>Add Users</span>
                 </div>
 
-                <div class="enlace" onclick="mostrarContenido('opcion5')">
-                    <i class="bx bx-file-blank"></i>
-                    <span>Profile</span>
-                </div>
             </div>
         </div>
 
@@ -70,17 +71,15 @@
                         <h1>Choose Your Option</h1>
                     </div>
                     <div class="opciones">
-                        <button class="enlace" onclick="mostrarContenido('opcion10')">ADD</button>
-                        <button class="enlace" onclick="mostrarContenido('opcion11')">EDIT</button>
-                        <button class="enlace" onclick="mostrarContenido('opcion13')">DELETE</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion10')"><i class='bx bx-cart-add'></i>ADD</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion11')"><i class='bx bx-cog'></i> EDIT</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion13')"><i class='bx bxs-trash'></i>DELETE</button>
                     </div>
                 </div>
                 <div class="table-data">
                     <div class="order">
                         <div class="head">
                             <h3>Recent Orders</h3>
-                            <i class='bx bx-search'></i>
-                            <i class='bx bx-filter'></i>
                         </div>
                         <table>
                             <thead>
@@ -324,15 +323,17 @@
                                 <span class="text-nomb">Id Product</span>
                             </label>
                         </div>
-                        <div class="input-field">
-                            <button id="btn-busqueda-id">Search Product</button>
-                        </div>
+                        
 
 
                         <div class="buttons-add-save">
+                            <div class="input-field">
+                                <button id="btn-busqueda-id">Search Product</button>
+                            </div>
+
                             <button type="button" id="save-product">
-                                <i class='bx bx-save'></i></i> Save Product
-                            </button>
+                                <i class='bx bx-save'></i></i> Delete Product
+                            </button>    
                         </div>
                     </div>
                 </form>
@@ -347,17 +348,15 @@
                         <h1>Choose Your Option</h1>
                     </div>
                     <div class="opciones">
-                        <button class="enlace" onclick="mostrarContenido('opcion14')">ADD</button>
-                        <button class="enlace" onclick="mostrarContenido('opcion15')">EDIT</button>
-                        <button class="enlace" onclick="mostrarContenido('opcion16')">DELETE</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion14')"><i class='bx bx-cart-add'></i>ADD</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion15')"><i class='bx bx-cog'></i>EDIT</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion16')"><i class='bx bxs-trash'></i>DELETE</button>
 
                     </div>
                     <div class="table-data">
                         <div class="order">
                             <div class="head">
                                 <h3>Recent Orders</h3>
-                                <i class='bx bx-search'></i>
-                                <i class='bx bx-filter'></i>
                             </div>
                             <table>
                                 <thead>
@@ -416,10 +415,7 @@
                         </div>
 
                         <div class="help-message">
-                            <p>To search for and delete an ID, start by entering the ID in the search bar and clicking
-                                on the "Search" button. Once you have located the correct ID in the search results,
-                                select it and click on the "Delete" button to remove it from the system. Ensure you have
-                                the correct ID before proceeding with deletion, as this action might be irreversible.
+                            <p>To edit an Brand, search for it by its unique ID. Select the line to open the editing interface, then modify the desired fields. Click "Save" to update the iconic line with the new information.
                             </p>
                         </div>
 
@@ -499,21 +495,19 @@
                 </div>
                 <div class="choose-your-option">
                     <div class="title-category">
-                        <h1>choose-your-option</h1>
+                        <h1>choose your option</h1>
                     </div>
 
                     <div class="opciones">
-                        <button class="enlace" onclick="mostrarContenido('opcion17')">ADD</button>
-                        <button class="enlace" onclick="mostrarContenido('opcion18')">EDIT</button>
-                        <button class="enlace" onclick="mostrarContenido('opcion19')">DELETE</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion17')"><i class='bx bx-cart-add'></i>ADD</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion18')"><i class='bx bx-cog'></i> EDIT</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion19')"><i class='bx bxs-trash'></i>DELETE</button>
 
                     </div>
                     <div class="table-data">
                         <div class="order">
                             <div class="head">
                                 <h3>Recent Orders</h3>
-                                <i class='bx bx-search'></i>
-                                <i class='bx bx-filter'></i>
                             </div>
                             <table>
                                 <thead>
@@ -539,6 +533,12 @@
                             <h1>ADD ICONIC LINE</h1>
                         </div>
 
+                        <div class="help-message">
+                            <p>
+                                To add an iconic line, complete the required fields with the necessary information. Once you have filled in the fields, click "Save" to store the iconic line. This will ensure your new iconic line is added successfully.
+                            </p>
+                        </div>
+
                         <div class="input-field">
                             <input type="text" required id="id-brand">
                             <label class="lbl-nombre">
@@ -552,7 +552,7 @@
                             </label>
                         </div>
                         <button type="button" id="add-iconic">
-                            <i class='bx bx-save'></i></i> Save Product
+                            <i class='bx bx-save'></i></i> Save 
                         </button>
 
                     </div>
@@ -564,9 +564,13 @@
                     <div class="formulario">
 
                         <div class="title-for-boxs">
-                            <h1>EDIT ICONIC LINE<< /h1>
+                            <h1>EDIT ICONIC LINE</h1>
                         </div>
 
+                        <div class="help-message">
+                            <p>To edit an iconic line, search for it by its unique ID. Select the line to open the editing interface, then modify the desired fields. Click "Save" to update the iconic line with the new information.
+                            </p>
+                        </div>
 
                         <div class="input-field">
                             <input type="text" required id="id-iconic">
@@ -604,7 +608,7 @@
                     <div class="formulario">
 
                         <div class="title-for-boxs">
-                            <h1>DELETE ICONIC LINE<< /h1>
+                            <h1>DELETE ICONIC LINE</h1>
                         </div>
 
                         <div class="help-message">
@@ -623,7 +627,7 @@
                         </div>
 
                         <div class="input-field">
-                            <button id="search-brand">Search Product</button>
+                            <button id="search-brand">Search</button>
                         </div>
 
                         <div class="input-field">
@@ -634,7 +638,7 @@
                         </div>
 
                         <button type="button" id="update-brand">
-                            <i class='bx bx-save'></i></i> Delete Product
+                            <i class='bx bx-save'></i></i> Delete 
                         </button>
                     </div>
                 </form>
@@ -647,19 +651,17 @@
                 </div>
                 <div class="choose-your-option">
                     <div class="title-category">
-                        <h1>choose-your-option</h1>
+                        <h1>choose your option</h1>
                     </div>
                     <div class="opciones">
-                        <button class="enlace" onclick="mostrarContenido('opcion20')">ADD</button>
-                        <button class="enlace" onclick="mostrarContenido('opcion21')">EDIT</button>
-                        <button class="enlace" onclick="mostrarContenido('opcion22')">DELETE</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion20')"><i class='bx bxs-cart-add'></i> ADD</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion21')"><i class='bx bx-cog'></i>EDIT</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion22')"><i class='bx bxs-trash'></i>DELETE</button>
                     </div>
                     <div class="table-data">
                         <div class="order">
                             <div class="head">
                                 <h3>Recent Orders</h3>
-                                <i class='bx bx-search'></i>
-                                <i class='bx bx-filter'></i>
                             </div>
                             <table>
                                 <thead>
@@ -712,7 +714,6 @@
                             </label>
                         </div>
                         <div class="input-field">
-                            <label for="select-rol">Role</label>
                             <select name="select" id="select-rol">
                                 <option selected disabled>Choose a Role</option>
                                 <option value="2">admin</option>
@@ -729,7 +730,7 @@
 
 
                         <button type="button" id="new-user-btn">
-                            <i class='bx bx-save'></i></i> Save Product
+                            <i class='bx bx-save'></i></i> Save User
                         </button>
 
                     </div>
@@ -785,7 +786,7 @@
                         <div class="input-field">
                             <input type="date" id="birthDate" name="birthDate">
                             <label class="lbl-nombre">
-                                <span class="text-nomb">Birth Date</span>
+                                <span class="text-nomb"></span>
                             </label>
                         </div>
                         <div class="input-field">
@@ -795,19 +796,17 @@
                             </label>
                         </div>
                         <div class="input-field">
-                            <label for="status">Status</label>
                             <select class="box-input" id="status" name="status" required>
                                 <option value="active">Active</option>
                                 <option value="inactive">Inactive</option>
                             </select>
                         </div>
                         <div class="input-field">
-                            <label for="role">Role</label>
-                    <select class="box-input" id="role" name="role" required>
-                        <option value="1">Client</option>
-                        <option value="2">Admin</option>
-                        <option value="3">Super admin</option>
-                    </select>
+                            <select class="box-input" id="role" name="role" required>
+                                <option value="1">Client</option>
+                                <option value="2">Admin</option>
+                                <option value="3">Super admin</option>
+                            </select>
                         </div>
 
                         <button type="submit" id="update-user">
@@ -890,12 +889,13 @@
                 <div class="container-user-info">
                     <div class="user-info">
                         <div class="title-for-boxs"><h1>Profile settings</h1></div>
-                        <div class="form-inputs">
-                            <div>
-                                <h1>Personal data</h1>
-                                <p id="solic">Required fields*</p>
-                            </div>
 
+                        <div>
+                            <h1>Personal data</h1>
+                            <p id="solic">Required fields*</p>
+                        </div>
+
+                        <div class="form-inputs">
                             <div class="input-field">
                                 <input type="text" required id="name">
                                 <label class="lbl-nombre">
@@ -934,10 +934,10 @@
                             <div class="input-field">
                                 <input type="date" required id="birthDate">
                                 <label class="lbl-nombre">
-                                    <span class="text-nomb">Date of Birth</span>
+                                    <span class="text-nomb"></span>
                                 </label>
                             </div>
-                            
+
                             <div class="closes">
                                 <button id="update-user">Update</button>
                                 <button onclick="mostrarContenido('opcion1')" id="editCloseSA">Cancel</button>
