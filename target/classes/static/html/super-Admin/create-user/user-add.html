@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../css/super-adminCSS/create-user/user-add.css">
+    <title>Create User</title>
+</head>
+<body>
+<div class="user-add-container">
+    <div class="user-add">
+        <div class="user-add-title">
+            <h1>Create user</h1>
+            <div class="user-add-subtitle">
+                <h4>Personal data</h4>
+                <p>Required fields*</p>
+            </div>
+            <div class="user-add-admin">
+                <div class="user-1-column">
+                    <div class="column-all-user">
+                        <label for="name">Name</label>
+                        <input type="text" id="name">
+                    </div>
+                    <div class="column-all-user">
+                        <label for="lastname">Lastname</label>
+                        <input type="text" id="lastname">
+                    </div>
+                </div>
+                <div class="user-2-column">
+                    <div class="column-all-user">
+                        <label for="email-user">Email</label>
+                        <input type="text" id="email-user">
+                    </div>
+                </div>
+                <div class="user-3-column">
+                    <div class="column-all-user">
+                        <div class="column-all-user">
+                            <label for="select-rol">Role</label>
+                            <select name="select" id="select-rol">
+                                <option value="2">admin</option>
+                                <option value="3">super-admin</option>
+                            </select>
+                        </div>
+                        <div class="column-all-user">
+                            <label for="birth-date">Birth Date</label>
+                            <input type="date" id="birth-date">
+                        </div>
+                    </div>
+                    <div class="user-pass-info">
+                        <h3>New password for administrators</h3>
+                    </div>
+                    <div class="column-all-user">
+                        <label for="new-password">New Password</label>
+                        <input type="password" id="new-password">
+                    </div>
+                    <div class="user-button">
+                        <button type="button" id="new-user-btn">New</button>
+                        <a href="../create-user/user-main.html"><button type="button" id="cancel-user-btn">Cancel</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="message"></div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="../../../js/super-admin/user/add-user.js"></script>
+
+</body>
+</html>

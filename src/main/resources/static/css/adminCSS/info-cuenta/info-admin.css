@@ -1,0 +1,598 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+header {
+    background-color: #000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+
+}
+
+.nav {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav,
+.nav_item {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_logo,
+.nav_link,
+.nav_login {
+    color: #fff;
+}
+
+.nav_logo {
+    font-size: 2em;
+}
+
+.nav_item {
+    column-gap: 25px;
+}
+
+.nav_link:hover {
+    color: #383636;
+}
+
+.nav_login_container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav_login {
+    padding: 4px 12px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+    box-shadow: none;
+}
+
+
+.nav_login:hover {
+    color: #383636;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+
+header.sticky {
+    padding: 5px 10%;
+    background-color: #fff;
+}
+
+header.sticky .nav_items li a {
+    color: #000;
+}
+
+header.sticky .nav_logo {
+    color: #000;
+}
+
+header.sticky .nav_login {
+    color: #000;
+}
+
+
+/* Estilo para ocultar el menú desplegable */
+
+#user-btn {
+    background-color: transparent;
+    border: none;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.user-menu {
+    position: relative;
+    display: inline-block;
+} 
+.user-menu:hover .dropdown-content {
+    display: block;
+}
+
+
+
+.menu-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+#logo{
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+}
+.menu{
+    width: 280px;
+    background-color: white;
+    height: 100hv;
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.options-menu{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.options-menu button{
+    font-size: 20px;
+    border: none;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: 0.4s;
+    display: flex;
+    gap: 10px;
+}
+.options-menu button{
+    background-color: white;
+    text-align: start;
+}
+.options-menu button:active{
+    background-color: rgba(56, 136, 255);
+    color: white;
+}
+button:focus{
+    background-color: rgba(56, 136, 255);
+    color: white;
+}
+.contenido{
+    border-top: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+#opcion1{
+    width: 100%;
+    height: 100%;
+}
+.container-user-info{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.form-inputs{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    
+}
+.form-inputs input{
+    height: 40px;
+    width: 500px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.row-1-column, .row-2-column, .row-3-column{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+.column-all{
+    display: flex;
+    flex-direction: column;
+}
+
+
+#update-password{
+     display: block;
+    margin: 20px 0;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: fit-content;
+    font-size: 14px;
+}
+
+
+.container-user-info{
+    max-width: 600px;  
+    padding: 20px;
+    background-color: #fff;
+    
+}
+
+.user-info{
+    margin: 50px auto;
+    padding: 20px;
+    
+}
+
+.user-info h1{
+    font-size: 34px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.info p{
+    display: flex;
+    margin: 10px 0;   
+    line-height: 1.5;
+}
+
+.info p span {
+    color: #666;
+    margin-left: 10px;
+}
+
+.info strong {
+    display: inline-block;
+    min-width: 10px;
+}
+
+.edit-btn {
+    display: block;
+    margin: 20px 0;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: fit-content;
+    font-size: 14px;
+}
+.edit-btn:hover {
+    background-color: #ddd;
+}
+
+
+.column1{
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    border: 1px solid #A6A6A6;
+    border-radius: 30px;
+    height: 650px;
+    width: 700px;
+}
+.column1 h1{
+    font-size: 20px
+}
+
+.description input{
+    height: 100px;
+    width: 100%;
+}
+.box-input{
+    box-sizing: border-box;
+    padding: 4px 12px;
+    height: 30px;
+    width: 300px;
+    border-radius: 1px;
+    border: 1px solid #A6A6A6;
+}
+
+.name{
+    grid-column: 1/1;
+    grid-row: 2/2;
+}
+.description{
+    grid-column: 1/4;
+    grid-row: 3/3;
+    width: 100%;
+}
+
+.mark{
+    grid-column: 1/1;
+    grid-row: 4/4;
+}
+
+.amount{
+    grid-column: 1/1;
+    grid-row: 5/5;
+}
+.price{
+    grid-column: 1/1;
+    grid-row: 6/6;
+}
+.size{
+    grid-column: 3/3;
+    grid-row:  4/4;
+}
+.categories{
+    grid-column: 3/3;
+    grid-row: 5/5;
+}
+.color{
+    grid-column: 3/3;
+    grid-row: 6/6;
+}
+
+.id-producto{
+    grid-column: 1/1;
+    grid-row: 7/7;
+}
+.id-linea{
+    grid-column: 3/3;
+    grid-row: 7/7;
+}
+
+
+.column2{
+    padding: 20px;
+    border: 1px solid #A6A6A6;
+    border-radius: 30px;
+    height: 580px;
+    width: 390px;
+    flex-wrap: wrap;
+    gap: 40px;
+    display: flex;
+}
+
+.drag-imagen1{
+    text-align: center;
+    border: 2px dashed #A6A6A6;
+    height: 200px;
+    width: 340px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+}
+.drag-imagen2{
+    text-align: center;
+    border: 2px dashed #A6A6A6;
+    height: 200px;
+    width: 150px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+}
+
+.drag-imagen3{
+    text-align: center;
+    border: 2px dashed #A6A6A6;
+    height: 200px;
+    width: 150px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+}
+.drag-imagen1 .icon-drag{
+    font-size: 50px; 
+}
+.title-drag{
+    font-size: 20px;
+    font-weight: 500;
+}
+.drag-imagen2 .icon-drag{
+    font-size: 40px; 
+}
+
+.drag-imagen3 .icon-drag{
+    font-size: 40px; 
+}
+.drag-imagen1 button, .drag-imagen2 button, .drag-imagen3 button{
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: white;
+    border: 1px solid #A6A6A6;
+    color: #ffbb2a;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.drag-imagen2 button, .drag-imagen3 button{
+    height: 40px;
+    width: 120px;
+    font-size: 13px;
+}
+
+.drag-imagen1 img, .drag-imagen2 img, .drag-imagen3 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+#save-product, #btn-busqueda-id{
+    text-align: center;
+    background-color: #4DBDED;
+    border: none;
+    color: white;
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#delete-product{
+    text-align: center;
+    background-color: red;
+    border: none;
+    color: white;
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.container-column-set{
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.busqueda-id-editar{
+    grid-column: 1/1;
+    grid-row: 2/2;
+}
+.btn-busqueda-id{
+    grid-column: 1/1;
+    grid-row: 3/3;
+}
+.container-column-set  .name{
+    grid-column: 1/1;
+    grid-row: 8/8;
+}
+.container-column-set  .description{
+    grid-column: 1/4;
+    grid-row: 4/4;
+    width: 100%;
+}
+
+.container-column-set  .mark{
+    grid-column: 1/1;
+    grid-row: 5/5;
+}
+
+.container-column-set .amount{
+    grid-column: 3/3;
+    grid-row: 5/5;
+}
+.container-column-set .price{
+    grid-column: 1/1;
+    grid-row: 6/6;
+}
+.container-column-set .size{
+    grid-column: 3/3;
+    grid-row:  6/6;
+}
+.container-column-set .categories{
+    grid-column: 3/3;
+    grid-row: 8/8;
+}
+.container-column-set .color{
+    grid-column: 1/1;
+    grid-row: 7/7;
+}
+.container-column-set .id-linea{
+    grid-column: 3/3;
+    grid-row: 7/7;
+}
+.container-column-delete{
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+.content-delete{
+    border: 1px solid black;
+    padding: 30px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 40px;
+    height: 50%;
+    width: 50%;
+}
+.content-delete h1{
+    text-align: center;
+}
+
+
+.container-user-info #solic{
+    color: #A6A6A6;
+    font-family: 'Poppins';
+    font-size: 14px;
+}
+
+.closes {
+    display: flex;
+    gap: 10px; /* Espacio entre botones */
+}
+
+#editCloseSA{
+    display: block;
+    margin: 20px 0;
+    padding: 10px 15px;
+    background-color: #000000;
+    border: 1px solid #000000;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: fit-content;
+    font-size: 14px;
+}

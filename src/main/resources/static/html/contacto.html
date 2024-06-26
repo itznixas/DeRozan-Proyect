@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- *******  Link To CSS Style Sheet  ******* -->
+	<link rel="stylesheet" type="text/css" href="../css/contactoestilo.css">
+
+	<!-- *******  Font Awesome Icons Link  ******* -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+	<!-- *******  Link To Goggle Fonts  *******  -->
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,800;1,900&display=swap"
+		rel="stylesheet">
+
+
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Contact Section</title>
+</head>
+
+<body>
+
+	<header>
+		<nav class="nav">
+			<a href="../index.html" class="nav_logo">DEROZAN</a>
+			<ul class="nav_items">
+				<li class="nav_item">
+					<a href="../index.html" class="nav_link">HOME</a>
+					<a href="catalogo.html" class="nav_link">SNEAKERS</a>
+					<a href="#" class="nav_link">SERVICES</a>
+					<a href="contacto.html" class="nav_link">CONTACT</a>
+				  </li>
+			</ul>
+			<div>
+                <button class="nav_contact" ><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="nav_contact"> <i class="fa-regular fa-heart"></i></button>
+                <button class="nav_contact"> <i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
+                <button class="nav_contact" id="form-open"> <i class="fa-regular fa-user"></i></button>
+            </div>
+		</nav>
+	</header>
+
+	<script type="text/javascript">
+		window.addEventListener("scroll", function () {
+			var header = document.querySelector("header");
+			header.classList.toggle("sticky", window.scrollY > 0)
+		})
+	</script>
+
+
+	<!-- Home -->
+	<section class="home">
+		<div class="form_container">
+			<i class="uil uil-times form_close"></i>
+			<!-- Formulario de Login -->
+			<div class="form login_form">
+				<form action="#">
+					<h2>Login</h2>
+
+					<div class="input_box">
+						<input type="email" placeholder="Introduce tu correo" required />
+						<i class="uil uil-envelope-alt email"></i>
+					</div>
+					<div class="input_box">
+						<input type="password" placeholder="Introduce tu contraseña" required />
+						<i class="uil uil-lock password"></i>
+						<i class="uil uil-eye-slash pw_hide"></i>
+					</div>
+
+					<div class="option_field">
+						<span class="checkbox">
+							<input type="checkbox" id="check" />
+							<label for="check">Recordarme</label>
+						</span>
+						<a href="#" class="forgot_pw">¿Olvidaste tu contraseña?</a>
+					</div>
+
+					<button class="button">Iniciar Sesión</button>
+
+					<div class="login_signup">O</div>
+
+					<button class="google">Continuar con Google</button>
+					<button class="facebook">Continuar con Facebook</button>
+
+					<div class="login_signup">¿No tienes una cuenta? <a href="#" id="signup">Regístrate</a></div>
+
+
+				</form>
+			</div>
+
+			<!-- Formulario de Registro -->
+			<div class="form signup_form">
+				<form action="#">
+					<h2>Registro</h2>
+
+					<div class="input_box">
+						<input type="email" placeholder="Introduce tu correo" required />
+						<i class="uil uil-envelope-alt email"></i>
+					</div>
+					<div class="input_box">
+						<input type="password" placeholder="Crea una contraseña" required />
+						<i class="uil uil-lock password"></i>
+						<i class="uil uil-eye-slash pw_hide"></i>
+					</div>
+					<div class="input_box">
+						<input type="password" placeholder="Confirma tu contraseña" required />
+						<i class="uil uil-lock password"></i>
+						<i class="uil uil-eye-slash pw_hide"></i>
+					</div>
+					<br>
+					<div>
+						<span class="checkbox">
+							<input type="checkbox" id="check" />
+							<label for="check">Acepto las <a href="./html/avisos-de-privacidad.html">Política de
+									Privacidad</a></label>
+						</span>
+						<span class="checkbox">
+							<input type="checkbox" id="check" />
+							<label for="check">He leido y Acepto las <a href="./html/termino-condiciones.html">Terminos
+									y condiciones</a></label>
+						</span>
+					</div>
+					<button class="button">Regístrate Ahora</button>
+					<div class="login_signup">O</div>
+
+					<button class="google">Continuar con Google</button>
+					<button class="facebook">Continuar con Facebook</button>
+					<div class="login_signup">¿Ya tienes una cuenta? <a href="#" id="login">Iniciar Sesión</a></div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<script src="../js/script.js"></script>
+
+
+	<div class="container">
+		<main class="row">
+
+			<!--  *******   Left Section (Column) Starts   *******  -->
+
+			<section class="col left">
+
+				<!--  *******   Title Starts   *******  -->
+
+				<div class="contactTitle">
+					<h2>Get In Touch</h2>
+					<p>Hello! At Derozan, we greatly value your feedback and are here to answer any questions you may
+						have. Whether you need assistance, have a suggestion, or just want to say hi, don't hesitate to
+						get in touch with us. Below are the different ways you can reach our team.</p>
+				</div>
+
+				<!--  *******   Title Ends   *******  -->
+
+				<!--  *******   Contact Info Starts   *******  -->
+
+				<div class="contactInfo">
+
+					<div class="iconGroup">
+						<div class="icon">
+							<i class="fa-solid fa-phone"></i>
+						</div>
+						<div class="details">
+							<span>Phone</span>
+							<span>+57 321 664 55 36</span>
+						</div>
+					</div>
+
+					<div class="iconGroup">
+						<div class="icon">
+							<i class="fa-solid fa-envelope"></i>
+						</div>
+						<div class="details">
+							<span>Email</span>
+							<span>DerozanOfficial@gmail.com</span>
+						</div>
+					</div>
+
+					<div class="iconGroup">
+						<div class="icon">
+							<i class="fa-solid fa-location-dot"></i>
+						</div>
+						<div class="details">
+							<span>Location</span>
+							<span>Cra. 54 #68 – 80, Nte. Centro Historico.</span>
+						</div>
+					</div>
+
+				</div>
+
+				<!--  *******   Contact Info Ends   *******  -->
+
+				<!--  *******   Social Media Starts   *******  -->
+
+				<div class="socialMedia">
+					<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+					<a href="#"><i class="fa-brands fa-twitter"></i></a>
+					<a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+				</div>
+
+				<!--  *******   Social Media Ends   *******  -->
+
+			</section>
+
+			<!--  *******   Left Section (Column) Ends   *******  -->
+
+			<!--  *******   Right Section (Column) Starts   *******  -->
+
+			<section class="col right">
+
+				<!--  *******   Form Starts   *******  -->
+
+				<form class="messageForm">
+
+					<div class="inputGroup halfWidth">
+						<input type="text" name="" required="required">
+						<label>Your Name</label>
+					</div>
+
+					<div class="inputGroup halfWidth">
+						<input type="email" name="" required="required">
+						<label>Email</label>
+					</div>
+
+					<div class="inputGroup fullWidth">
+						<input type="text" name="" required="required">
+						<label>Subject</label>
+					</div>
+
+					<div class="inputGroup fullWidth">
+						<textarea required="required"></textarea>
+						<label>Say Something</label>
+					</div>
+
+					<div class="inputGroup fullWidth">
+						<button>Send Message</button>
+					</div>
+
+				</form>
+
+				<!--  *******   Form Ends   *******  -->
+			</section>
+
+			<!--  *******   Right Section (Column) Ends   *******  -->
+
+		</main>
+	</div>
+
+
+
+
+	<footer>
+
+		<div class="waves">
+			<div class="wave" id="wave1"></div>
+			<div class="wave" id="wave2"></div>
+			<div class="wave" id="wave3"></div>
+			<div class="wave" id="wave4"></div>
+		</div>
+
+
+		<ul class="social-media">
+			<li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+			<li><a href="#"><i class='bx bxl-facebook'></i></a></li>
+			<li><a href="#"><i class='bx bxl-instagram-alt'></i></a></li>
+		</ul>
+
+		<ul class="menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="contacto.html">Contact</a></li>
+            <li><a href="avisos-de-privacidad.html">Privacy Policy</a></li>
+            <li><a href="termino-condiciones.html">Terms of Services</a></li>
+        </ul>
+
+		<p>@2024 Derozan Official | All Rights Reserved.</p>
+
+	</footer>
+
+
+</body>
+
+</html>

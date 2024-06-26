@@ -1,0 +1,553 @@
+/* FONTS GOOGLE */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.menu-dashboard {
+    flex: 1;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+.content {
+    flex: 3;
+    background-color: #ecf0f1;
+    color: black;
+    padding: 20px;
+}
+
+
+
+/* VARIABLES */
+
+:root {
+    --blanco: #E0E0E0;
+    --azul-opacidad: #184463;
+    --bg-menu: #003053;
+    --bg-body: #C7E1FF;
+}
+
+/* GENERALES */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: var(--blanco);
+}
+
+/* LAYOUT */
+
+.menu-dashboard {
+    max-width: 150px;
+    height: 100vh;
+    background: black;
+    padding: 20px;
+    transition: max-width .3s ease;
+}
+
+.top-menu {
+    display: flex;
+    margin-bottom: 60px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-menu .logo {
+    display: flex;
+    align-items: center;
+}
+
+.top-menu .logo img {
+    width: 40px;
+    transition: width .3s ease;
+}
+
+.top-menu .logo span {
+    font-size: 20px;
+    margin-left: 20px;
+    display: none;
+}
+
+.top-menu .toggle {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.top-menu .toggle i {
+    font-size: 35px;
+}
+
+
+
+/* ENLACES MENU */
+
+.menu .enlace {
+    width: 100%;
+    padding: 20px 0 20px 17px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all .3s ease;
+}
+
+.menu .enlace:hover {
+    background: #2ecece;
+}
+
+.menu .enlace i {
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.menu .enlace span {
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.menu-dashboard.open {
+    max-width: 300px;
+}
+
+.menu-dashboard.open .top-menu .logo span {
+    display: block;
+    font-size: 25px;
+}
+
+.menu-dashboard.open .input-search
+.menu-dashboard.open .menu .enlace {
+    width: auto;
+}
+
+.menu-dashboard.open .input-search .input {
+    display: block;
+}
+
+.menu-dashboard.open .menu .enlace {
+    padding: 20px;
+}
+
+.menu-dashboard.open .menu .enlace span {
+    opacity: 1;
+}
+
+.contenido{
+    height: 100%;
+    width: 100%;
+}
+
+#opcion1{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.title-category{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: black;
+}
+
+.choose-your-option{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.choose-your-option button{
+    width: 250px;
+    text-align: center;
+    padding: 20px 0 20px 17px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all .3s ease;
+}
+.opciones{
+    display: flex;
+    gap: 30px;
+}
+
+.añadir-producto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+}
+.editar-producto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+}
+.eliminar-producto{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+}
+.eliminar-producto .formulario{
+    gap: 0px;
+}
+.form{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.formulario{
+    padding: 70px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    width: 800px;
+    height: 100%;
+    flex-wrap: wrap;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.buttons-add-save{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 0px;
+    gap: 15px;
+}
+.title-for-boxs{
+    width: 100%;
+    text-align: center;
+}
+.title-for-boxs h1{
+    color: black;
+    border-bottom: 2px solid #E0E0E0; /* Esto añade una línea negra de 2 píxeles de grosor debajo del título */
+    padding-bottom: 5px;
+}
+.contenedor-btn-file input[type="file"] {
+    appearance: none;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+}
+.contenedor-btn-file {
+    display: flex;
+    position: relative;
+    background-color: black;
+    color: #fff;
+    border: 0;
+    height: 50px;
+    width: 170px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .15);
+    transition: ease-out 120ms background-color;
+}
+.contenedor-btn-file p,i{
+    font-size: 22px;
+}
+.contenedor-btn-file:hover {
+    background-color: #16579B;
+}
+.contenedor-btn-file:active {
+    background-color: #114378;
+}
+.contenedor-btn-file  i {
+    margin-right: 15px;
+}
+.contenedor-btn-file label {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+#save-product{
+    box-shadow: 0 0 12px rgba(0, 0, 0, .15);
+    text-align: center;
+    background: black;
+    cursor: pointer;
+    color: white;
+    width: 170px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    font-size: 22px;
+}
+
+#save-product:hover{
+        background-color: #114378;
+        transition-duration: 0.5s;
+}
+#btn-busqueda-id{
+    box-shadow: 0 0 12px rgba(0, 0, 0, .15);
+    text-align: center;
+    background: black;
+    cursor: pointer;
+    color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: none;
+    font-size: 22px;
+}
+.input-field{
+    width: 250px;
+    height: 50px;
+    max-width: 400px;
+    position: relative;
+    overflow: hidden;
+}
+.form input{
+    width: 100%;
+    height: 100%;
+    background: none;
+    color: black;
+    padding-top: 20px;
+    border: none;
+    outline: 0px;
+}
+.form .lbl-nombre{
+    font-size: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #c7c7c7;
+}
+.form .lbl-nombre:after{
+    content: '';
+    font-size: 30px;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #2ecece;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+    
+}
+.text-nomb{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+    color: black;
+}
+.eliminar-producto .input-field input{
+    font-size: 25px;
+}
+.form input:focus + .lbl-nombre .text-nomb,.form input:valid + .lbl-nombre .text-nomb{
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: black;
+}
+.form input:focus + .lbl-nombre:after, .form input:valid + .lbl-nombre:after{
+    transform: translateX(0%);
+}
+
+.help-message p{
+    font-size: 30px;
+    padding: 30px;
+    color: black;
+}
+.eliminar-producto .input-field{
+    width: 500px;
+    position: relative;
+    left: 33px;
+}
+.eliminar-producto .buttons-add-save{
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+}
+.eliminar-producto .buttons-add-save .contenedor-btn-file{
+    width: 250px;
+}
+.eliminar-producto .buttons-add-save #save-product{
+    width: 250px;
+}
+
+.añadir-producto .buttons-add-save{
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+
+.añadir-producto .buttons-add-save .contenedor-btn-file{
+    width: 250px;
+}
+.añadir-producto .buttons-add-save #save-product{
+    width: 250px;
+}
+
+
+@media only screen and (min-width:320px) and (max-width:768px){
+.form{
+    width:85%;
+}
+    }
+
+
+
+.table-data {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 24px;
+    margin-top: 24px;
+    width:100%;
+    color: black;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+.table-data > div {
+    border-radius: 20px;
+    background: var(--light);
+    padding: 24px;
+    overflow-x: auto;
+}
+.table-data .head {
+    display: flex;
+    align-items: center;
+    grid-gap: 16px;
+    margin-bottom: 24px;
+}
+.table-data .head h3 {
+    margin-right: auto;
+    font-size: 24px;
+    font-weight: 600;
+}
+.table-data .head .bx {
+    cursor: pointer;
+}
+
+.table-data .order {
+    flex-grow: 1;
+    flex-basis: 500px;
+}
+.table-data .order table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table-data .order table th {
+    padding-bottom: 12px;
+    font-size: 13px;
+    text-align: left;
+    border-bottom: 1px solid var(--grey);
+}
+.table-data .order table td {
+    padding: 16px 0;
+}
+.table-data .order table tr td:first-child {
+    display: flex;
+    align-items: center;
+    grid-gap: 12px;
+    padding-left: 6px;
+}
+.table-data .order table td img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.table-data .order table tbody tr:hover {
+    background: var(--grey);
+}
+.table-data .order table tr td .status {
+    font-size: 10px;
+    padding: 6px 16px;
+    color: var(--light);
+    border-radius: 20px;
+    font-weight: 700;
+}
+.table-data .order table tr td .status.completed {
+    background: var(--blue);
+}
+.table-data .order table tr td .status.process {
+    background: var(--yellow);
+}
+.table-data .order table tr td .status.pending {
+    background: var(--orange);
+}
+
+
+.table-data .todo {
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+.table-data .todo .todo-list {
+    width: 100%;
+}
+.table-data .todo .todo-list li {
+    width: 100%;
+    margin-bottom: 16px;
+    background: var(--grey);
+    border-radius: 10px;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.table-data .todo .todo-list li .bx {
+    cursor: pointer;
+}
+.table-data .todo .todo-list li.completed {
+    border-left: 10px solid var(--blue);
+}
+.table-data .todo .todo-list li.not-completed {
+    border-left: 10px solid var(--orange);
+}
+.table-data .todo .todo-list li:last-child {
+    margin-bottom: 0;
+}
+
