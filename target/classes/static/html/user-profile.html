@@ -52,7 +52,7 @@
     
                 <div class="enlace" onclick="mostrarContenido('opcion5')">
                     <i class="bx bx-file-blank"></i>
-                    <span></span>
+                    <span>Profile</span>
                 </div>
             </div>
         </div>
@@ -318,7 +318,9 @@
                                     <span class="text-nomb">Id Product</span>
                                     </label>
                                 </div>
-        
+                                <div class="input-field">
+                                    <button id="btn-busqueda-id">Search Product</button>
+                                </div>
                                 
         
                                 <div class="buttons-add-save">
@@ -346,13 +348,131 @@
                         <h1>Choose Your Option</h1>
                     </div>
                     <div class="opciones">
-                        <button>ADD</button>
-                        <button>EDIT</button>
-                        <button>DELETE</BUtton>
+                        <button class="enlace" onclick="mostrarContenido('opcion14')">ADD</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion15')">EDIT</button>                    
+                        <button class="enlace" onclick="mostrarContenido('opcion16')">DELETE</button>                    
+                        
                     </div>
-                    
+                    <div class="table-data">
+                        <div class="order">
+                            <div class="head">
+                                <h3>Recent Orders</h3>
+                                <i class='bx bx-search' ></i>
+                                <i class='bx bx-filter' ></i>
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Data will be populated here by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
+           
+            <div class="añadir-marca" style="display: none;" id="opcion14">
+        <form class="form" enctype="multipart/form-data">
+            <div class="formulario">
+
+                <div class="title-for-boxs">
+                    <h1>ADD PRODUCTS</h1>
+                </div>
+
+                <div class="input-field">
+                    <input type="text" required id="brand-name">
+                    <label class="lbl-nombre">
+                    <span class="text-nomb">Brand Title</span>
+                    </label>
+                </div>           
+
+                    <button type="button" id="sadd-brand">
+                        <i class='bx bx-save' ></i></i> Save Product 
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="actualizar-producto" style="display: none;" id="opcion15">
+            <form class="form" enctype="multipart/form-data">
+                <div class="formulario">
+
+                    <div class="title-for-boxs">
+                        <h1>EDIT PRODUCTS</h1>
+                    </div>
+
+                    
+                    <div class="input-field">
+                        <input type="text" required id="id-brand">
+                        <label class="lbl-nombre">
+                        <span class="text-nomb">Id brand</span>
+                        </label>
+                    </div>
+
+                    <div class="input-field">
+                        <button id="search-brand">Search Product</button>
+                    </div>
+
+                    <div class="input-field">
+                        <input type="text" required id="brand-name">
+                        <label class="lbl-nombre">
+                        <span class="text-nomb">Name brand</span>
+                        </label>
+                    </div>
+             
+
+                        <button type="button" id="update-brand">
+                            <i class='bx bx-save' ></i></i> Save 
+                        </button>
+                    </div>                     
+                </form>
+                </div>
+       
+        <div class="eliminar-producto" style="display: none;" id="opcion16">
+            <form class="form" enctype="multipart/form-data">
+                <div class="formulario">
+
+                    <div class="title-for-boxs">
+                        <h1>DELETE BRAND</h1>
+                    </div>
+                    
+                    <div class="help-message">
+                        <p>To search for and delete an ID, start by entering the ID in the search bar and clicking on the "Search" button. Once you have located the correct ID in the search results, select it and click on the "Delete" button to remove it from the system. Ensure you have the correct ID before proceeding with deletion, as this action might be irreversible.</p>
+                    </div>
+                    
+
+                    <div class="input-field">
+                        <input type="text" required id="id-brand">
+                        <label class="lbl-nombre">
+                        <span class="text-nomb">Id brand</span>
+                        </label>
+                    </div>
+
+                    <div class="input-field">
+                        <button id="search-brand">Search Product</button>
+                    </div>
+                    
+                    <div class="input-field">
+                        <input type="text" required id="brand-name">
+                        <label class="lbl-nombre">
+                        <span class="text-nomb">Name brand</span>
+                        </label>
+                    </div>
+
+                        <button type="button" id="update-brand">
+                            <i class='bx bx-save' ></i></i> Delete Product 
+                        </button>
+                    </div>                     
+                </form>
+                </div>
+        
+
+   
             <div id="opcion3" style="display: none;">
                 <div class="title-category">
                     <h1>ICONIC LINE</h1>
@@ -363,12 +483,129 @@
                     </div>
 
                     <div class="opciones">
-                        <button>ADD</button>
-                        <button>EDIT</button>
-                        <button>DELETE</BUtton>
+                        <button class="enlace" onclick="mostrarContenido('opcion17')">ADD</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion18')">EDIT</button>                    
+                        <button class="enlace" onclick="mostrarContenido('opcion19')">DELETE</button>                    
+                        
+                    </div>
+                    <div class="table-data">
+                        <div class="order">
+                            <div class="head">
+                                <h3>Recent Orders</h3>
+                                <i class='bx bx-search' ></i>
+                                <i class='bx bx-filter' ></i>
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Data will be populated here by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="añadir-marca" style="display: none;" id="opcion17">
+                <form class="form" enctype="multipart/form-data">
+                    <div class="formulario">
+        
+                        <div class="title-for-boxs">
+                            <h1>ADD PRODUCTS</h1>
+                        </div>
+        
+                        <div class="input-field">
+                            <input type="text" required id="brand-name">
+                            <label class="lbl-nombre">
+                            <span class="text-nomb">Brand Title</span>
+                            </label>
+                        </div>           
+        
+                            <button type="button" id="sadd-brand">
+                                <i class='bx bx-save' ></i></i> Save Product 
+                            </button>
+                        </div>
+                    </form>
+                </div>
+        
+                <div class="actualizar-marca" style="display: none;" id="opcion18">
+                    <form class="form" enctype="multipart/form-data">
+                        <div class="formulario">
+        
+                            <div class="title-for-boxs">
+                                <h1>EDIT PRODUCTS</h1>
+                            </div>
+        
+                            
+                            <div class="input-field">
+                                <input type="text" required id="id-brand">
+                                <label class="lbl-nombre">
+                                <span class="text-nomb">Id brand</span>
+                                </label>
+                            </div>
+        
+                            <div class="input-field">
+                                <button id="search-brand">Search Product</button>
+                            </div>
+        
+                            <div class="input-field">
+                                <input type="text" required id="brand-name">
+                                <label class="lbl-nombre">
+                                <span class="text-nomb">Name brand</span>
+                                </label>
+                            </div>
+                     
+        
+                                <button type="button" id="update-brand">
+                                    <i class='bx bx-save' ></i></i> Save 
+                                </button>
+                            </div>                     
+                        </form>
+                        </div>
+               
+                <div class="eliminar-marca" style="display: none;" id="opcion19">
+                    <form class="form" enctype="multipart/form-data">
+                        <div class="formulario">
+        
+                            <div class="title-for-boxs">
+                                <h1>DELETE BRAND</h1>
+                            </div>
+                            
+                            <div class="help-message">
+                                <p>To search for and delete an ID, start by entering the ID in the search bar and clicking on the "Search" button. Once you have located the correct ID in the search results, select it and click on the "Delete" button to remove it from the system. Ensure you have the correct ID before proceeding with deletion, as this action might be irreversible.</p>
+                            </div>
+                            
+        
+                            <div class="input-field">
+                                <input type="text" required id="id-brand">
+                                <label class="lbl-nombre">
+                                <span class="text-nomb">Id brand</span>
+                                </label>
+                            </div>
+        
+                            <div class="input-field">
+                                <button id="search-brand">Search Product</button>
+                            </div>
+                            
+                            <div class="input-field">
+                                <input type="text" required id="brand-name">
+                                <label class="lbl-nombre">
+                                <span class="text-nomb">Name brand</span>
+                                </label>
+                            </div>
+        
+                                <button type="button" id="update-brand">
+                                    <i class='bx bx-save' ></i></i> Delete Product 
+                                </button>
+                            </div>                     
+                        </form>
+                        </div>
+
 
             <div id="opcion4" style="display: none;">
                 <div class="title-category">
@@ -396,7 +633,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="../../../js/super-admin/user/info-admin.js"></script>
+    <script src="../js/super-admin/brand/add-brand.js"></script>
     <script>
         function mostrarContenido(opcion) {
             // Oculta todos los contenidos
