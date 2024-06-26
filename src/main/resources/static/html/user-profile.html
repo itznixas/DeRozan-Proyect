@@ -330,13 +330,6 @@
 
 
                         <div class="buttons-add-save">
-                            <div class="contenedor-btn-file">
-                                <i class='bx bx-image-add'></i></i>
-                                <p>Adjuntar Archivo</p>
-                                <label for="file1"></label>
-                                <input type="file" id="file1">
-                            </div>
-
                             <button type="button" id="save-product">
                                 <i class='bx bx-save'></i></i> Save Product
                             </button>
@@ -387,7 +380,17 @@
                     <div class="formulario">
 
                         <div class="title-for-boxs">
-                            <h1>ADD PRODUCTS</h1>
+                            <h1>ADD BRAND</h1>
+                        </div>
+
+                        <div class="help-message">
+                            <p>
+                                Welcome to the brand creation menu. Here you can set up a new brand quickly and easily.
+
+                                Enter the Brand Name: type the name you want for your new brand.
+                                Save the Information: Once you have entered the brand name, click the "Save".
+                                After completing these steps, your brand will be created and you can start managing all aspects related to it.
+                            </p>
                         </div>
 
                         <div class="input-field">
@@ -398,20 +401,27 @@
                         </div>
 
                         <button type="button" id="sadd-brand">
-                            <i class='bx bx-save'></i></i> Save Product
+                            <i class='bx bx-save'></i></i> Save
                         </button>
                     </div>
                 </form>
             </div>
 
-            <div class="actualizar-producto" style="display: none;" id="opcion15">
+            <div class="actualizar-marca" style="display: none;" id="opcion15">
                 <form class="form" enctype="multipart/form-data">
                     <div class="formulario">
 
                         <div class="title-for-boxs">
-                            <h1>EDIT PRODUCTS</h1>
+                            <h1>EDIT BRAND</h1>
                         </div>
 
+                        <div class="help-message">
+                            <p>To search for and delete an ID, start by entering the ID in the search bar and clicking
+                                on the "Search" button. Once you have located the correct ID in the search results,
+                                select it and click on the "Delete" button to remove it from the system. Ensure you have
+                                the correct ID before proceeding with deletion, as this action might be irreversible.
+                            </p>
+                        </div>
 
                         <div class="input-field">
                             <input type="text" required id="id-brand">
@@ -421,7 +431,7 @@
                         </div>
 
                         <div class="input-field">
-                            <button id="search-brand">Search Product</button>
+                            <button id="search-brand"><i class='bx bx-search-alt-2' ></i>Search</button>
                         </div>
 
                         <div class="input-field">
@@ -439,7 +449,7 @@
                 </form>
             </div>
 
-            <div class="eliminar-producto" style="display: none;" id="opcion16">
+            <div class="eliminar-marca" style="display: none;" id="opcion16">
                 <form class="form" enctype="multipart/form-data">
                     <div class="formulario">
 
@@ -464,7 +474,7 @@
                         </div>
 
                         <div class="input-field">
-                            <button id="search-brand">Search Product</button>
+                            <button id="search-brand"><i class='bx bx-search-alt-2' ></i> Search</button>
                         </div>
 
                         <div class="input-field">
@@ -475,7 +485,7 @@
                         </div>
 
                         <button type="button" id="update-brand">
-                            <i class='bx bx-save'></i></i> Delete Product
+                            <i class='bx bx-save'></i></i> Delete 
                         </button>
                     </div>
                 </form>
@@ -521,7 +531,7 @@
                 </div>
             </div>
 
-            <div class="añadir-marca" style="display: none;" id="opcion17">
+            <div class="añadir-linea-iconica" style="display: none;" id="opcion17">
                 <form class="form" enctype="multipart/form-data">
                     <div class="formulario">
 
@@ -549,7 +559,7 @@
                 </form>
             </div>
 
-            <div class="actualizar-marca" style="display: none;" id="opcion18">
+            <div class="actualizar-linea-iconica" style="display: none;" id="opcion18">
                 <form class="form" enctype="multipart/form-data">
                     <div class="formulario">
 
@@ -589,7 +599,7 @@
                 </form>
             </div>
 
-            <div class="eliminar-marca" style="display: none;" id="opcion19">
+            <div class="eliminar-linea-iconica" style="display: none;" id="opcion19">
                 <form class="form" enctype="multipart/form-data">
                     <div class="formulario">
 
@@ -604,7 +614,6 @@
                                 the correct ID before proceeding with deletion, as this action might be irreversible.
                             </p>
                         </div>
-
 
                         <div class="input-field">
                             <input type="text" required id="id-brand">
@@ -705,6 +714,7 @@
                         <div class="input-field">
                             <label for="select-rol">Role</label>
                             <select name="select" id="select-rol">
+                                <option selected disabled>Choose a Role</option>
                                 <option value="2">admin</option>
                                 <option value="3">super-admin</option>
                             </select>
@@ -743,7 +753,7 @@
                         </div>
 
                         <div class="input-field">
-                            <button id="search-user">Search Product</button>
+                            <button id="search-user"><i class='bx bx-search-alt-2' ></i>Search user</button>
                         </div>
 
                         <div class="input-field">
@@ -832,7 +842,7 @@
                         </div>
 
                         <div class="input-field">
-                            <button id="search-user">Search Product</button>
+                            <button id="search-user"><i class='bx bx-search-alt-2' ></i>Search user</button>
                         </div>
 
                         <div class="input-field">
@@ -843,10 +853,98 @@
                         </div>
 
                         <button type="button" id="delete-user">
-                            <i class='bx bx-save'></i></i> Delete Product
+                            <i class='bx bx-save'></i></i> Delete user
                         </button>
                     </div>
                 </form>
+            </div>
+
+            <div class="info-user" id="opcion5" style="display: none;">
+                <div class="container-user-info">
+                    <div class="user-info">
+                        <div class="title-for-boxs"><h1>Detalles y seguridad</h1></div>
+                        <div class="info">
+                            <div class="name-user-container">
+                                <p><strong>Nombre:</strong> <span id="user-name"></span></p>
+                            </div>
+                            <div class="apellido-user-container">
+                                <p><strong>Apellido:</strong> <span id="user-lastName"></span></p>
+                            </div>
+                            <div class="email-user-container">
+                                <p><strong>Dirección de correo electrónico:</strong> <span id="user-email"></span></p>
+                            </div>
+                            <div class="date-user-container">
+                                <p><strong>Fecha de nacimiento:</strong> <span id="user-birthDate"></span></p>
+                            </div>
+                            <div class="fecha-nacimiento-user-container">
+                                <p><strong>Contraseña:</strong> <span>********</span></p>
+                            </div>
+
+                            <button class="edit-btn" id="editSAbtn" onclick="mostrarContenido('settings')">Editar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings-menu-user"id="settings" style="display: none;">
+                <div class="container-user-info">
+                    <div class="user-info">
+                        <div class="title-for-boxs"><h1>Profile settings</h1></div>
+                        <div class="form-inputs">
+                            <div>
+                                <h1>Personal data</h1>
+                                <p id="solic">Required fields*</p>
+                            </div>
+
+                            <div class="input-field">
+                                <input type="text" required id="name">
+                                <label class="lbl-nombre">
+                                    <span class="text-nomb">Name</span>
+                                </label>
+                            </div>
+
+                            <div class="input-field">
+                                <input type="text" required id="lastName">
+                                <label class="lbl-nombre">
+                                    <span class="text-nomb">lastName</span>
+                                </label>
+                            </div>
+
+                            <div class="input-field">
+                                <input type="text" required id="email">
+                                <label class="lbl-nombre">
+                                    <span class="text-nomb">Email Address</span>
+                                </label>
+                            </div>
+
+                            <div class="input-field">
+                                <input type="text" required id="email">
+                                <label class="lbl-nombre">
+                                    <span class="text-nomb">Email Address</span>
+                                </label>
+                            </div>
+
+                            <div class="input-field">
+                                <input type="text" required id="dni">
+                                <label class="lbl-nombre">
+                                    <span class="text-nomb">DNI</span>
+                                </label>
+                            </div>
+
+                            <div class="input-field">
+                                <input type="date" required id="birthDate">
+                                <label class="lbl-nombre">
+                                    <span class="text-nomb">Date of Birth</span>
+                                </label>
+                            </div>
+                            
+                            <div class="closes">
+                                <button id="update-user">Update</button>
+                                <button onclick="mostrarContenido('opcion1')" id="editCloseSA">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 

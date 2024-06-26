@@ -339,7 +339,7 @@ body {
     position: relative;
     overflow: hidden;
 }
-.form input{
+input{
     width: 100%;
     height: 100%;
     background: none;
@@ -348,7 +348,7 @@ body {
     border: none;
     outline: 0px;
 }
-.form .lbl-nombre{
+.lbl-nombre{
     font-size: 30px;
     position: absolute;
     bottom: 0;
@@ -358,7 +358,7 @@ body {
     pointer-events: none;
     border-bottom: 1px solid #c7c7c7;
 }
-.form .lbl-nombre:after{
+.lbl-nombre:after{
     content: '';
     font-size: 30px;
     position: absolute;
@@ -381,18 +381,17 @@ body {
 .eliminar-producto .input-field input{
     font-size: 25px;
 }
-.form input:focus + .lbl-nombre .text-nomb,.form input:valid + .lbl-nombre .text-nomb{
+input:focus + .lbl-nombre .text-nomb, input:valid + .lbl-nombre .text-nomb{
     transform: translateY(-150%);
     font-size: 14px;
     color: black;
 }
-.form input:focus + .lbl-nombre:after, .form input:valid + .lbl-nombre:after{
+input:focus + .lbl-nombre:after, input:valid + .lbl-nombre:after{
     transform: translateX(0%);
 }
 
 .help-message p{
     font-size: 30px;
-    padding: 30px;
     color: black;
 }
 .eliminar-producto .input-field{
@@ -551,3 +550,170 @@ body {
     margin-bottom: 0;
 }
 
+
+.añadir-marca{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+}
+.actualizar-marca{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+}
+.eliminar-marca{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+}
+.añadir-linea-iconica , .eliminar-linea-iconica, .actualizar-linea-iconica{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+}
+#sadd-brand, #search-brand, #update-brand , #search-brand, #update-brand, #add-iconic, #search-iconic, #update-iconic, #update-brand, #new-user-btn, #update-user, #delete-user, #update-user, #search-user, #editSAbtn{
+    box-shadow: 0 0 12px rgba(0, 0, 0, .15);
+    text-align: center;
+    background: black;
+    cursor: pointer;
+    color: white;
+    width: 170px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    transition: 0.6s;
+    font-size: 22px;
+}
+
+input[type="date"]{
+    background-color: #0080ff;
+    padding: 15px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-family: "Roboto Mono",monospace;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+select {
+    height: 100%;
+    width: 100%;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+    outline:0;
+    box-shadow:none;
+    border:0!important;
+    background: #5c6664;
+    background-image: none;
+    flex: 1;
+    padding: 0 .5em;
+    color:#fff;
+    cursor:pointer;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+}
+select::-ms-expand {
+    display: none;
+}
+.select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: #5c6664;
+    overflow: hidden;
+    border-radius: .25em;
+}
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #2b2e2e;
+    cursor:pointer;
+    pointer-events:none;
+    transition:.25s all ease;
+}
+.select:hover::after {
+    color: #23b499;
+}
+.info-user{
+    padding: 70px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+.container-user-info{
+    padding: 70px;
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    height: 100%;
+    color: black;
+    flex-wrap: wrap;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.user-info{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    gap: 50px;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.info p{
+    font-size: 30px;
+}
+.settings-menu-user{
+    padding: 70px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+.container-user-info{
+    padding: 70px;
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    height: 100%;
+    color: black;
+    flex-wrap: wrap;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-inputs{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
