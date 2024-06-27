@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings User</title>
     <link rel="stylesheet" href="../../../css/estilo-menu.css">
+    
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -14,67 +16,90 @@
 <body>
     <header>
         <nav class="nav" id="navbar">
-            <a href="../index.html" class="nav_logo">DEROZAN</a>
+
+            <div class="logo">
+              <a href="../../../index.html" class="nav_logo">DEROZAN</a>
+            </div>
+            
             <ul class="nav_items">
-                <li class="nav_item">
-                    <a href="../index.html" class="nav_link">HOME</a>
-                    <a href="catalogo.html" class="nav_link">SNEAKERS</a>
-                    <a href="a.html" class="nav_link">SERVICES</a>
-                    <a href="catalogo.html" class="nav_link">CONTACT</a>
-                </li>
+              <li class="nav_item">
+                <a href="../../../index.html" class="nav_link">HOME</a>
+                <a href="../../catalogo.html" class="nav_link">SNEAKERS</a>
+                <a href="../../services.html" class="nav_link">SERVICES</a>
+                <a href="../../contacto.html" class="nav_link">CONTACT</a>
+              </li>
             </ul>
-
-            <div id="guest-nav" style="display: block;" >
-                <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
-                <button class="nav_login"><i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
+      
+            <div class="menu-icons" id="guest-nav" >
+              <div class="flex-icons">
+                <div class="cart-icon">
+                  <button class="open-carrito"><i class="fa-solid fa-cart-shopping"></i> </button>
+                  <span>0</span>
+                </div>
                 <button class="nav_login" id="form-open"><i class="fa-regular fa-user"></i></button>
+              </div>
             </div>
-
+            
+      
             <div id="user-nav" style="display: none;">
-                <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
-                <button class="nav_login"><i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
-                <div class="nav_login user-menu">
-                    <button id="user-btn"><i class="fa-solid fa-user"></i></button>
+              <div class="menu-icons" id="guest-nav" >
+                <div class="flex-icons">
+                  <div class="cart-icon">
+                    <button class="open-carrito"><i class="fa-solid fa-cart-shopping"></i> </button>
+                    <span>0</span>
+                  </div>
+                  <div class="nav_login user-menu">
+                    <button class="nav_login" id="user-btn"><i class="fa-regular fa-user"></i></button>
                     <div class="dropdown-content">
-                    <a href="#">Profile</a>
-                    <a href="#">Settings</a>
-                    <a href="#" id="logout-btn">Logout</a>
+                      <a href="../info-cuentaSA/menu-super.html">Settings</a>
+                      <a href="#" id="logout-btn">Logout</a>
                     </div>
+                  </div>
                 </div>
+              </div>      
             </div>
-
+      
+      
+      
             <div id="admin-nav" style="display: none;">
-                <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
-                <button class="nav_login"><i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
-                <div class="nav_login user-menu">
+              <div class="menu-icons" id="guest-nav" >
+                <div class="flex-icons">
+                  <div class="cart-icon">
+                    <button class="open-carrito"><i class="fa-solid fa-cart-shopping"></i> </button>
+                    <span>0</span>
+                  </div>
+      
+                  <div class="nav_login user-menu">
                     <button id="user-btn"><i class="fa-solid fa-user"></i></button>
                     <div class="dropdown-content">
-                        <a href="#">Profile</a>
-                        <a href="#">Settings</a>
-                        <a href="#">Admin</a>
-                        <a href="#" id="logout-btnAD">Logout</a>
+                      <a href="../info-cuentaSA/menu-super.html">Settings</a>
+                      <a href="../info-cuentaSA/menu-super.html">Admin</a>
+                      <a href="#" id="logout-btnAD">Logout</a>
                     </div>
+                  </div>
                 </div>
+              </div>     
             </div>
-
+      
+      
             <div id="super-nav" style="display: none;">
-                <button class="nav_login" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <button class="nav_login"><i class="fa-regular fa-heart"></i></button>
-                <button class="nav_login"><i class="fa-sharp fa-solid fa-bag-shopping"></i></button>
-                <div class="nav_login user-menu">
-                    <button id="user-btn"><i class="fa-solid fa-user"></i></button>
+              <div class="menu-icons" id="guest-nav" >
+                <div class="flex-icons">
+                  <div class="cart-icon">
+                    <button class="open-carrito"><i class="fa-solid fa-cart-shopping"></i> </button>
+                    <span>0</span>
+                  </div>
+                  <div class="nav_login user-menu">
+                    <button id="user-btn"><i class="fa-solid fa-user"></i></button>      
                     <div class="dropdown-content">
-                    <a href="#">Profile</a>
-                    <a href="./html/super-Admin/principalSA.html">admin</a>
-                    <a href="html/super-Admin/info-cuentaSA/userSA.html">Setting</a>
-                    <a href="#" id="logout-btnSA">Logout</a>
+                      <a href="./html/super-Admin/principalSA.html">admin</a>
+                      <a href="html/super-Admin/info-cuentaSA/menu-user.html">Setting</a>
+                      <a href="#" id="logout-btnSA">Logout</a>
                     </div>
+                  </div>
                 </div>
-            </div>
-        </nav>
+              </div>      
+          </nav>
     </header>
 
 
@@ -87,7 +112,7 @@
                 <button onclick="mostrarContenido('opcion1')"><i class='bx bx-user'></i>Profile</button>
                 <button onclick="mostrarContenido('opcion2')"><i class='bx bx-shield-quarter'></i>Security</button>
                 <a href="../../super-Admin/principalSA.html"><button><i class='bx bx-shield-quarter'></i>Admin</button></a>
-                <button id="log-out-btn"><i class='bx bx-log-out'></i>Log out</button>
+                <a href="../../../index.html"><button id="log-out-btn"><i class='bx bx-log-out'></i>Back</button></a>
             </div>
         </div>
         <div class="contenido">
@@ -102,7 +127,8 @@
                             <p><strong>Dirección de correo electrónico:</strong> <span id="user-email"></span></p>
                             <p><strong>Fecha de nacimiento:</strong> <span id="user-birthDate"></span></p>
                             <p><strong>Contraseña:</strong> <span>********</span></p>
-                            <button class="edit-btn" id="editSAbtn">Editar</button>
+                            
+                            <button class="edit-btn" onclick="mostrarContenido('settings')" >Edit</button>
                         </div>
                     </div>
                 </div>
@@ -175,7 +201,7 @@
                         </div>
 
                         <div class="closes">
-                            <button id="update-user">Update</button>
+                            <button ="update-user">Update</button>
                             <button onclick="mostrarContenido('opcion1')" id="editCloseSA">Cancel</button>
                         </div>
                     </div>
@@ -187,6 +213,13 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../../../js/super-admin/user/info-admin.js"></script>
+    <script src="../../../js/add-to-cart.js"></script>
+    <script src="../../../js/logged.js"></script>
+    <script src="../../../js/signupAut.js"></script>
+    <script src="../../../js/loginAut.js"></script>
+    <script src="../../../js/script.js"></script>
+    <script src="../../../js/logout.js"></script>
+    <script src="../../../js/buttom-login.js"></script>
     <script>
         function mostrarContenido(opcion) {
             // Oculta todos los contenidos
