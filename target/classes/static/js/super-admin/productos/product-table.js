@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>
-                    <img src="/img/${sneaker.image}" alt="Sneaker Image">
+                    <img src="/img/sneakers/${sneaker.image}" alt="Sneaker Image">
                     <p>${sneaker.name}</p>
                 </td>
                 <td>${sneaker.description}</td>
