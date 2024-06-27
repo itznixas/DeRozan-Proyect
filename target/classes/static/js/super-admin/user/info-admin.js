@@ -72,6 +72,60 @@ function fetchUserInfo(userId) {
 
         })
         .catch(error => {
-            console.error('Error al obtener información del usuario:', error);
+            new Noty({
+                type: 'warning',
+                layout: 'topRight',
+                text: 'Error obtaining user information',
+                timeout: 3000
+              }).show();
         });
 }
+document.getElementById('update-password').addEventListener('click', async function() {
+    const userId = localStorage.getItem('userId');
+    const currentPassword = document.getElementById('currentPassword').value;
+    const newPassword = document.getElementById('newPassword').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+
+    if (newPassword !== confirmPassword) {
+        alert("New password and confirm password do not match.");
+        info
+ new Noty({
+                type: 'info',
+                layout: 'topLeft',
+                text: 'New password and confirm password do not match.',
+                timeout: 3000
+              }).show();
+        return;
+    }
+
+    try {
+        const response = await axios.put(/api/users/update-password/${userId}, null, {
+            params: {
+                currentPassword: currentPassword,
+                newPassword: newPassword,
+                confirmPassword: confirmPassword
+            }
+        });
+
+        if (response.status === 200) {
+            console.log('Password updated successfully');
+            new Noty({
+                type: 'success',
+                layout: 'topRight',
+                text: 'Password updated successfully.',
+                timeout: 3000    
+              }).show();
+        } else {
+            console.error('Error updating password');
+            new Noty({
+                type: 'error',
+                layout: 'topRight',
+                text: 'Error updating password',
+                timeout: 3000
+              }).show();
+        }
+    } catch (error) {
+        console.error('HTTP request error:', error);
+        alert(Error updating password: ${error.response.data});
+    }
+});

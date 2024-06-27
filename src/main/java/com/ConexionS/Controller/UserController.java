@@ -94,17 +94,31 @@ public class UserController {
         }).orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
-    /*@PostMapping("/update-password/{id}")
-    public ResponseEntity<Users> updatePassword(@PathVariable Integer id, @RequestBody String newPassword) {
-        Optional<Users> existingUserOptional = usersService.getUsersById(id);
+ @PutMapping("/update-password/{id}")
+    public ResponseEntity<String> updatePassword(@PathVariable Integer id,
+                                                 @RequestParam("currentPassword") String currentPassword,
+                                                 @RequestParam("newPassword") String newPassword,
+                                                 @RequestParam("confirmPassword") String confirmPassword) {
+        if (!newPassword.equals(confirmPassword)) {
+            return new ResponseEntity<>("Passwords do not match", HttpStatus.BAD_REQUEST);
+        }
 
-        return existingUserOptional.map(existingUser -> {
-            // Update password securely
-            existingUser.setPassword(usersService.hashPassword(newPassword));
-            Users updatedUser = usersService.updateUser(existingUser);
-            return new ResponseEntity<>(updatedUser, HttpStatus.OK);
-        }).orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
-    }*/
+        Optional<Users> userOptional = usersService.getUsersById(id);
+        if (userOptional.isEmpty()) {
+            return new ResponseEntity<>("User not found", HttpStatus.NOT_FOUND);
+        }
+
+        Users user = userOptional.get();
+
+        if (!currentPassword.equals(user.getPassword())) {
+            return new ResponseEntity<>("Current password is incorrect", HttpStatus.UNAUTHORIZED);
+        }
+
+        user.setPassword(newPassword);
+        usersService.updateUser(user);
+
+        return new ResponseEntity<>("Password updated successfully", HttpStatus.OK);
+    }
 
     @DeleteMapping("/delete-user/{id}")
     public ResponseEntity<Void> deleteUserById(@PathVariable Integer id) {

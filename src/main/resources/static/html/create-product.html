@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Product</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/crear-producto.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -13,16 +13,48 @@
 </head>
 <body>
     <div class="container">
-        <h1>Create a New Product</h1>
-        <form id="product-form">
-            <input type="text" id="product-name" placeholder="Product Name" required>
-            <input type="number" id="product-price" placeholder="Product Price" required>
-            <textarea id="product-description" placeholder="Product Description"></textarea>
-            <input type="file" id="product-image" accept="image/*" required>
-            <button type="submit">Add Product</button>
-        </form>
+        <div class="container-formulario">
+            <div class="title-section">
+                <h1>Create a New Product</h1>
+            </div>
+            
+            <form id="product-form">
+                <div class="input-boxes">
+                    <div class="input-field">
+                        <p>Product Name</p>
+                        <input class="box-input" type="text" id="product-name"  required>
+                    </div>                  
+                    <div class="input-field">
+                        <p>Precio</p>
+                        <input class="box-input" type="number" id="product-price"  required>
+                    </div>
+                </div>
 
-        <button><a href="catalogo.html">View Products</a></button>
+                <div class="input-boxes">
+                    <div class="input-field">
+                        <p>Descripcion Producto</p>
+                        <textarea class="box-input" id="product-description"></textarea>
+                    </div>
+    
+                    <div class="input-field">
+                        <p>Importa una imagen</p>
+                        <input type="file" id="product-image" accept="image/*" required>
+                    </div>                     
+                </div>
+                
+                <div class="buttons-options">
+                    <button class="btn-add" type="submit">Add Product</button>
+                    <a class="btn-ir-catalogo" href="catalogo.html">View Products</a>
+                    <a href="../html/super-Admin/producto/productosSA.html"  id="back">
+                        Back                  
+                    </a>
+                </div>
+                
+            </form>
+    
+            
+        </div>
+        
     </div>
 
     <script src="../js/catalogo-add.js"></script>
