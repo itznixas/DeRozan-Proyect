@@ -201,104 +201,90 @@
             </div>
 
             <div class="editar-producto" style="display: none;" id="opcion11">
-                <form class="form" enctype="multipart/form-data">
-                    <div class="formulario">
-
-                        <div class="title-for-boxs">
-                            <h1>EDIT PRODUCTS</h1>
+                <div class="container-column-set">
+                    <div class="column1">
+                        <h1>SET PRODUCT</h1>
+            
+                        <div class="busqueda-id-editar">
+                            <p>Id product</p>
+                            <input id="id-producto" type="text" class="box-input">
                         </div>
-
-
-                        <div class="input-field">
-                            <input type="text" required id="productId">
-                            <label class="lbl-nombre">
-                                <span class="text-nomb">Id Product</span>
-                            </label>
+            
+                        <div class="btn-busqueda-id">
+                            <button id="btn-busqueda-id">Buscar</button>
                         </div>
-
-                        <div class="input-field">
-                            <button id="btn-busqueda-id">Search Product</button>
+            
+                        <div class="name">
+                            <p>Product Title</p>
+                            <input  id="name"  type="text" class="box-input">
                         </div>
-
-                        <div class="input-field">
-                            <input type="text" required id="productDescription">
-                            <label class="lbl-nombre">
-                                <span class="text-nomb">Product Description</span>
-                            </label>
+            
+                        <div class="description">
+                            <p>Product Description</p>
+                            <input id="description" type="text" >
                         </div>
-
-                        <div class="input-field">
-                            <input type="text" required id="brand">
-                            <label class="lbl-nombre">
-                                <span class="text-nomb">Brand</span>
-                            </label>
+            
+                        <div class="mark">
+                            <p>Brand</p>
+                            <input id="mark" type="text" class="box-input">
                         </div>
-
-                        <div class="input-field">
-                            <input type="text" required id="amount">
-                            <label class="lbl-nombre">
-                                <span class="text-nomb">Amount</span>
-                            </label>
+                        
+                        <div class="amount">
+                            <p>Amount</p>
+                            <input id="amount" type="text" class="box-input">
                         </div>
-
-                        <div class="input-field">
-                            <input type="text" required id="price">
-                            <label class="lbl-nombre">
-                                <span class="text-nomb">Price</span>
-                            </label>
+            
+                        <div class="price">
+                            <p>Price</p>
+                            <input id="price" type="text" class="box-input">
                         </div>
-
-                        <div class="input-field">
-                            <input type="text" required id="size">
-                            <label class="lbl-nombre">
-                                <span class="text-nomb">Size</span>
-                            </label>
+            
+                        <div class="size">
+                            <p>Size</p>
+                            <input id="size" type="text" class="box-input">
                         </div>
-
-                        <div class="input-field">
-                            <input type="text" required id="categories">
-                            <label class="lbl-nombre">
-                                <span class="text-nomb">Categories</span>
-                            </label>
+            
+                        <div class="categories">
+                            <p>Categories</p>
+                            <input id="categories" type="text" class="box-input">
                         </div>
-
-                        <div class="input-field">
-                            <input type="text" required id="color">
-                            <label class="lbl-nombre">
-                                <span class="text-nomb">Color</span>
-                            </label>
-                        </div>
-
-                        <div class="input-field">
-                            <input type="text" required id="productTitle">
-                            <label class="lbl-nombre">
-                                <span class="text-nomb">Product Title</span>
-                            </label>
-                        </div>
-
-
-                        <div class="input-field">
-                            <input type="text" required id="lineId">
-                            <label class="lbl-nombre">
-                                <span class="text-nomb">Id Line</span>
-                            </label>
-                        </div>
-
-                        <div class="buttons-add-save">
-                            <div class="contenedor-btn-file">
-                                <i class='bx bx-image-add'></i></i>
-                                <p>Adjuntar</p>
-                                <label for="file1"></label>
-                                <input type="file" id="file1">
-                            </div>
-
-                            <button type="button" id="save-product">
-                                <i class='bx bx-save'></i></i> Save
-                            </button>
+            
+                        <div class="color">
+                            <p>Color</p>
+                            <input id="color" type="text" class="box-input">
+                        </div>  
+                        
+                        
+                        <div class="id-linea">
+                            <p>Id Line</p>
+                            <input id="id-linea" type="text" class="box-input">
                         </div>
                     </div>
-                </form>
+            
+            
+                    <div class="column2">
+            
+                        <button class="contenedor-btn-file">
+                            <i class="fas fa-file"></i>
+                            Adjuntar Archivo
+                            <label for="file1"></label>
+                            <input type="file" id="file1">
+                        </button>
+            
+                        <button id="save-product"><i class="fa-regular fa-floppy-disk"></i>  Save All Product Info</i></button>
+                        <a href="../producto/productosSA.html"><button id="back">Back</i></button></a>
+                    </div>
+            
+                    
+                </div>
+                <div id="message"></div>
+                <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+                <script src="../js/super-admin/productos/update-product.js"></script>
             </div>
+
+            
+            
+            
 
             <div class="eliminar-producto" style="display: none;" id="opcion13">
                 <form class="form" enctype="multipart/form-data">
@@ -951,9 +937,36 @@
         </div>
 
 
+        <script src="../js/super-admin/user/add-user.js"></script>
+        <script src="../js/super-admin/user/delete-user.js"></script>
+        <script src="../js/super-admin/user/info-admin.js"></script>
+        <script src="../js/super-admin/user/update-user.js"></script>
+        <script src="../js/super-admin/user/user-table.js"></script>
 
+        <script src="../js/super-admin/productos/add-product.js"></script>
+        <script src="../js/super-admin/productos/delete-product.js"></script>
+        <script src="../js/super-admin/productos/product-table.js"></script>
+        <script src="../js/super-admin/productos/update-product.js"></script>
+        <script src="../js/super-admin/productos/upload-image.js"></script>
 
+        <script src="../js/super-admin/brand/add-brand.js"></script>
+        <script src="../js/super-admin/brand/brand-table.js"></script>
+        <script src="../js/super-admin/brand/delete-brand.js"></script>
+        <script src="../js/super-admin/brand/update-brand.js"></script>
+
+        <script src="../js/super-admin/iconicLine/add-iconicLine.js"></script>
+        <script src="../js/super-admin/iconicLine/delete-iconicLine.js"></script>
+        <script src="../js/super-admin/iconicLine/iconicLine-table.js"></script>
+        <script src="../js/super-admin/iconicLine/update-iconicLine.js"></script>
+
+        <script src="../js/super-admin/script.js"></script>
+        <script src="../js/super-admin/logout.js"></script>
+        <script src="../js/super-admin/loggedSA.js"></script>
+
+        <script></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
         <script src="../js/super-admin/brand/add-brand.js"></script>
         <script>
             function mostrarContenido(opcion) {
@@ -965,6 +978,11 @@
                 document.getElementById(opcion).style.display = 'block';
             }
         </script>
+
+        
+
+
+
 
 </body>
 

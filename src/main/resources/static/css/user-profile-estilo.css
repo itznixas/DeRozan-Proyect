@@ -253,13 +253,7 @@ body {
     border-bottom: 2px solid #E0E0E0; /* Esto añade una línea negra de 2 píxeles de grosor debajo del título */
     padding-bottom: 5px;
 }
-.contenedor-btn-file input[type="file"] {
-    appearance: none;
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-    z-index: -1;
-}
+
 .contenedor-btn-file {
     display: flex;
     position: relative;
@@ -340,47 +334,12 @@ input{
     border: none;
     outline: 0px;
 }
-.lbl-nombre{
-    font-size: 30px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    border-bottom: 1px solid #c7c7c7;
-}
-.lbl-nombre:after{
-    content: '';
-    font-size: 30px;
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    width: 100%;
-    height: 100%;
-    border-bottom: 3px solid #2ecece;
-    transform: translateX(-100%);
-    transition: all 0.3s ease;
-    
-}
-.text-nomb{
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    transition: all 0.3s ease;
-    color: black;
-}
+
+
 .eliminar-producto .input-field input{
     font-size: 25px;
 }
-input:focus + .lbl-nombre .text-nomb, input:valid + .lbl-nombre .text-nomb{
-    transform: translateY(-150%);
-    font-size: 14px;
-    color: black;
-}
-input:focus + .lbl-nombre:after, input:valid + .lbl-nombre:after{
-    transform: translateX(0%);
-}
+
 
 .help-message p{
     font-size: 30px;

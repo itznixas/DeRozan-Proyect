@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Product</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Create a New Product</h1>
+        <form id="product-form">
+            <input type="text" id="product-name" placeholder="Product Name" required>
+            <input type="number" id="product-price" placeholder="Product Price" required>
+            <textarea id="product-description" placeholder="Product Description"></textarea>
+            <input type="file" id="product-image" accept="image/*" required>
+            <button type="submit">Add Product</button>
+        </form>
+
+        <button><a href="catalogo.html">View Products</a></button>
+    </div>
+
+    <script src="../js/catalogo-add.js"></script>
+    <script>
+        document.getElementById("product-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("product-name").value;
+            const price = document.getElementById("product-price").value;
+            const description = document.getElementById("product-description").value;
+            const imageInput = document.getElementById("product-image");
+
+            if (name.trim() === "" || price.trim() === "") {
+                alert("Please enter product name and price.");
+                return;
+            }
+
+            // Verificar si se seleccionó una imagen
+            if (!imageInput.files || !imageInput.files[0]) {
+                alert("Please select an image.");
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const image = e.target.result;
+
+                const newProduct = { name, price, description, image };
+
+                // Save product to localStorage
+                const products = JSON.parse(localStorage.getItem("products")) || [];
+                products.push(newProduct);
+                localStorage.setItem("products", JSON.stringify(products));
+
+                // Show success message
+                alert("Product added successfully!");
+
+                // Reset form
+                document.getElementById("product-form").reset();
+            };
+
+            reader.readAsDataURL(imageInput.files[0]);
+        });
+    </script>
+    <script src="../add-to-cart.js"></script>
+</body>
+</html>

@@ -160,17 +160,6 @@
 
   
 
-    
-    
-
-
-  <div class="search-box">
-      <div class="search">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="search" placeholder="Search among 100+ products">
-      </div>
-  </div>
-
   <div class="filters">
       <div class="buttons-filter">
           <button data-filter="all" class="active">All</button>
@@ -181,68 +170,30 @@
       </div>
   </div>
         
-  <div class="products-content">
-    <div class="card" data-category="urban">
-      <div class="product-img"></div>
-      <div class="product-detail">
-          <span class="card-title">Adidas Air</span>
-          <div class="rating">
-            <i class='bx bxs-star' ></i>
-            <i class='bx bxs-star' ></i>
-            <i class='bx bxs-star' ></i>
-            <i class='bx bxs-star' ></i>
-            <i class='bx bxs-star-half' ></i>
-          </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <div class="buttons">
-              <div class="price-in-card">$200</div>
-              <button class="add-to-cart">Add to cart</button>
-              <button class="favourite"><i class='bx bx-heart' ></i></button>
-          </div>
-        </div>
-    </div>
-
-    <div class="card" data-category="urban">
-      <div class="product-img"></div>
-      <div class="product-detail">
-          <span class="card-title">Air Jordan Retro</span>
-          <div class="rating">
-            <i class='bx bxs-star' ></i>
-            <i class='bx bxs-star' ></i>
-            <i class='bx bxs-star' ></i>
-            <i class='bx bxs-star' ></i>
-            <i class='bx bxs-star-half' ></i>
-          </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <div class="buttons">
-              <div class="price-in-card">$900</div>
-              <button class="add-to-cart">Add to cart</button>
-              <button class="favourite"><i class='bx bx-heart' ></i></button>
-          </div>
-        </div>
-    </div>
-
-    <div class="card" data-category="urban">
-      <div class="product-img"></div>
-      <div class="product-detail">
-          <span class="card-title">Nike Dunk</span>
-          <div class="rating">
-            <i class='bx bxs-star' ></i>
-            <i class='bx bxs-star' ></i>
-            <i class='bx bxs-star' ></i>
-            <i class='bx bxs-star' ></i>
-            <i class='bx bxs-star-half' ></i>
-          </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <div class="buttons">
-              <div class="price-in-card">$30.99</div>
-              <button class="add-to-cart">Add to cart</button>
-              <button class="favourite"><i class='bx bx-heart' ></i></button>
-          </div>
-        </div>
-    </div>
-
+  <div class="products-content" id="products-container">
+    <!-- Aquí se insertarán las tarjetas de productos dinámicamente desde JavaScript -->
   </div>
+  <script src="../js/catalogo-add.js"></script>
+  <!-- Modal -->
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div class="modal-product-img"></div>
+        <div class="modal-product-detail">
+            <span class="modal-card-title"></span>
+            <div class="modal-rating">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star-half'></i>
+            </div>
+            <p class="modal-product-description"></p>
+            <!-- Eliminamos la sección de los botones -->
+        </div>
+    </div>
+</div>
+
 
 
   <script>
@@ -271,18 +222,18 @@
 
   <div class="sidebar" id="sidebar">
     <div class="sidebar-close">
-        <i class="fa-solid fa-close"></i>
+      <i class="fa-solid fa-close"></i>
     </div>
     <div class="cart-menu">
-        <h3>My Cart</h3>
-        <div class="cart-tems"></div>
+      <h3><i class='bx bx-cart'></i>My Cart</h3>
+      <div class="cart-tems"></div>
     </div>
     <div class="sidebar--footer">
-        <div class="total--amount">
-          <h5>Total</h5>
-          <div class="cart-total">$0.00</div>
-        </div>
-        <button class="checkout-btn">Checkout</button>
+      <div class="total--amount">
+        <h5>Total</h5>
+        <div class="cart-total">$0.00</div>
+      </div>
+      <button class="checkout-btn"><a href="html/compra-checkout.html"></a>Checkout</button>
     </div>
   </div>
   

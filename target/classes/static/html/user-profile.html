@@ -32,6 +32,11 @@
 
             <!-- MENU -->
             <div class="menu">
+                <div class="enlace" onclick="mostrarContenido('opcion5')">
+                    <i class='bx bx-user-circle'></i>
+                    <span>Profile</span>
+                </div>
+
                 <div class="enlace" id="" onclick="mostrarContenido('opcion1')">
                     <i class="bx bx-grid-alt"></i>
                     <span>Sneakers</span>
@@ -48,14 +53,10 @@
                 </div>
 
                 <div class="enlace" onclick="mostrarContenido('opcion4')">
-                    <i class="bx bx-message-square"></i>
+                    <i class='bx bxs-user-plus'></i>
                     <span>Add Users</span>
                 </div>
 
-                <div class="enlace" onclick="mostrarContenido('opcion5')">
-                    <i class="bx bx-file-blank"></i>
-                    <span>Profile</span>
-                </div>
             </div>
         </div>
 
@@ -70,17 +71,15 @@
                         <h1>Choose Your Option</h1>
                     </div>
                     <div class="opciones">
-                        <button class="enlace" onclick="mostrarContenido('opcion10')">ADD</button>
-                        <button class="enlace" onclick="mostrarContenido('opcion11')">EDIT</button>
-                        <button class="enlace" onclick="mostrarContenido('opcion13')">DELETE</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion10')"><i class='bx bx-cart-add'></i>ADD</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion11')"><i class='bx bx-cog'></i> EDIT</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion13')"><i class='bx bxs-trash'></i>DELETE</button>
                     </div>
                 </div>
                 <div class="table-data">
                     <div class="order">
                         <div class="head">
                             <h3>Recent Orders</h3>
-                            <i class='bx bx-search'></i>
-                            <i class='bx bx-filter'></i>
                         </div>
                         <table>
                             <thead>
@@ -202,104 +201,90 @@
             </div>
 
             <div class="editar-producto" style="display: none;" id="opcion11">
-                <form class="form" enctype="multipart/form-data">
-                    <div class="formulario">
-
-                        <div class="title-for-boxs">
-                            <h1>EDIT PRODUCTS</h1>
+                <div class="container-column-set">
+                    <div class="column1">
+                        <h1>SET PRODUCT</h1>
+            
+                        <div class="busqueda-id-editar">
+                            <p>Id product</p>
+                            <input id="id-producto" type="text" class="box-input">
                         </div>
-
-
-                        <div class="input-field">
-                            <input type="text" required id="productId">
-                            <label class="lbl-nombre">
-                                <span class="text-nomb">Id Product</span>
-                            </label>
+            
+                        <div class="btn-busqueda-id">
+                            <button id="btn-busqueda-id">Buscar</button>
                         </div>
-
-                        <div class="input-field">
-                            <button id="btn-busqueda-id">Search Product</button>
+            
+                        <div class="name">
+                            <p>Product Title</p>
+                            <input  id="name"  type="text" class="box-input">
                         </div>
-
-                        <div class="input-field">
-                            <input type="text" required id="productDescription">
-                            <label class="lbl-nombre">
-                                <span class="text-nomb">Product Description</span>
-                            </label>
+            
+                        <div class="description">
+                            <p>Product Description</p>
+                            <input id="description" type="text" >
                         </div>
-
-                        <div class="input-field">
-                            <input type="text" required id="brand">
-                            <label class="lbl-nombre">
-                                <span class="text-nomb">Brand</span>
-                            </label>
+            
+                        <div class="mark">
+                            <p>Brand</p>
+                            <input id="mark" type="text" class="box-input">
                         </div>
-
-                        <div class="input-field">
-                            <input type="text" required id="amount">
-                            <label class="lbl-nombre">
-                                <span class="text-nomb">Amount</span>
-                            </label>
+                        
+                        <div class="amount">
+                            <p>Amount</p>
+                            <input id="amount" type="text" class="box-input">
                         </div>
-
-                        <div class="input-field">
-                            <input type="text" required id="price">
-                            <label class="lbl-nombre">
-                                <span class="text-nomb">Price</span>
-                            </label>
+            
+                        <div class="price">
+                            <p>Price</p>
+                            <input id="price" type="text" class="box-input">
                         </div>
-
-                        <div class="input-field">
-                            <input type="text" required id="size">
-                            <label class="lbl-nombre">
-                                <span class="text-nomb">Size</span>
-                            </label>
+            
+                        <div class="size">
+                            <p>Size</p>
+                            <input id="size" type="text" class="box-input">
                         </div>
-
-                        <div class="input-field">
-                            <input type="text" required id="categories">
-                            <label class="lbl-nombre">
-                                <span class="text-nomb">Categories</span>
-                            </label>
+            
+                        <div class="categories">
+                            <p>Categories</p>
+                            <input id="categories" type="text" class="box-input">
                         </div>
-
-                        <div class="input-field">
-                            <input type="text" required id="color">
-                            <label class="lbl-nombre">
-                                <span class="text-nomb">Color</span>
-                            </label>
-                        </div>
-
-                        <div class="input-field">
-                            <input type="text" required id="productTitle">
-                            <label class="lbl-nombre">
-                                <span class="text-nomb">Product Title</span>
-                            </label>
-                        </div>
-
-
-                        <div class="input-field">
-                            <input type="text" required id="lineId">
-                            <label class="lbl-nombre">
-                                <span class="text-nomb">Id Line</span>
-                            </label>
-                        </div>
-
-                        <div class="buttons-add-save">
-                            <div class="contenedor-btn-file">
-                                <i class='bx bx-image-add'></i></i>
-                                <p>Adjuntar</p>
-                                <label for="file1"></label>
-                                <input type="file" id="file1">
-                            </div>
-
-                            <button type="button" id="save-product">
-                                <i class='bx bx-save'></i></i> Save
-                            </button>
+            
+                        <div class="color">
+                            <p>Color</p>
+                            <input id="color" type="text" class="box-input">
+                        </div>  
+                        
+                        
+                        <div class="id-linea">
+                            <p>Id Line</p>
+                            <input id="id-linea" type="text" class="box-input">
                         </div>
                     </div>
-                </form>
+            
+            
+                    <div class="column2">
+            
+                        <button class="contenedor-btn-file">
+                            <i class="fas fa-file"></i>
+                            Adjuntar Archivo
+                            <label for="file1"></label>
+                            <input type="file" id="file1">
+                        </button>
+            
+                        <button id="save-product"><i class="fa-regular fa-floppy-disk"></i>  Save All Product Info</i></button>
+                        <a href="../producto/productosSA.html"><button id="back">Back</i></button></a>
+                    </div>
+            
+                    
+                </div>
+                <div id="message"></div>
+                <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+                <script src="../js/super-admin/productos/update-product.js"></script>
             </div>
+
+            
+            
+            
 
             <div class="eliminar-producto" style="display: none;" id="opcion13">
                 <form class="form" enctype="multipart/form-data">
@@ -324,22 +309,17 @@
                                 <span class="text-nomb">Id Product</span>
                             </label>
                         </div>
-                        <div class="input-field">
-                            <button id="btn-busqueda-id">Search Product</button>
-                        </div>
+                        
 
 
                         <div class="buttons-add-save">
-                            <div class="contenedor-btn-file">
-                                <i class='bx bx-image-add'></i></i>
-                                <p>Adjuntar Archivo</p>
-                                <label for="file1"></label>
-                                <input type="file" id="file1">
+                            <div class="input-field">
+                                <button id="btn-busqueda-id">Search Product</button>
                             </div>
 
                             <button type="button" id="save-product">
-                                <i class='bx bx-save'></i></i> Save Product
-                            </button>
+                                <i class='bx bx-save'></i></i> Delete Product
+                            </button>    
                         </div>
                     </div>
                 </form>
@@ -354,17 +334,15 @@
                         <h1>Choose Your Option</h1>
                     </div>
                     <div class="opciones">
-                        <button class="enlace" onclick="mostrarContenido('opcion14')">ADD</button>
-                        <button class="enlace" onclick="mostrarContenido('opcion15')">EDIT</button>
-                        <button class="enlace" onclick="mostrarContenido('opcion16')">DELETE</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion14')"><i class='bx bx-cart-add'></i>ADD</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion15')"><i class='bx bx-cog'></i>EDIT</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion16')"><i class='bx bxs-trash'></i>DELETE</button>
 
                     </div>
                     <div class="table-data">
                         <div class="order">
                             <div class="head">
                                 <h3>Recent Orders</h3>
-                                <i class='bx bx-search'></i>
-                                <i class='bx bx-filter'></i>
                             </div>
                             <table>
                                 <thead>
@@ -387,7 +365,17 @@
                     <div class="formulario">
 
                         <div class="title-for-boxs">
-                            <h1>ADD PRODUCTS</h1>
+                            <h1>ADD BRAND</h1>
+                        </div>
+
+                        <div class="help-message">
+                            <p>
+                                Welcome to the brand creation menu. Here you can set up a new brand quickly and easily.
+
+                                Enter the Brand Name: type the name you want for your new brand.
+                                Save the Information: Once you have entered the brand name, click the "Save".
+                                After completing these steps, your brand will be created and you can start managing all aspects related to it.
+                            </p>
                         </div>
 
                         <div class="input-field">
@@ -398,20 +386,24 @@
                         </div>
 
                         <button type="button" id="sadd-brand">
-                            <i class='bx bx-save'></i></i> Save Product
+                            <i class='bx bx-save'></i></i> Save
                         </button>
                     </div>
                 </form>
             </div>
 
-            <div class="actualizar-producto" style="display: none;" id="opcion15">
+            <div class="actualizar-marca" style="display: none;" id="opcion15">
                 <form class="form" enctype="multipart/form-data">
                     <div class="formulario">
 
                         <div class="title-for-boxs">
-                            <h1>EDIT PRODUCTS</h1>
+                            <h1>EDIT BRAND</h1>
                         </div>
 
+                        <div class="help-message">
+                            <p>To edit an Brand, search for it by its unique ID. Select the line to open the editing interface, then modify the desired fields. Click "Save" to update the iconic line with the new information.
+                            </p>
+                        </div>
 
                         <div class="input-field">
                             <input type="text" required id="id-brand">
@@ -421,7 +413,7 @@
                         </div>
 
                         <div class="input-field">
-                            <button id="search-brand">Search Product</button>
+                            <button id="search-brand"><i class='bx bx-search-alt-2' ></i>Search</button>
                         </div>
 
                         <div class="input-field">
@@ -439,7 +431,7 @@
                 </form>
             </div>
 
-            <div class="eliminar-producto" style="display: none;" id="opcion16">
+            <div class="eliminar-marca" style="display: none;" id="opcion16">
                 <form class="form" enctype="multipart/form-data">
                     <div class="formulario">
 
@@ -464,7 +456,7 @@
                         </div>
 
                         <div class="input-field">
-                            <button id="search-brand">Search Product</button>
+                            <button id="search-brand"><i class='bx bx-search-alt-2' ></i> Search</button>
                         </div>
 
                         <div class="input-field">
@@ -475,7 +467,7 @@
                         </div>
 
                         <button type="button" id="update-brand">
-                            <i class='bx bx-save'></i></i> Delete Product
+                            <i class='bx bx-save'></i></i> Delete 
                         </button>
                     </div>
                 </form>
@@ -489,21 +481,19 @@
                 </div>
                 <div class="choose-your-option">
                     <div class="title-category">
-                        <h1>choose-your-option</h1>
+                        <h1>choose your option</h1>
                     </div>
 
                     <div class="opciones">
-                        <button class="enlace" onclick="mostrarContenido('opcion17')">ADD</button>
-                        <button class="enlace" onclick="mostrarContenido('opcion18')">EDIT</button>
-                        <button class="enlace" onclick="mostrarContenido('opcion19')">DELETE</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion17')"><i class='bx bx-cart-add'></i>ADD</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion18')"><i class='bx bx-cog'></i> EDIT</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion19')"><i class='bx bxs-trash'></i>DELETE</button>
 
                     </div>
                     <div class="table-data">
                         <div class="order">
                             <div class="head">
                                 <h3>Recent Orders</h3>
-                                <i class='bx bx-search'></i>
-                                <i class='bx bx-filter'></i>
                             </div>
                             <table>
                                 <thead>
@@ -521,12 +511,18 @@
                 </div>
             </div>
 
-            <div class="añadir-marca" style="display: none;" id="opcion17">
+            <div class="añadir-linea-iconica" style="display: none;" id="opcion17">
                 <form class="form" enctype="multipart/form-data">
                     <div class="formulario">
 
                         <div class="title-for-boxs">
                             <h1>ADD ICONIC LINE</h1>
+                        </div>
+
+                        <div class="help-message">
+                            <p>
+                                To add an iconic line, complete the required fields with the necessary information. Once you have filled in the fields, click "Save" to store the iconic line. This will ensure your new iconic line is added successfully.
+                            </p>
                         </div>
 
                         <div class="input-field">
@@ -542,21 +538,25 @@
                             </label>
                         </div>
                         <button type="button" id="add-iconic">
-                            <i class='bx bx-save'></i></i> Save Product
+                            <i class='bx bx-save'></i></i> Save 
                         </button>
 
                     </div>
                 </form>
             </div>
 
-            <div class="actualizar-marca" style="display: none;" id="opcion18">
+            <div class="actualizar-linea-iconica" style="display: none;" id="opcion18">
                 <form class="form" enctype="multipart/form-data">
                     <div class="formulario">
 
                         <div class="title-for-boxs">
-                            <h1>EDIT ICONIC LINE<< /h1>
+                            <h1>EDIT ICONIC LINE</h1>
                         </div>
 
+                        <div class="help-message">
+                            <p>To edit an iconic line, search for it by its unique ID. Select the line to open the editing interface, then modify the desired fields. Click "Save" to update the iconic line with the new information.
+                            </p>
+                        </div>
 
                         <div class="input-field">
                             <input type="text" required id="id-iconic">
@@ -589,12 +589,12 @@
                 </form>
             </div>
 
-            <div class="eliminar-marca" style="display: none;" id="opcion19">
+            <div class="eliminar-linea-iconica" style="display: none;" id="opcion19">
                 <form class="form" enctype="multipart/form-data">
                     <div class="formulario">
 
                         <div class="title-for-boxs">
-                            <h1>DELETE ICONIC LINE<< /h1>
+                            <h1>DELETE ICONIC LINE</h1>
                         </div>
 
                         <div class="help-message">
@@ -605,7 +605,6 @@
                             </p>
                         </div>
 
-
                         <div class="input-field">
                             <input type="text" required id="id-brand">
                             <label class="lbl-nombre">
@@ -614,7 +613,7 @@
                         </div>
 
                         <div class="input-field">
-                            <button id="search-brand">Search Product</button>
+                            <button id="search-brand">Search</button>
                         </div>
 
                         <div class="input-field">
@@ -625,7 +624,7 @@
                         </div>
 
                         <button type="button" id="update-brand">
-                            <i class='bx bx-save'></i></i> Delete Product
+                            <i class='bx bx-save'></i></i> Delete 
                         </button>
                     </div>
                 </form>
@@ -638,19 +637,17 @@
                 </div>
                 <div class="choose-your-option">
                     <div class="title-category">
-                        <h1>choose-your-option</h1>
+                        <h1>choose your option</h1>
                     </div>
                     <div class="opciones">
-                        <button class="enlace" onclick="mostrarContenido('opcion20')">ADD</button>
-                        <button class="enlace" onclick="mostrarContenido('opcion21')">EDIT</button>
-                        <button class="enlace" onclick="mostrarContenido('opcion22')">DELETE</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion20')"><i class='bx bxs-cart-add'></i> ADD</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion21')"><i class='bx bx-cog'></i>EDIT</button>
+                        <button class="enlace" onclick="mostrarContenido('opcion22')"><i class='bx bxs-trash'></i>DELETE</button>
                     </div>
                     <div class="table-data">
                         <div class="order">
                             <div class="head">
                                 <h3>Recent Orders</h3>
-                                <i class='bx bx-search'></i>
-                                <i class='bx bx-filter'></i>
                             </div>
                             <table>
                                 <thead>
@@ -703,8 +700,8 @@
                             </label>
                         </div>
                         <div class="input-field">
-                            <label for="select-rol">Role</label>
                             <select name="select" id="select-rol">
+                                <option selected disabled>Choose a Role</option>
                                 <option value="2">admin</option>
                                 <option value="3">super-admin</option>
                             </select>
@@ -719,7 +716,7 @@
 
 
                         <button type="button" id="new-user-btn">
-                            <i class='bx bx-save'></i></i> Save Product
+                            <i class='bx bx-save'></i></i> Save User
                         </button>
 
                     </div>
@@ -743,7 +740,7 @@
                         </div>
 
                         <div class="input-field">
-                            <button id="search-user">Search Product</button>
+                            <button id="search-user"><i class='bx bx-search-alt-2' ></i>Search user</button>
                         </div>
 
                         <div class="input-field">
@@ -775,7 +772,7 @@
                         <div class="input-field">
                             <input type="date" id="birthDate" name="birthDate">
                             <label class="lbl-nombre">
-                                <span class="text-nomb">Birth Date</span>
+                                <span class="text-nomb"></span>
                             </label>
                         </div>
                         <div class="input-field">
@@ -785,19 +782,17 @@
                             </label>
                         </div>
                         <div class="input-field">
-                            <label for="status">Status</label>
                             <select class="box-input" id="status" name="status" required>
                                 <option value="active">Active</option>
                                 <option value="inactive">Inactive</option>
                             </select>
                         </div>
                         <div class="input-field">
-                            <label for="role">Role</label>
-                    <select class="box-input" id="role" name="role" required>
-                        <option value="1">Client</option>
-                        <option value="2">Admin</option>
-                        <option value="3">Super admin</option>
-                    </select>
+                            <select class="box-input" id="role" name="role" required>
+                                <option value="1">Client</option>
+                                <option value="2">Admin</option>
+                                <option value="3">Super admin</option>
+                            </select>
                         </div>
 
                         <button type="submit" id="update-user">
@@ -832,7 +827,7 @@
                         </div>
 
                         <div class="input-field">
-                            <button id="search-user">Search Product</button>
+                            <button id="search-user"><i class='bx bx-search-alt-2' ></i>Search user</button>
                         </div>
 
                         <div class="input-field">
@@ -843,19 +838,135 @@
                         </div>
 
                         <button type="button" id="delete-user">
-                            <i class='bx bx-save'></i></i> Delete Product
+                            <i class='bx bx-save'></i></i> Delete user
                         </button>
                     </div>
                 </form>
+            </div>
+
+            <div class="info-user" id="opcion5" style="display: none;">
+                <div class="container-user-info">
+                    <div class="user-info">
+                        <div class="title-for-boxs"><h1>Detalles y seguridad</h1></div>
+                        <div class="info">
+                            <div class="name-user-container">
+                                <p><strong>Nombre:</strong> <span id="user-name"></span></p>
+                            </div>
+                            <div class="apellido-user-container">
+                                <p><strong>Apellido:</strong> <span id="user-lastName"></span></p>
+                            </div>
+                            <div class="email-user-container">
+                                <p><strong>Dirección de correo electrónico:</strong> <span id="user-email"></span></p>
+                            </div>
+                            <div class="date-user-container">
+                                <p><strong>Fecha de nacimiento:</strong> <span id="user-birthDate"></span></p>
+                            </div>
+                            <div class="fecha-nacimiento-user-container">
+                                <p><strong>Contraseña:</strong> <span>********</span></p>
+                            </div>
+
+                            <button class="edit-btn" id="editSAbtn" onclick="mostrarContenido('settings')">Editar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings-menu-user"id="settings" style="display: none;">
+                <div class="container-user-info">
+                    <div class="user-info">
+                        <div class="title-for-boxs"><h1>Profile settings</h1></div>
+
+                        <div>
+                            <h1>Personal data</h1>
+                            <p id="solic">Required fields*</p>
+                        </div>
+
+                        <div class="form-inputs">
+                            <div class="input-field">
+                                <input type="text" required id="name">
+                                <label class="lbl-nombre">
+                                    <span class="text-nomb">Name</span>
+                                </label>
+                            </div>
+
+                            <div class="input-field">
+                                <input type="text" required id="lastName">
+                                <label class="lbl-nombre">
+                                    <span class="text-nomb">lastName</span>
+                                </label>
+                            </div>
+
+                            <div class="input-field">
+                                <input type="text" required id="email">
+                                <label class="lbl-nombre">
+                                    <span class="text-nomb">Email Address</span>
+                                </label>
+                            </div>
+
+                            <div class="input-field">
+                                <input type="text" required id="email">
+                                <label class="lbl-nombre">
+                                    <span class="text-nomb">Email Address</span>
+                                </label>
+                            </div>
+
+                            <div class="input-field">
+                                <input type="text" required id="dni">
+                                <label class="lbl-nombre">
+                                    <span class="text-nomb">DNI</span>
+                                </label>
+                            </div>
+
+                            <div class="input-field">
+                                <input type="date" required id="birthDate">
+                                <label class="lbl-nombre">
+                                    <span class="text-nomb"></span>
+                                </label>
+                            </div>
+
+                            <div class="closes">
+                                <button id="update-user">Update</button>
+                                <button onclick="mostrarContenido('opcion1')" id="editCloseSA">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
         </div>
 
 
+        <script src="../js/super-admin/user/add-user.js"></script>
+        <script src="../js/super-admin/user/delete-user.js"></script>
+        <script src="../js/super-admin/user/info-admin.js"></script>
+        <script src="../js/super-admin/user/update-user.js"></script>
+        <script src="../js/super-admin/user/user-table.js"></script>
 
+        <script src="../js/super-admin/productos/add-product.js"></script>
+        <script src="../js/super-admin/productos/delete-product.js"></script>
+        <script src="../js/super-admin/productos/product-table.js"></script>
+        <script src="../js/super-admin/productos/update-product.js"></script>
+        <script src="../js/super-admin/productos/upload-image.js"></script>
 
+        <script src="../js/super-admin/brand/add-brand.js"></script>
+        <script src="../js/super-admin/brand/brand-table.js"></script>
+        <script src="../js/super-admin/brand/delete-brand.js"></script>
+        <script src="../js/super-admin/brand/update-brand.js"></script>
+
+        <script src="../js/super-admin/iconicLine/add-iconicLine.js"></script>
+        <script src="../js/super-admin/iconicLine/delete-iconicLine.js"></script>
+        <script src="../js/super-admin/iconicLine/iconicLine-table.js"></script>
+        <script src="../js/super-admin/iconicLine/update-iconicLine.js"></script>
+
+        <script src="../js/super-admin/script.js"></script>
+        <script src="../js/super-admin/logout.js"></script>
+        <script src="../js/super-admin/loggedSA.js"></script>
+
+        <script></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
         <script src="../js/super-admin/brand/add-brand.js"></script>
         <script>
             function mostrarContenido(opcion) {
@@ -867,6 +978,11 @@
                 document.getElementById(opcion).style.display = 'block';
             }
         </script>
+
+        
+
+
+
 
 </body>
 
