@@ -16,8 +16,11 @@
     
     <div class="container-column-set">
         <div class="column1">
-            <h1>SET PRODUCT</h1>
 
+            <div class="title-section">
+                <h1>EDIT PRODUCT</h1>
+            </div>
+            
             <div class="busqueda-id-editar">
                 <p>Id product</p>
                 <input id="id-producto" type="text" class="box-input">
@@ -34,7 +37,7 @@
 
             <div class="description">
                 <p>Product Description</p>
-                <input id="description" type="text" >
+                <input id="description" class="box-input" type="text" >
             </div>
 
             <div class="mark">
@@ -72,20 +75,18 @@
                 <p>Id Line</p>
                 <input id="id-linea" type="text" class="box-input">
             </div>
-        </div>
 
-
-        <div class="column2">
+            <div class="save-product">
+                <button  id="save-product"><i class="fa-regular fa-floppy-disk"></i>  Save All Product Info</i></button>
+            </div>
+            
+            <a href="../producto/productosSA.html">
+            <button id="back">Back</i></button></a>
 
             <button class="contenedor-btn-file">
-                <i class="fas fa-file"></i>
-                Adjuntar Archivo
                 <label for="file1"></label>
                 <input type="file" id="file1">
             </button>
-
-            <button id="save-product"><i class="fa-regular fa-floppy-disk"></i>  Save All Product Info</i></button>
-            <a href="../producto/productosSA.html"><button id="back">Back</i></button></a>
         </div>
 
         

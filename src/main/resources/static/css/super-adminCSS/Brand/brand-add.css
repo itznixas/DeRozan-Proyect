@@ -36,29 +36,25 @@ header{
 }
 
 .container-column-add{
-    justify-content: center;
-    margin-top: 30px;
-    width: 100%;
-    height: auto;
     display: flex;
-    gap: 20px;
-    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
+    align-items: center;
+    height: 100vh;
 }
 
 
 .content-add{
-    border: 1px solid black;
     padding: 30px;
     justify-content: center;
-    display: flex;
     flex-direction: column;
+    padding: 70px;
+    gap: 30px;
+    display: flex;
     flex-wrap: wrap;
-    gap: 40px;
-    height: 50%;
-    width: 50%;
+    border-radius: 30px;
+    height: auto;
+    width: 700px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .content-add h1{
     text-align: center;
@@ -69,7 +65,7 @@ header{
     background-color: rgb(35, 221, 59);
     border: none;
     color: white;
-    width: 100%;
+    width: 250px;
     height: 40px;
     font-size: 20px;
     border-radius: 5px;
@@ -81,9 +77,29 @@ header{
     background-color: rgb(0, 0, 0);
     border: none;
     color: white;
-    width: 20%;
+    width: 250px;
     height: 40px;
     font-size: 20px;
-    border-radius: 5px;
     cursor: pointer;
+}
+
+.box-input{
+    box-sizing: border-box;
+    padding: 4px 12px;
+    height: 40px;
+    width: 250px;
+    border-radius: 1px;
+    border: 1px solid #A6A6A6;
+}   
+
+.box-input {
+    border: none; /* Elimina cualquier borde */
+    outline: none; /* Elimina el outline al estar enfocado */
+    background-color: transparent; /* Fondo transparente */
+    border-bottom: 1px solid black; /* Línea inferior */
+    padding: 5px; /* Ajusta el padding según sea necesario */
+}
+.buttons-option{
+    display: flex;
+    gap: 40px;
 }
