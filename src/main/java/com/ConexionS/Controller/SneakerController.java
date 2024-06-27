@@ -137,7 +137,7 @@ public class SneakerController {
         sneakers.setPrice(price);
 
         if (!image.isEmpty()) {
-            Path directorioImagenes = Paths.get("src/main/resources/static/img");
+            Path directorioImagenes = Paths.get("src/main/resources/static/img/sneakers");
             String rutaAbsoluta = directorioImagenes.toFile().getAbsolutePath();
             try {
                 byte[] bytesImg = image.getBytes();

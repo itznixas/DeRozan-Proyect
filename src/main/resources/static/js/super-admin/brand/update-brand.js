@@ -8,7 +8,12 @@ searchBrand.addEventListener('click', async () => {
     const id = idBrand.value;
 
     if(id == null) {
-        messageElement.textContent = 'Please enter a brand ID';
+        new Noty({
+            type: 'info',
+            layout: 'topLeft',
+            text: 'Please enter a brand ID.',
+            timeout: 3000
+          }).show();
         return;
     }
 
@@ -19,16 +24,34 @@ searchBrand.addEventListener('click', async () => {
             const brand = response.data;
             brandName.value = brand.name;
         } else {
-            messageElement.textContent = 'Brand not found';
+            
+            new Noty({
+                type: 'info',
+                layout: 'topLeft',
+                text: 'Brand not found.',
+                timeout: 3000
+              }).show();
         }
 
     }catch (error) {
 
         console.error('Error fetching Brand: ', error);
         if (error.response && error.response.status === 404) {
-            messageElement.textContent = 'Brand not found';
+           
+            new Noty({
+                type: 'info',
+                layout: 'topLeft',
+                text: 'Brand not found.',
+                timeout: 3000
+              }).show();
         } else {
             messageElement.textContent = 'Error fetching Brand: ' + error.message;
+            new Noty({
+                type: 'info',
+                layout: 'topLeft',
+                text: 'Error fetching Brand, please check in the console',
+                timeout: 3000
+              }).show();
         }
 
     }
@@ -49,15 +72,24 @@ updateBrand.addEventListener('click', async () => {
         const response = await axios.put(`/api/brands/update-brand/${id}`, updateBrand);
 
         if (response.status === 200) {
-            messageElement.textContent = 'Brand updated successfully';
+            new Noty({
+                type: 'success',
+                layout: 'topRight',
+                text: 'Brand updated successfully.',
+                timeout: 3000    
+              }).show();
         } else {
             messageElement.textContent = 'Failed to update Brand';
         }
 
     }catch (error) {
-
-        console.error('Error updating Brand: ', error);
-        messageElement.textContent = 'Error updating Brand: ' + error.message;
+        console.error('Error updating Brand: ' + error.message);
+        new Noty({
+            type: 'error',
+            layout: 'topRight',
+            text: 'Error updating Brand.',
+            timeout: 3000    
+          }).show();
 
     }
 });

@@ -63,6 +63,8 @@ body {
 	transition: .3s ease;
 	overflow-x: hidden;
 	scrollbar-width: none;
+	display: flex;
+	flex-direction: column;
 }
 #sidebar::--webkit-scrollbar {
 	display: none;
@@ -74,7 +76,7 @@ body {
 	font-size: 24px;
 	font-weight: 700;
 	height: 56px;
-	display: flex;
+	text-align: center;
 	align-items: center;
 	color: var(--blue);
 	position: sticky;
@@ -82,7 +84,7 @@ body {
 	left: 0;
 	background: var(--light);
 	z-index: 500;
-	padding-bottom: 20px;
+	padding-top: 20px;
 	box-sizing: content-box;
 }
 #sidebar .brand .bx {

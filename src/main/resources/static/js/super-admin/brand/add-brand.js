@@ -9,9 +9,19 @@ addBrand.addEventListener('click', async () => {
 
     try {
         const response = await axios.post('/api/brands/add-brand', addBrand);
-        messageElement.textContent = 'Brand saved successfully';
+        new Noty({
+            type: 'success',
+            layout: 'topRight',
+            text: 'The brand have been created correctly.',
+            timeout: 3000    
+          }).show();
     }catch (error) {
         console.error('Error saving brand:', error);
-        messageElement.textContent = 'Error saving brand: ' + error.message;
+        new Noty({
+            type: 'error',
+            layout: 'topRight',
+            text: 'The brand could not be created correctly',
+            timeout: 3000
+          }).show();
     }
 });
